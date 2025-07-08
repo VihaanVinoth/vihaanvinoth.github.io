@@ -30,26 +30,46 @@ header {
     height: 100%;
 }
 
-.logo > p {
+.logo-nav > p {
     font-family: 'Bitcount Grid Double', 'Courier New', Courier, monospace;
 }
 
-.logo > img {
+.logo-nav > img {
     width: 2.5em;
     padding-left: 1.5%;
     object-fit:contain;
 }
 
 .logo {
-    position: sticky;
+    display: flex;
+    border-bottom: 1px solid;
+    background-color: white;
+}
+
+.logo-nav {
     width: 100%;
-    float: left;
     display: flex;
     justify-content: start;
     gap: 10px;
     padding-left: 1.5%;
-    border-bottom: 1px solid;
-    background-color: white;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    gap: 9px;
+    justify-content: end;
+    padding-right: 3%;
+}
+
+ul li::before {
+    content: "//";
+}
+
+ul li {
+    list-style: none;
 }
 
 .container, section {
@@ -164,6 +184,8 @@ code {
     font-family: 'Share Tech', 'Courier New', Courier, monospace;
     border: 1px dashed black;
     padding: 14px 16px;
+    position: relative;
+    top: -50px;
 }
 
 .resume:hover {
@@ -171,4 +193,14 @@ code {
     border: 1px dashed white;
     background-color: black;
     color: white;
+}
+
+#brief {
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+#brief > p {
+    position: relative;
+    top: -50px;
 }
