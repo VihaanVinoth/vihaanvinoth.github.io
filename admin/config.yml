@@ -15,11 +15,12 @@ display_url: "https://vihaanvinoth.netlify.app"
 collections:
   - name: "blog"
     label: Blog
-    folder: /posts/
+    folder: posts
     create: true
     slug: "{{slug}}"
-    fields: 
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Summary", name: "description", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
