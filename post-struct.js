@@ -33,7 +33,9 @@ fs.readdirSync(postsDir).forEach(file => {
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        ${htmlBody}
+        <section class="article">
+            ${htmlBody}
+        </section>
     </body>
     </html>
     `;
