@@ -7,4 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "post-struct": "node post-struct.js"
   },
-  "keywords": 
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
