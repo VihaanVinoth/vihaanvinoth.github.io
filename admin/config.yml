@@ -15,7 +15,7 @@ display_url: "https://vihaanvinoth.netlify.app"
 collections:
   - name: "blog"
     label: Blog
-    folder: blog/posts
+    folder: /posts/
     create: true
     slug: "{{slug}}"
     fields: 
