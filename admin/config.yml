@@ -10,9 +10,9 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "blog"
-    label: Blog
-    folder: posts
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "blog/posts"
     create: true
     slug: "{{slug}}"
     fields:
