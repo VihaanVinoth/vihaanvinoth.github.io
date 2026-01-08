@@ -9,9 +9,6 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: "https://vihaanvinoth.netlify.app"
-display_url: "https://vihaanvinoth.netlify.app"
-
 collections:
   - name: "blog"
     label: Blog
