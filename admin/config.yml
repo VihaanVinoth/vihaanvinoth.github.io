@@ -22,4 +22,4 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Summary", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
-    
+      - { label: "Body", name: "body", widget: "markdown" }
