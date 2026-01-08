@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: VihaanVinoth/VihaanVinoth.github.io
+  repo: VihaanVinoth/vihaanvinoth.github.io
   branch: main
   auth_type: implicit
   app_id: "Ov23li3UPpcWezvmlLA9"
