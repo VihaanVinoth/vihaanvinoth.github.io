@@ -1,226 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vihaan Vinoth</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/ress/dist/ress.min.css" async></script>
+    <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <div class="logo-nav">
-                <img src="public/VVNormal.png">
-                <p class="logo-title">@vertriwayz</p>
-                <a href="https://github.com/VihaanVinoth"><img src="public/socials/github.svg"></a>
+    <main class="content" id="mainContent">
+        <button class="content" id="theme-toggle" aria-label="Toggle theme">
+            <img id="theme-toggle-icon" src="public/icons/light-mode-icon.svg" fetchpriority="high">
+        </button>
+        <section class="hero content">
+            <a href="index.html" id="logo"><img src="public/VVNormal.png" fetchpriority="high"></a>
+            <h1>Hey, I'm Vihaan <span id="wave">👋</span></h1>
+            <p>A <i>full-stack developer</i> based in <kbd>Melbourne, Australia</kbd>.</p>
+            <p class="hire-container">
+                <span class="hire-text-swap">
+                    <span class="default">Available for Hire</span>
+                    <span class="hover">
+                        <a href="mailto:dalx900@gmail.com">Enquire Now
+                            <svg loading="lazy" class="mail-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+                                <path
+                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                            </svg>
+                        </a>
+                    </span>
+                </span>
+            </p>
+            <br>
+            <div class="map-box">
+                <div id="map"></div>
             </div>
-        </div>
-        <div class="container">
-            <h1>Hello, <br> i'm Vihaan Vinoth <img class="dog" src="public/dog.gif"></h1>
-            <a href="#brief"><p>// Web + Roblox dev</p></a>
-            <audio id="audio" src="public/dogsong-made-with-Voicemod.mp3" loop="true"></audio>
-        </div>
-        <hr>
-        <section id="brief">
-            <h1>Brief</h1>
-            <p>I'm Vihaan Vinoth; based in <code>AUSTRALIA</code>. I casually design some epic stuff
-            in web design & game design (especially <code>ROBLOX</code>). Over the past several years, I have refined on my techniques in both web development and design - my bread and butter for life. So far, I am looking forward to doing a side-hustle that I can use for while I'm still at school. This can be ranging from simplistic website management, to modern poster & logo designs delivered within less than a week.</p>
-            <a href="public/Vihaan Vinoth.pdf" class="resume" target="_blank">
-                Resume
-            </a>  
-        </section>
-        <hr>
-        <section id="skillset">
-            <h1>Skill Set</h1>
-            <p>These are the stuff I specialise in and like to do - feel free look around :D</p>
-            <div class="logos first">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
+            <p id="about-text">I've been developing engaging websites and crafting stunning experiences
+                for over 4
+                years. I've delivered projects across the fields of graphic and web design. Additionally, I specialise
+                in managing sites and optimizing user interfaces.</p>
+            <br>
+            <br>
+            <div class="icons-box">
+                <div class="icon-track">
+                    <img class="icon" src="public/icons/css-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/django-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/flask-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/html-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/js-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/lua-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mariadb-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mysql-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/nodejs-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/php-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/python-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/css-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/django-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/flask-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/html-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/js-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/lua-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mariadb-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mysql-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/nodejs-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/php-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/python-logo.svg" loading="eager" decoding="async" />
+                </div>
+            </div>
+            <div class="icons-box">
+                <div class="icon-track reverse">
+                    <img class="icon" src="public/icons/css-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/django-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/flask-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/html-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/js-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/lua-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mariadb-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mysql-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/nodejs-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/php-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/python-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/css-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/django-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/flask-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/html-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/js-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/lua-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mariadb-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/mysql-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/nodejs-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/php-logo.svg" loading="eager" decoding="async" />
+                    <img class="icon" src="public/icons/python-logo.svg" loading="eager" decoding="async" />
+                </div>
             </div>
             <br>
-            <div class="logos second">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-                <img src="public/logo/npm.svg">
-                <img src="public/logo/html.svg">
-                <img src="public/logo/css.svg">
-                <img src="public/logo/netlify.svg">
-                <img src="public/logo/github.svg">
-                <img src="public/logo/bootstrap.svg">
-                <img src="public/logo/vercel.svg">
-                <img src="public/logo/scratch.svg">
-                <img src="public/logo/wix.svg">
-                <img src="public/logo/canva.svg">
-                <img src="public/logo/photoshop.svg">
-                <img src="public/logo/illustrator.svg">
-                <img src="public/logo/blogspot.svg">
-                <img src="public/logo/lua.svg">
-            </div>         
+            <br>
         </section>
         <hr>
-        <section id="projects">
-            <h1>Projects</h1>
-            <p>These are the projects I have engaged in so far. Over time, this section might accumulate.</p>
+        <br>
+        <kbd>Projects</kbd>
+        <br>
+        <br>
+        <section class="projects content">
+            <div class="project-box">
+                <img class="project-img" src="public/augustus-thumbnail.png" loading="lazy">
+                <a href="https://github.com/VihaanVinoth/AugustusCaesar">
+                    <h2>Augustus Museum</h2>
+                </a>
+                <p>HTML · CSS</p>
+                <p>A virtual museum that I made for a school project.</p>
+            </div>
+            <div class="project-box">
+                <img class="project-img" src="public/aristotle-thumbnail.png" loading="lazy">
+                <a href="https://github.com/VihaanVinoth/aristotle">
+                    <h2>Aristotle CSS Framework</h2>
+                </a>
+                <p>HTML · CSS</p>
+                <p>I created a light CSS Framework for easy semantic design.</p>
+            </div>
+            <div class="project-box">
+                <img class="project-img" src="public/verty-thumbnail.png" loading="lazy">
+                <a href="https://github.com/VihaanVinoth/verty">
+                    <h2>Verty, Email Service</h2>
+                </a>
+                <p>HTML · CSS · PHP · MySQL/MariaDB · Apache</p>
+                <p>An attempt at creating a simple web mail service.</p>
+            </div>
+            <div class="project-box">
+                <img class="project-img" src="public/vblog-thumbnail.png" loading="lazy">
+                <a href="https://github.com/VihaanVinoth/V_blog">
+                    <h2>VBlog</h2>
+                </a>
+                <p>Astro · HTML · CSS · JS</p>
+                <p>To expand my CS skills, I made a simple blog.</p>
+            </div>
         </section>
+        <br>
         <hr>
-        <section id="contact">
-            <h1>Contact Me</h1>
-            <p>Use the details below to contact me for any inquiries.</p>
+        <section class="footer content">
+            <a href="https://github.com/VihaanVinoth">
+                <img id="git-icon" src="public/icons/github-icon.png" loading="lazy">
+                <p>Github</p>
+            </a>
+            <p>&nbsp;&nbsp;</p>
+            <a href="mailto:dalx900@gmail.com">
+                <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    loading="lazy" width="20px" fill="#FFFFFF">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <p>Contact</p>
+            </a>
+            <p id="footer-reserved">©2025 Made with 🌶️ by Vihaan Vinoth.</p>
         </section>
-        <footer>
-            @2025 made with 🌶️ by Vihaan. All rights reserved.
-        </footer>
-    </header>
+    </main>
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+
+        const toggle = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme) {
+            root.dataset.theme = savedTheme;
+        } else {
+            root.dataset.theme = systemDark ? "dark" : "light";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+    </script>
+    <script type="text/javascript">
+        function loadLeafletCSS() {
+            if (document.getElementById('leaflet-css')) return;
+
+            const link = document.createElement('link');
+            link.id = 'leaflet-css';
+            link.rel = 'stylesheet';
+            link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+            link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+            link.crossOrigin = '';
+
+            document.head.appendChild(link);
+        }
+
+        function loadLeafletJS() {
+            return new Promise(resolve => {
+                if (window.L) return resolve();
+
+                const script = document.createElement('script');
+                script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+                script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+                script.crossOrigin = '';
+                script.onload = resolve;
+
+                document.head.appendChild(script);
+            });
+        }
+
+        function initMap() {
+            var map = L.map('map', {
+                center: [-37.81562, 144.96340],
+                zoom: 13,
+                zoomControl: false
+            });
+
+            L.tileLayer('https://tile.tracestrack.com/topo__/{z}/{x}/{y}.webp?key=fb53325118a0289c76508fc0d65ae853', {
+                maxZoom: 13,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            L.control.attribution({
+                position: 'topright'
+            }).addTo(map);
+        }
+
+        const mapObserver = new IntersectionObserver(entries => {
+            if (!entries[0].isIntersecting) return;
+
+            loadLeafletCSS();
+            loadLeafletJS().then(initMap);
+
+            mapObserver.disconnect();
+
+        }, { threshold: 0.25 });
+
+        mapObserver.observe(document.getElementById('map'));
+    </script>
 </body>
 
 </html>

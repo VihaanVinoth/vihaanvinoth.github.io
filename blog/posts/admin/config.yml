@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: VihaanVinoth/VihaanVinoth.github.io
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://VihaanVinoth.github.io
+display_url: https://VihaanVinoth.github.io
+
+collections:
+  - name: "blog"
+    label: Blog
+    folder: blog/posts
+    create: true
+    slug: "{{slug}}"
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
