@@ -8,14 +8,12 @@ const md = new MarkdownIt({
     linkify: true
 });
 
-const postsDir = path.join('blog', 'posts');
-const outDir = path.join('public', 'posts');
+const postsDir = "blog/posts";
+const outDir = "public/posts";
 
-if (!fs.existsSync(outDir)) {
-    fs.mkdirSync(outDir, { recursive: true });
-}
+fs.mkdirSync(outDir, { recursive: true });
 
-fs.readdirSync(postsDir).forEach(file => {
+for (const file of fs.readdirSync(postsDir)) {
     if (!file.endsWith('.md')) return;
 
     const mdContent = fs.readFileSync(path.join(postsDir, file), 'utf-8');
@@ -23,24 +21,30 @@ fs.readdirSync(postsDir).forEach(file => {
     const content = mdContent.replace(/^---[\s\S]*?---\s*/, '');
     
     const htmlBody = md.render(content);
+    const slug = file.replace(".md", "");
 
     const html = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>${file.replace('.md', '')}</title>
+        <title>${slug}</title>
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <section class="article">
-            ${htmlBody}
-        </section>
+        <main>
+            <section class="article">
+                ${htmlBody}
+            </section>
+        </main>
     </body>
     </html>
     `;
+    
+    fs.writeFileSync(
+        path.join(outDir, `${slug}.html`),
+        html
+    );
+}
 
-    const outFile = path.join(outDir, file.replace('.md', '.html'));
-    fs.writeFileSync(outFile, html, 'utf-8');
-    console.log(`Built ${outFile}`);
-});
+console.log(`Built ${outDir}`);
