@@ -35,7 +35,8 @@ for (const file of fs.readdirSync(postsDir)) {
     <head>
         <meta charset="utf-8">
         <title>${slug}</title>
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="../stylesheets/style.css">
+        <link rel="stylesheet" href="../stylesheets/reset.css">
     </head>
     <body>
         <main>
