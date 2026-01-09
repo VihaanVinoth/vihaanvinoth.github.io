@@ -47,7 +47,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <body>
         <main>
             <section class="article">
-                <header>x
+                <header>
                     <h1>${title}</h1>
                     ${date ? `<time datetime="${date}">${date}</time>` : ""}
                     ${summary ? `<p class="summary">${summary}</p>` : ""}
