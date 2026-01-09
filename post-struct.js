@@ -8,14 +8,14 @@ const md = new MarkdownIt({
     linkify: true
 });
 
+const ROOT = process.cwd();
+const postsDir = path.join(ROOT, "blog/posts");
+const outDir = path.join(ROOT, "public/posts");
+
 if (!fs.existsSync(postsDir)) {
     console.error("Post directory not found");
     process.exit(1);
 }
-
-const ROOT = process.cwd();
-const postsDir = path.join(ROOT, "blog/posts");
-const outDir = path.join(ROOT, "public/posts");
 
 fs.mkdirSync(outDir, { recursive: true });
 
