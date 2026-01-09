@@ -4,8 +4,8 @@ backend:
   branch: main
   auth_type: implicit
   app_id: "Ov23li3UPpcWezvmlLA9"
-  
 
+publish_mode: editorial_workflow
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
@@ -21,3 +21,28 @@ collections:
       - { label: "Summary", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+    preview_styles: ["/style.css"]
+
+preview: |
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>${slug}</title>
+        <link rel="stylesheet" href="../stylesheets/style.css">
+        <link rel="stylesheet" href="../stylesheets/reset.css">
+        <meta name="description" content="${summary}">
+    </head>
+    <body>
+        <main>
+            <section class="article">
+                <header>
+                    <h1>${title}</h1>
+                    ${date ? `<time datetime=${date}">${date}</time>` : ""}
+                    ${summary ? `<p class="summary">${summary}</p>` : ""}
+                </header>
+                ${htmlBody}
+            </section>
+        </main>
+    </body>
+    </html>
