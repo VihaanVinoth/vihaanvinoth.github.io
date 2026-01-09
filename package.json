@@ -12,5 +12,8 @@
   "description": "",
   "dependencies": {
     "markdown-it": "^14.1.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
