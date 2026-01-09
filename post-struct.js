@@ -33,6 +33,7 @@ for (const file of fs.readdirSync(postsDir)) {
     const title = data.title ?? slug;
     const summary = data.summary ?? "";
     const date = data.date ?? "";
+    const cover = data.cover ?? "";
 
     const html = `
     <!DOCTYPE html>
@@ -47,6 +48,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <body>
         <main>
             <section class="article">
+                ${cover ? `<img class="cover" src="/${cover}">` : ""}
                 <header>
                     <h1>${title}</h1>
                     ${date ? `<time datetime="${date}">${date}</time>` : ""}
