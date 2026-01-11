@@ -48,11 +48,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <body>
         <main>
             <section class="article">
-<<<<<<< HEAD
-                ${cover ? `<img class="cover" src="/${cover}">` : ""}
-=======
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
->>>>>>> 203ce23 (fix git)
                 <header>
                     <h1>${title}</h1>
                     ${date ? `<time datetime="${date}">${date}</time>` : ""}
