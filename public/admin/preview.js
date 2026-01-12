@@ -1,3 +1,6 @@
+CMS.registerPreviewStyle("/stylesheets/reset.css");
+CMS.registerPreviewStyle("/stylesheets/style.css");
+
 const PostPreview = ({ entry, widgetFor }) => {
   const wpm = 225;
 
@@ -45,7 +48,7 @@ const PostPreview = ({ entry, widgetFor }) => {
       <hr />
       <section className="footer content">
         <a href="https://github.com/VihaanVinoth">
-          <img id="git-icon" src="../icons/github-icon.png" loading="lazy" />
+          <img id="git-icon" src="/icons/github-icon.png" loading="lazy" />
           <p>Github</p>
         </a>
         <p>&nbsp;&nbsp;</p>
@@ -68,8 +71,5 @@ const PostPreview = ({ entry, widgetFor }) => {
     </main>
   );
 };
-
-CMS.registerPreviewStyle("../stylesheets/reset.css");
-CMS.registerPreviewStyle("../stylesheets/style.css");
 
 CMS.registerPreviewTemplate("posts", PostPreview);
