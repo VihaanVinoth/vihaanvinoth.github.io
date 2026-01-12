@@ -516,5 +516,5 @@ time, .summary {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  top: 0px;
+  top: -100px;
 }
