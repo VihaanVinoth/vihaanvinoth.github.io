@@ -8,7 +8,7 @@
 }
 
 :root {
-  --mono-font: "Atkinson Hyperlegible Mono", monospace;
+  --mono-font: "Roboto Mono", monospace;
   --sans-font: "Atkinson Hyperlegible", system-ui, sans-serif;
   --border-radius-map: 10px;
   --bg: linear-gradient(rgb(24, 24, 24) 0%, rgba(0, 0, 0, 1) 20%);
@@ -493,4 +493,8 @@ hr {
 .cover {
   width: 500px;
   object-fit: cover;
+}
+
+time, .summary {
+  font-family: var(--mono-font);
 }
