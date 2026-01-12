@@ -18,7 +18,7 @@ const PostPreview = ({ entry, widgetFor }) => {
 
   const parts = dateFormat.split(" ");
 
-  const date = `${parts[0].replace(",", "")} ${parts[1]}, ${parts[2]}` ?? "";
+  const date = entry.getIn([`${parts[0].replace(",", "")} ${parts[1]}, ${parts[2]}` || ""]);
   const cover = entry.getIn(["data", "cover"]);
 
   return `
