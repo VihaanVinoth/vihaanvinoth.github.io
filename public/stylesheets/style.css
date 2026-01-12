@@ -515,6 +515,6 @@ time, .summary {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   top: 240px;
 }
