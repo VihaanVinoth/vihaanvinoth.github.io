@@ -489,3 +489,7 @@ hr {
   top: 18.5px;
   color: grey;
 }
+
+.cover {
+  width: 500px;
+}
