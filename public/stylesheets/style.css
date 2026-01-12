@@ -508,6 +508,7 @@ hr {
 time, .summary {
   font-family: var(--mono-font);
   text-align: center;
+  width: 100%;
 }
 
 .article-text {
