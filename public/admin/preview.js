@@ -1,3 +1,5 @@
+import React from "react";
+
 CMS.registerPreviewStyle("/stylesheets/reset.css");
 CMS.registerPreviewStyle("/stylesheets/style.css");
 
