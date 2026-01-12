@@ -47,8 +47,11 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main class="content" id="mainContent">
+            <a href="https://github.com/VihaanVinoth">
+                <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
+                <p>Github</p>
+            </a>
             <section class="article content">
-                <br>
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 ${
                   date
@@ -67,10 +70,6 @@ for (const file of fs.readdirSync(postsDir)) {
             <br>
             <hr>
             <section class="footer content">
-                <a href="https://github.com/VihaanVinoth">
-                    <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
-                    <p>Github</p>
-                </a>
                 <p>&nbsp;&nbsp;</p>
                 <a href="mailto:dalx900@gmail.com">
                     <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
