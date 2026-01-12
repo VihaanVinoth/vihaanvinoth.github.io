@@ -500,7 +500,7 @@ hr {
   width: 458px;
   height: 5em;
   z-index: 100;
-  transform: translateY(5px);
+  transform: translateY(10px);
   background: red;
 }
 
