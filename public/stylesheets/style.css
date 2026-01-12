@@ -498,6 +498,8 @@ hr {
 
 .cover::before {
   content: "";
+  width: 5em;
+  height: 5em;
   position: absolute;
   top: 0;
   background: red;
