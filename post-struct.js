@@ -42,7 +42,7 @@ for (const file of fs.readdirSync(postsDir)) {
   const options = {
     day: '2-digit',
     month: 'long',
-    year: '2-digit'
+    year: 'long'
   }
 
   const dateFormat = new Intl.DateTimeFormat('en-GB', options).format(dateNow);
