@@ -499,7 +499,7 @@ hr {
   content: "";
   width: 28.8em;
   height: 3em;
-  background: var(--map-grad);
+  background: red;
   position: absolute;
   top: 18.2em;
   z-index: 100;
