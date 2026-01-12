@@ -47,10 +47,9 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main class="content" id="mainContent">
-            <a href="https://github.com/VihaanVinoth">
-                <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
-                <p>Github</p>
-            </a>
+            <button class="content" id="theme-toggle" aria-label="Toggle theme">
+                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
+            </button>
             <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 ${
@@ -60,9 +59,6 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
                 ${summary ? `<p class="summary">${summary}</p>` : ""}
                 <header>
-                    <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                        <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
-                    </button>
                     <h1 id="article-title">${title}</h1>
                 </header>
                 ${htmlBody}
@@ -70,6 +66,10 @@ for (const file of fs.readdirSync(postsDir)) {
             <br>
             <hr>
             <section class="footer content">
+                <a href="https://github.com/VihaanVinoth">
+                    <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
+                    <p>Github</p>
+                </a>
                 <p>&nbsp;&nbsp;</p>
                 <a href="mailto:dalx900@gmail.com">
                     <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
