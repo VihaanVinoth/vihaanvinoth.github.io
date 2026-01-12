@@ -508,7 +508,8 @@ hr {
 time, .summary {
   font-family: var(--mono-font);
   text-align: center;
-  width: 100%;
+  position: relative;
+  left: 50px;
 }
 
 .article-text {
