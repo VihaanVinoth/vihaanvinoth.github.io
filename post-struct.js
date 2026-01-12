@@ -48,6 +48,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <body>
         <main>
             <section class="article content">
+                <br>
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 ${
                   date
