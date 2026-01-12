@@ -52,6 +52,7 @@ for (const file of fs.readdirSync(postsDir)) {
             </button>
             <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
+                <div class="cover-blur"></div>
                 <br>
                 <br>
                 ${
