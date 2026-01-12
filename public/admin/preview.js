@@ -13,11 +13,12 @@ const PostPreview = ({ entry, widgetFor }) => {
   let date = "";
 
   if (dateNow) {
-    date = new Date(dateNow).toLocaleDateString("en-GB", {
+    date = dateNow ? new Date(dateNow).toLocaleDateString("en-GB", {
       day: "2-digit",
       month: "long",
       year: "numeric",
-    });
+    }) 
+    : null;
   }
 
   const options = {
@@ -32,33 +33,28 @@ const PostPreview = ({ entry, widgetFor }) => {
 
   //   const date = entry.getIn([`${parts[0].replace(",", "")} ${parts[1]}, ${parts[2]}` || ""]);
 
-  return `
-    <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="stylesheet" href="../stylesheets/reset.css">
-    <main class="content" id="mainContent">
-        <section class="article content">
-            ${cover ? `<img class="cover" src="${cover}">` : ""}
-            <div class="cover-blur"></div>
-            <div class="article-text">
-                <br>
-                <br>
-                ${
-                  date
-                    ? `<time>${date} · Vihaan Vinoth · ${mins} min read</time>`
-                    : ""
-                }
-                ${summary ? `<p class="summary">${summary}</p>` : ""}
+  return (
+    <main className="content" id="mainContent">
+        <section className="article content">
+            ${cover && <img className="cover" src={cover} />}
+            <div className="cover-blur"></div>
+            <div className="article-text">
+                {
+                  date && (
+                    <time>{date} · Vihaan Vinoth · {mins} min read</time>
+                )}
+                ${summary && <p className="summary">${summary}</p>}
                 <header>
-                    <h1 id="article-title">${title || ""}</h1>
+                    <h1 id="article-title">{title}</h1>
                 </header>
                 ${widgetFor("body")}
             </div>
         </section>
-        <br>
-        <hr>
-        <section class="footer content">
+        <br />
+        <hr />
+        <section className="footer content">
             <a href="https://github.com/VihaanVinoth">
-                <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
+                <img id="git-icon" src="../icons/github-icon.png" loading="lazy" />
                 <p>Github</p>
             </a>
             <p>&nbsp;&nbsp;</p>
@@ -73,7 +69,10 @@ const PostPreview = ({ entry, widgetFor }) => {
             <p id="footer-reserved">©2025 Made with 🌶️ by Vihaan Vinoth.</p>
         </section>
     </main>
-  `;
+  );
 };
+
+CMS.registerPreviewStyle("../stylesheets/reset.css");
+CMS.registerPreviewStyle("../stylesheets/style.css");
 
 CMS.registerPreviewTemplate("posts", PostPreview);
