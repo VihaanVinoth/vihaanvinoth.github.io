@@ -47,11 +47,10 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main>
-            <button id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="./icons/light-mode-icon.svg" fetchpriority="high">
+            <button class="content" id="theme-toggle" aria-label="Toggle theme">
+                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
             </button>
-            <br>
-            <section class="article">
+            <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 ${
                   date
@@ -64,9 +63,41 @@ for (const file of fs.readdirSync(postsDir)) {
                 </header>
                 ${htmlBody}
             </section>
+            <br>
+            <hr>
+            <section class="footer content">
+                <a href="https://github.com/VihaanVinoth">
+                    <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
+                    <p>Github</p>
+                </a>
+                <p>&nbsp;&nbsp;</p>
+                <a href="mailto:dalx900@gmail.com">
+                    <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        loading="lazy" width="20px" fill="#FFFFFF">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg>
+                    <p>Contact</p>
+                </a>
+                <p id="footer-reserved">©2025 Made with 🌶️ by Vihaan Vinoth.</p>
+            </section>
         </main>
         <script type="text/javascript">
         window.addEventListener("load", () => {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
             if ('scrollRestoration' in history) {
                 history.scrollRestoration = 'manual';
             }
