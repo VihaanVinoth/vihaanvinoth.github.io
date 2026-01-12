@@ -8,9 +8,9 @@ backend:
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: /
-display_url: /
-preview_path: /
+site_url: "/"
+display_url: "/"
+preview_path: "/"
 
 collections:
   - name: "posts"
@@ -24,4 +24,4 @@ collections:
       - { label: "Summary", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Cover", name: "cover", widget: "image" }
-      - { label
+      - { label: "Body", name: "body", widget: "markdown" }
