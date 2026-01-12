@@ -47,9 +47,6 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main>
-            <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
-            </button>
             <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 ${
@@ -59,6 +56,9 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
                 ${summary ? `<p class="summary">${summary}</p>` : ""}
                 <header>
+                    <button class="content" id="theme-toggle" aria-label="Toggle theme">
+                        <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
+                    </button>
                     <h1 id="article-title">${title}</h1>
                 </header>
                 ${htmlBody}
