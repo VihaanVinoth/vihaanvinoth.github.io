@@ -501,7 +501,8 @@ hr {
   width: 5em;
   height: 5em;
   position: absolute;
-  top: 0;
+  top: 50px;;
+  z-index: 100;
   background: red;
 }
 
