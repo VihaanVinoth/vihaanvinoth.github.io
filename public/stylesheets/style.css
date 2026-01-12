@@ -509,6 +509,7 @@ time, .summary {
   font-family: var(--mono-font);
 }
 
-.article {
-  top: -200px;
+.article-text {
+  position: absolute;
+  top: -10px;
 }
