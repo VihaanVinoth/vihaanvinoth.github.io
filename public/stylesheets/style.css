@@ -501,7 +501,7 @@ hr {
   height: 5em;
   z-index: 100;
   position: relative;
-  top: -10px;
+  top: -50px;
   background: var(--blur-grad);
 }
 
