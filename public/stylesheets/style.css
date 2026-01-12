@@ -507,12 +507,10 @@ hr {
 
 time, .summary {
   font-family: var(--mono-font);
-  text-align: center;
 }
 
 .article-text {
   display: flex;
-  align-items: center;
   position: absolute;
   top: 225px;
 }
