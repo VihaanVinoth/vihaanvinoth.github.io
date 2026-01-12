@@ -17,7 +17,7 @@
   --icon-filter: brightness(0) invert(1);
   --bg-toggle-border: 1px solid darkslategray;
   --bg-toggle: linear-gradient(rgba(27, 46, 46, 1) 5%, rgba(0, 0, 0, 1) 50%);
-  --map-grad: linear-gradient(
+  --blur-grad: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(0, 0, 0, 1) 70%
@@ -47,7 +47,7 @@
     rgba(255, 255, 0, 1) 20%,
     rgba(255, 255, 255, 1) 50%
   );
-  --map-grad: linear-gradient(
+  --blur-grad: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 1) 70%
@@ -218,7 +218,7 @@ img {
   content: "";
   width: 28.8em;
   height: 3em;
-  background: var(--map-grad);
+  background: var(--blur-grad);
   position: absolute;
   top: 18.2em;
   z-index: 100;
