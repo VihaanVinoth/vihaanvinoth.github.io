@@ -36,7 +36,20 @@ for (const file of fs.readdirSync(postsDir)) {
 
   const title = data.title ?? slug;
   const summary = data.summary ?? "";
-  const date = data.date.toLocaleDateString() ?? "";
+
+  const dateNow = data.date;
+
+  const options = {
+    day: '2-digit',
+    month: 'long',
+    year: '2-digit'
+  }
+
+  const dateFormat = new Intl.DateTimeFormat('en-GB', options).format(dateNow);
+
+  const parts = dateFormat.split(' ');
+
+  const date = `${parts[0].replace(',', '')} ${parts[1]}, ${parts[2]}` ?? "";
   const cover = data.cover ?? "";
 
   const html = `
