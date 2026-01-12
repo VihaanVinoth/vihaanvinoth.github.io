@@ -511,6 +511,7 @@ time, .summary {
 }
 
 .article-text {
-  position: absolute;
-  top: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
