@@ -497,7 +497,7 @@ hr {
 
 .cover-blur {
   content: "";
-  width: 9em;
+  width: 10em;
   height: 5em;
   z-index: 100;
   background: red;
