@@ -32,7 +32,7 @@ for (const file of fs.readdirSync(postsDir)) {
 
     const title = data.title ?? slug;
     const summary = data.summary ?? "";
-    const date = data.date ?? "";
+    const date = data.date.toLocaleString() ?? "";
     const cover = data.cover ?? "";
 
     const html = `
