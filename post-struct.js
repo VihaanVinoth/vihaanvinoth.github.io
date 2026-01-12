@@ -47,9 +47,10 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main>
-            <button class="content" id="theme-toggle" aria-label="Toggle theme">
+            <button id="theme-toggle" aria-label="Toggle theme">
                 <img id="theme-toggle-icon" src="./icons/light-mode-icon.svg" fetchpriority="high">
             </button>
+            <br>
             <section class="article">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 ${
@@ -66,20 +67,6 @@ for (const file of fs.readdirSync(postsDir)) {
         </main>
         <script type="text/javascript">
         window.addEventListener("load", () => {
-            const observer = new IntersectionObserver(
-                entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("visible");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.1 }
-            );
-
-            document.querySelectorAll(".content").forEach(el => observer.observe(el));
-
             if ('scrollRestoration' in history) {
                 history.scrollRestoration = 'manual';
             }
