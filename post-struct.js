@@ -46,7 +46,7 @@ for (const file of fs.readdirSync(postsDir)) {
         <meta name="description" content="${summary}">
     </head>
     <body>
-        <main>
+        <main class="content" id="mainContent">
             <section class="article content">
                 <br>
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
