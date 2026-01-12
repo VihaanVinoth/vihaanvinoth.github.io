@@ -499,7 +499,6 @@ hr {
   content: "";
   width: 5em;
   height: 5em;
-  position: absolute;
   z-index: 100;
   background: red;
 }
