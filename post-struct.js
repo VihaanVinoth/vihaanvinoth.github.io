@@ -30,6 +30,10 @@ for (const file of fs.readdirSync(postsDir)) {
   const htmlBody = md.render(content);
   const slug = path.basename(file, ".md");
 
+  const wpm = 225;
+  const words = htmlBody.trim().split(/\s+/).length;
+  const mins = Math.ceil(words / wpm); 
+
   const title = data.title ?? slug;
   const summary = data.summary ?? "";
   const date = data.date.toLocaleDateString() ?? "";
@@ -58,7 +62,7 @@ for (const file of fs.readdirSync(postsDir)) {
                     <br>
                     ${
                     date
-                        ? `<time datetime="${date}">${date} · Vihaan Vinoth</time>`
+                        ? `<time datetime="${date}">${date} · Vihaan Vinoth · ${mins} min read</time>`
                         : ""
                     }
                     ${summary ? `<p class="summary">${summary}</p>` : ""}
