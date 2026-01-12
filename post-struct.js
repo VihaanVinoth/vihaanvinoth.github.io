@@ -64,6 +64,7 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main class="content" id="mainContent">
+            <a href="index.html" id="logo"><img src="./VVNormal.png" fetchpriority="high"></a>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
                 <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
             </button>
