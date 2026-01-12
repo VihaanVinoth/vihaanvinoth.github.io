@@ -508,6 +508,7 @@ hr {
 time, .summary {
   font-family: var(--mono-font);
   text-transform: uppercase;
+  font-size: 8px;
 }
 
 .article-text {
@@ -517,4 +518,5 @@ time, .summary {
   flex-direction: column;
   position: relative;
   top: -100px;
+  text-align: center;
 }
