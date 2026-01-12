@@ -1,7 +1,6 @@
 const PostPreview = ({ entry, widgetFor }) => {
   const wpm = 225;
-  const body = entry.getIn(["data", "body"]) || "";
-  const words = body.trim().split(/\s+/).length;
+  const words = widgetFor("body").trim().split(/\s+/).length;
   const mins = Math.ceil(words / wpm);
 
   const title = entry.getIn(["data", "title"]);
