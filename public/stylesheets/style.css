@@ -509,7 +509,7 @@ time, .summary {
   font-family: var(--mono-font);
   text-align: center;
   position: relative;
-  left: 75px;
+  left: 85px;
 }
 
 .article-text {
