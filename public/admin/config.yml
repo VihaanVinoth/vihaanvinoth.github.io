@@ -8,6 +8,10 @@ backend:
 media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 
+site_url: /
+display_url: /
+preview_path: /
+
 collections:
   - name: "posts"
     label: "Blog Posts"
