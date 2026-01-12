@@ -17,6 +17,4 @@
     "react": "^19.2.3"
   },
   "devDependencies": {
-    "chokidar": "^5.0.0"
-  }
-}
+    "ch
