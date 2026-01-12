@@ -492,4 +492,5 @@ hr {
 
 .cover {
   width: 500px;
+  object-fit: cover;
 }
