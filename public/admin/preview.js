@@ -1,6 +1,7 @@
 const PostPreview = ({ entry, widgetFor }) => {
   const wpm = 225;
-  const words = widgetFor("body").trim().split(/\s+/).length;
+  const body = entry.getIn(["data", "body"]) || "";
+  const words = body.trim().split(/\s+/).length;
   const mins = Math.ceil(words / wpm);
 
   const title = entry.getIn(["data", "title"]);
@@ -115,4 +116,4 @@ const PostPreview = ({ entry, widgetFor }) => {
   `;
 };
 
-CSM.registerPreviewTemplate("posts", PostPreview);
+CMS.registerPreviewTemplate("posts", PostPreview);
