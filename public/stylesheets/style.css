@@ -508,7 +508,7 @@ hr {
 time, .summary {
   font-family: var(--mono-font);
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 13px;
 }
 
 .article-text {
