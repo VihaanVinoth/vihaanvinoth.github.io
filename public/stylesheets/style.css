@@ -512,7 +512,7 @@ time, .summary {
 
 .article-text {
   display: flex;
-  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 225px;
 }
