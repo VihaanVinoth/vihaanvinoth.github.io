@@ -493,10 +493,9 @@ hr {
 .cover {
   width: 500px;
   object-fit: cover;
-  position: relative;
 }
 
-.cover::before {
+.cover::after {
   content: "";
   width: 5em;
   height: 5em;
