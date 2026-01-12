@@ -496,7 +496,7 @@ hr {
   position: relative;
 }
 
-.cover::after {
+.cover::before {
   content: "";
   position: absolute;
   top: 0;
