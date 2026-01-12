@@ -503,7 +503,6 @@ hr {
   position: absolute;
   top: 50px;
   z-index: 100;
-  background: red;
 }
 
 time, .summary {
