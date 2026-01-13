@@ -522,7 +522,8 @@ time, .summary {
 }
 
 .post-preview {
-  margin-bottom: 3rem;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .post-preview .cover {
