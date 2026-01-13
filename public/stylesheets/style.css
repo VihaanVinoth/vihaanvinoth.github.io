@@ -552,6 +552,7 @@ article {
   height: auto;
   text-align: left;
   padding: 14px 16px;
+  width: 100%;
 }
 
 a, a:link, a:visited {
