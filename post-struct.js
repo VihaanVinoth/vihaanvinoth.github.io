@@ -145,4 +145,36 @@ for (const file of fs.readdirSync(postsDir)) {
         }
 
         toggle.addEventListener("click", () => {
-            const isDark = root.data
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+        </script>
+    </body>
+    </html>
+    `;
+
+  fs.writeFileSync(path.join(outDir, `${slug}.html`), html);
+
+  postsIndex.push({
+    title,
+    summary,
+    cover,
+    slug,
+    url: `/posts/${slug}.html`,
+    date: dateNow,
+    displayDate: date,
+    readingTime: mins,
+  });
+}
+
+postsIndex.sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+);
+
+fs.writeFileSync(
+    indexFile,
+    JSON.stringify(postsIndex, null, 2)
+);
+
+console.log(`Built ${outDir}`);
