@@ -251,7 +251,8 @@ img {
 .hire-container {
   border: 1px solid darkslategray;
   border-radius: 7px;
-  width: 28%;
+  width: fit-content;
+  max-width: 100%;
   padding: 4px;
   padding-left: 10px;
   margin-top: 10px;
@@ -595,4 +596,24 @@ article > h2:hover {
 
 .read-more:not(:hover)::after {
   transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 100%;
+    border: none;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .article-text {
+    top: 0;
+    padding: 1rem;
+  }
+
+  .cover-blur {
+    display: none;
+  }
 }
