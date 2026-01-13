@@ -538,7 +538,7 @@ time, .summary {
 
 .blog {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   color: var(--text);
   min-height: 100vh;
@@ -552,7 +552,6 @@ article {
   height: auto;
   text-align: left;
   padding: 14px 16px;
-  width: 100%;
 }
 
 a, a:link, a:visited {
