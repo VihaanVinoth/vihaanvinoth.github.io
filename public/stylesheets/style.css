@@ -525,6 +525,7 @@ article {
   background-color: red;
   border: 1px solid white;
   color: white;
+  height: 100%;
 }
 
 .post-preview {
