@@ -567,3 +567,16 @@ article > h2:hover {
   border-radius: 7px;
   padding: 10px;
 }
+
+.read-more::after {
+  content: "→";
+  transition: all 500ms;
+}
+
+.read-more:hover::after {
+  transform: translateX(2px);
+}
+
+.read-more:not(:hover)::after {
+  transform: translateX(0);
+}
