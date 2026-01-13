@@ -12,6 +12,7 @@ const md = new MarkdownIt({
 const ROOT = process.cwd();
 const postsDir = path.join(ROOT, "blog/posts");
 const outDir = path.join(ROOT, "public/posts");
+const indexFile = path.join(ROOT, "public/posts.json");
 
 if (!fs.existsSync(postsDir)) {
   console.error("Post directory not found");
@@ -19,6 +20,8 @@ if (!fs.existsSync(postsDir)) {
 }
 
 fs.mkdirSync(outDir, { recursive: true });
+
+const postsIndex = [];
 
 for (const file of fs.readdirSync(postsDir)) {
   if (!file.endsWith(".md")) continue;
@@ -31,26 +34,25 @@ for (const file of fs.readdirSync(postsDir)) {
   const slug = path.basename(file, ".md");
 
   const wpm = 225;
-  const words = htmlBody.trim().split(/\s+/).length;
-  const mins = Math.ceil(words / wpm); 
+  const words = content.trim().split(/\s+/).length;
+  const mins = Math.max(1, Math.ceil(words / wpm));
 
   const title = data.title ?? slug;
   const summary = data.summary ?? "";
-
-  const dateNow = data.date;
+  const cover = data.cover ?? "";
+  const dateNow = data.date ?? "";
 
   const options = {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric'
-  }
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  };
 
-  const dateFormat = new Intl.DateTimeFormat('en-GB', options).format(dateNow);
+  const dateFormat = new Intl.DateTimeFormat("en-GB", options).format(dateNow);
 
-  const parts = dateFormat.split(' ');
+  const parts = dateFormat.split(" ");
 
-  const date = `${parts[0].replace(',', '')} ${parts[1]}, ${parts[2]}` ?? "";
-  const cover = data.cover ?? "";
+  const date = `${parts[0].replace(",", "")} ${parts[1]}, ${parts[2]}` ?? "";
 
   const html = `
     <!DOCTYPE html>
@@ -77,7 +79,7 @@ for (const file of fs.readdirSync(postsDir)) {
                     <br>
                     <br>
                     ${
-                    date
+                      date
                         ? `<time datetime="${date}">${date} · Vihaan Vinoth · ${mins} min read</time>`
                         : ""
                     }
@@ -151,6 +153,26 @@ for (const file of fs.readdirSync(postsDir)) {
     `;
 
   fs.writeFileSync(path.join(outDir, `${slug}.html`), html);
+
+  postsIndex.push({
+    title,
+    summary,
+    cover,
+    slug,
+    url: `/posts/${slug}.html`,
+    date: dateNow,
+    options,
+    readingTime: mins,
+  });
 }
+
+postsIndex.sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+);
+
+fs.writeFileSync(
+    indexFile,
+    JSON.stringify(postsIndex, null, 2)
+);
 
 console.log(`Built ${outDir}`);
