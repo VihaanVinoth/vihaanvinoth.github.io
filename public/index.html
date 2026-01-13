@@ -269,7 +269,7 @@
 
                 posts.forEach(post => {
                     const article = document.createElement("article");
-                    article.className = "post-preview content";
+                    article.className = "post-preview content visible";
 
                     article.innerHTML = `
                     ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy">` : ""}
