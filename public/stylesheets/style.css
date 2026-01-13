@@ -538,7 +538,20 @@ time, .summary {
 
 .blog {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  color: var(--text);
+  min-height: 100vh;
+  height: auto;
+  scroll-snap-align: start;
+}
 
+article {
+  border: var(--border);
+  border-radius: 5px;
+  height: auto;
+  text-align: left;
+  padding: 14px 16px;
 }
 
 a, a:link, a:visited {
