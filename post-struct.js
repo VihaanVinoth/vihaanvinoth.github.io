@@ -61,6 +61,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <head>
         <meta charset="utf-8">
         <title>${slug}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="../stylesheets/reset.css">
         <meta name="description" content="${summary}">
