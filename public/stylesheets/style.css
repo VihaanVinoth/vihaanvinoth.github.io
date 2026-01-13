@@ -189,9 +189,15 @@ section p {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   color: var(--text);
-  min-height: 100vh;
+  min-height: 100svh;
   height: auto;
   scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 ::selection {
@@ -216,7 +222,8 @@ img {
 
 .map-box::before {
   content: "";
-  width: 28.8em;
+  width: 100%;
+  max-width: 28.8em;
   height: 3em;
   background: var(--blur-grad);
   position: absolute;
@@ -494,13 +501,15 @@ hr {
 }
 
 .cover {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   object-fit: cover;
 }
 
 .cover-blur {
   content: "";
-  width: 458px;
+  width: 100%;
+  max-width: 458px;
   height: 5em;
   z-index: 100;
   position: relative;
