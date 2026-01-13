@@ -520,3 +520,22 @@ time, .summary {
   top: -100px;
   text-align: center;
 }
+
+.post-preview {
+  margin-bottom: 3rem;
+}
+
+.post-preview .cover {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.post-text time {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
