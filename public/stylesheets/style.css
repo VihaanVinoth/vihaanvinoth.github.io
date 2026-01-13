@@ -525,6 +525,8 @@ time, .summary {
   background-color: red;
   border: 1px solid white;
   color: white;
+  position: relative;
+  z-index: 100;
 }
 
 .post-preview {
