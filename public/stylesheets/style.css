@@ -68,6 +68,7 @@
 }
 
 .projects,
+.blog,
 .footer,
 .icons-box {
     contain-intrinsic-size: 600px;
@@ -183,7 +184,7 @@ section:not(.footer) {
   scroll-snap-align: start;
 }
 
-.projects, .blog {
+.projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -309,6 +310,7 @@ hr {
 }
 
 .projects,
+.blog,
 .footer,
 .icons-box {
     contain: content;
@@ -337,7 +339,7 @@ hr {
   text-decoration: dotted underline darkslategrey;
 }
 
-.project-img {
+.project-img, article > img {
   width: 100%;
   object-fit: cover;
   object-position: left;
