@@ -80,15 +80,4 @@
         if (savedTheme) {
             root.dataset.theme = savedTheme;
         } else {
-            root.dataset.theme = systemDark ? "dark" : "light";
-        }
-
-        toggle.addEventListener("click", () => {
-            const isDark = root.dataset.theme === "dark";
-            root.dataset.theme = isDark ? "light" : "dark";
-            localStorage.setItem("theme", root.dataset.theme);
-        });
-        </script>
-    </body>
-    </html>
-    
+           
