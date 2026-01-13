@@ -164,7 +164,7 @@ main {
   }
 }
 
-.content[data-animate] {
+.content {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
