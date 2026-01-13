@@ -272,7 +272,6 @@
                     article.className = "post-preview content";
 
                     article.innerHTML = `
-                    ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy">` : ""}
                     <div class="post-text">
                         <time datetime="${post.date}">
                             ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
@@ -299,3 +298,6 @@
 </body>
 
 </html>
+
+<!-- Article - IndexHTML -->
+<!-- ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy">` : ""} -->
