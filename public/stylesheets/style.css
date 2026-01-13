@@ -210,15 +210,8 @@ section p {
   }
 
   .article-text {
-    top: 0;
-    position: static;
-    transform: none;
     padding: 1rem 0;
     text-align: left;
-  }
-
-  .cover-blur {
-    display: none;
   }
 
   section.hero {
