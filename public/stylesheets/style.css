@@ -177,6 +177,10 @@ section:not(.footer) {
   height: auto;
 }
 
+section p {
+  text-align: left;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
