@@ -552,7 +552,11 @@ article {
 
 a, a:link, a:visited {
   color: var(--text);
-  text-decoration: dotted underline darkslategray;
+  text-decoration: none;
+}
+
+article > h2:hover {
+  text-decoration: dotted underline darkslategray;;
 }
 
 .read-more {
