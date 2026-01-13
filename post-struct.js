@@ -84,7 +84,6 @@ for (const file of fs.readdirSync(postsDir)) {
                         ? `<time datetime="${date}">${date} · Vihaan Vinoth · ${mins} min read</time>`
                         : ""
                     }
-                    ${summary ? `<p class="summary">${summary}</p>` : ""}
                     <header>
                         <h1 id="article-title">${title}</h1>
                     </header>
