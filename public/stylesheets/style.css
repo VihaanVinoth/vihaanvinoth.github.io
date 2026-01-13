@@ -218,19 +218,22 @@ img {
 .map-box {
   border-radius: var(--border-radius-map);
   outline: none;
+  position: relative;
 }
 
 .map-box::before {
   content: "";
-  width: 100%;
-  max-width: 28.8em;
-  height: 3em;
-  background: var(--blur-grad);
   position: absolute;
-  top: 18.2em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  background: var(--blur-grad);
   z-index: 100;
   border-radius: var(--border-radius-map);
   outline: none;
+  pointer-events: none;
 }
 
 #map {
@@ -610,10 +613,35 @@ article > h2:hover {
 
   .article-text {
     top: 0;
-    padding: 1rem;
+    position: static;
+    transform: none;
+    padding: 1rem 0;
+    text-align: left;
   }
 
   .cover-blur {
     display: none;
+  }
+
+  section.hero {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  section.hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  section.hero p {
+    margin-top: 0.75rem;
+  }
+
+  #map {
+    height: 120px;
+  }
+
+  .map-box {
+    margin: 1rem 0;
   }
 }
