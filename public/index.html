@@ -249,4 +249,56 @@
             if (!entries[0].isIntersecting) return;
 
             loadLeafletCSS();
-        
+            loadLeafletJS().then(initMap);
+
+            mapObserver.disconnect();
+
+        }, { threshold: 0.25 });
+
+        mapObserver.observe(document.getElementById('map'));
+    </script>
+    <script type="text/javascript">
+        (async () => {
+            const container = document.getElementById("posts");
+            if (!container) return;
+
+            try {
+                const res = await fetch("/posts.json");
+                if (!res.ok) throw new Error("Failed to load posts");
+
+                const posts = await res.json();
+
+                posts.forEach(post => {
+                    const article = document.createElement("article");
+                    article.className = "post-preview content";
+
+                    article.innerHTML = `
+                    <div class="post-text">
+                        <time datetime="${post.date}">
+                            ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
+                        </time>
+
+                        <h2>${post.title}</h2>
+
+                        <p class="summary">${post.summary}</p>
+
+                        <a class="read-more" href="${post.url}">
+                            Read
+                        </a>
+                    </div>
+                    `;
+
+                    container.appendChild(article);
+                });
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = "<p>Failed to load posts.</p>";
+            }
+        })();
+    </script>
+</body>
+
+</html>
+
+<!-- Article - IndexHTML -->
+<!-- ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy">` : ""} -->
