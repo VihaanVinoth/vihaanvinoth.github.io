@@ -207,7 +207,46 @@ section p {
 
 @media (max-width: 500px) {
   main {
-    border: transparent;
+    max-width: 100%;
+    border: none;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .article-text {
+    top: 0;
+    position: static;
+    transform: none;
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .cover-blur {
+    display: none;
+  }
+
+  section.hero {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  section.hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  section.hero p {
+    margin-top: 0.75rem;
+  }
+
+  #map {
+    height: 120px;
+  }
+
+  .map-box {
+    margin: 1rem 0;
   }
 }
 
@@ -258,6 +297,7 @@ img {
   max-width: 100%;
   padding: 4px;
   padding-left: 10px;
+  padding-right: 2px;
   margin-top: 10px;
   text-align: center;
   font-size: 13px;
@@ -601,47 +641,4 @@ article > h2:hover {
   transform: translateX(0);
 }
 
-@media (max-width: 600px) {
-  main {
-    max-width: 100%;
-    border: none;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  .article-text {
-    top: 0;
-    position: static;
-    transform: none;
-    padding: 1rem 0;
-    text-align: left;
-  }
-
-  .cover-blur {
-    display: none;
-  }
-
-  section.hero {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-
-  section.hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  section.hero p {
-    margin-top: 0.75rem;
-  }
-
-  #map {
-    height: 120px;
-  }
-
-  .map-box {
-    margin: 1rem 0;
-  }
-}
+@media (max-width: 600px) {}
