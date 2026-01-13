@@ -161,7 +161,7 @@ for (const file of fs.readdirSync(postsDir)) {
     summary,
     cover,
     slug,
-    url: `/posts/${slug}.html`,
+    url: `/posts/${slug}`,
     date: dateNow,
     displayDate: date,
     readingTime: mins,

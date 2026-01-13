@@ -6,11 +6,7 @@
     "slug": "hello",
     "url": "/posts/hello.html",
     "date": "2026-01-09T06:15:00.000Z",
-    "options": {
-      "day": "2-digit",
-      "month": "long",
-      "year": "numeric"
-    },
+    "displayDate": "09 January, 2026",
     "readingTime": 1
   }
 ]
