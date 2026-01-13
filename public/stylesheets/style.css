@@ -521,7 +521,7 @@ time, .summary {
   text-align: center;
 }
 
-.article {
+article {
   background-color: red;
   border: 1px solid white;
   color: white;
