@@ -551,9 +551,10 @@ time, .summary {
 article {
   border: var(--border);
   border-radius: 5px;
-  height: auto;
+  height: 100%;
   text-align: left;
   padding: 14px 16px;
+  overflow: hidden;
 }
 
 a, a:link, a:visited {
