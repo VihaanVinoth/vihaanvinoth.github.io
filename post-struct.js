@@ -89,7 +89,7 @@ for (const file of fs.readdirSync(postsDir)) {
                     <header>
                         <h1 id="article-title">${title}</h1>
                     </header>
-                    <p>${htmlBody}</p>
+                    ${htmlBody}
                 </div>
             </section>
             <br>
