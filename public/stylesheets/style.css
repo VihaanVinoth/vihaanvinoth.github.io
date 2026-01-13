@@ -194,12 +194,6 @@ section p {
   scroll-snap-align: start;
 }
 
-@media (max-width: 768px) {
-  .projects {
-    grid-template-columns: 1fr;
-  }
-}
-
 ::selection {
   background: var(--text);
   color: var(--selection-text-color);
