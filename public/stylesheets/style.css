@@ -183,7 +183,7 @@ section:not(.footer) {
   scroll-snap-align: start;
 }
 
-.projects {
+.projects, .blog {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -534,6 +534,11 @@ time, .summary {
 .post-text time {
   opacity: 0.7;
   font-size: 0.9rem;
+}
+
+.blog {
+  display: grid;
+
 }
 
 a, a:link, a:visited {
