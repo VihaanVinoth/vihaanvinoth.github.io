@@ -107,9 +107,12 @@ for (const file of fs.readdirSync(postsDir)) {
                     </svg>
                     <p>Contact</p>
                 </a>
-                <p id="footer-reserved">©2025 Made with 🌶️ by Vihaan Vinoth.</p>
+                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
             </section>
         </main>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
         <script type="text/javascript">
         window.addEventListener("load", () => {
             const observer = new IntersectionObserver(
