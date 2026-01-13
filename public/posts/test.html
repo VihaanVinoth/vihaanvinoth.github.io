@@ -1,69 +1,12 @@
-import fs from "fs";
-import path from "path";
-import MarkdownIt from "markdown-it";
-import matter from "gray-matter";
 
-const md = new MarkdownIt({
-  html: true,
-  breaks: true,
-  linkify: true,
-});
-
-const postsDir = "blog/posts";
-const outDir = "public/posts";
-const indexFile = "public/posts.json";
-
-if (!fs.existsSync(postsDir)) {
-  console.error("Post directory not found");
-  process.exit(1);
-}
-
-fs.mkdirSync(outDir, { recursive: true });
-
-const postsIndex = [];
-
-for (const file of fs.readdirSync(postsDir)) {
-  if (!file.endsWith(".md")) continue;
-
-  const mdContent = fs.readFileSync(path.join(postsDir, file), "utf-8");
-
-  const { data, content } = matter(mdContent);
-
-  const htmlBody = md.render(content);
-  const slug = path.basename(file, ".md");
-
-  const wpm = 225;
-  const words = content.trim().split(/\s+/).length;
-  const mins = Math.max(1, Math.ceil(words / wpm));
-
-  const title = data.title ?? slug;
-  const summary = data.description ?? "";
-  const cover = data.cover ?? "";
-  const dateNow = data.date ?? "";
-
-  const dateObj = dateNow ? new Date(dateNow) : null;
-
-  const options = {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  };
-
-  const dateFormat = dateObj ? new Intl.DateTimeFormat("en-GB", options).format(dateObj) : "";
-
-  const parts = dateFormat.split(" ");
-
-  const date = `${parts[0].replace(",", "")} ${parts[1]}, ${parts[2]}` ?? "";
-
-  const html = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>${slug}</title>
+        <title>test</title>
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="../stylesheets/reset.css">
-        <meta name="description" content="${summary}">
+        <meta name="description" content="">
     </head>
     <body>
         <main class="content" id="mainContent">
@@ -74,21 +17,18 @@ for (const file of fs.readdirSync(postsDir)) {
                 <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
             </button>
             <section class="article content">
-                ${cover ? `<img class="cover" src="${cover}">` : ""}
+                <img class="cover" src="/assets/uploads/img_7942.jpeg">
                 <div class="cover-blur"></div>
                 <div class="article-text">
                     <br>
                     <br>
-                    ${
-                      date
-                        ? `<time datetime="${date}">${date} · Vihaan Vinoth · ${mins} min read</time>`
-                        : ""
-                    }
-                    ${summary ? `<p class="summary">${summary}</p>` : ""}
+                    <time datetime="13 January, 2026">13 January, 2026 · Vihaan Vinoth · 1 min read</time>
+                    
                     <header>
-                        <h1 id="article-title">${title}</h1>
+                        <h1 id="article-title">Test</h1>
                     </header>
-                    ${htmlBody}
+                    <p>This is the <strong>final</strong> test before I publish my website.</p>
+
                 </div>
             </section>
             <br>
@@ -151,29 +91,4 @@ for (const file of fs.readdirSync(postsDir)) {
         </script>
     </body>
     </html>
-    `;
-
-  fs.writeFileSync(path.join(outDir, `${slug}.html`), html);
-
-  postsIndex.push({
-    title,
-    summary,
-    cover,
-    slug,
-    url: `/posts/${slug}`,
-    date: dateNow,
-    displayDate: date,
-    readingTime: mins,
-  });
-}
-
-postsIndex.sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-);
-
-fs.writeFileSync(
-    indexFile,
-    JSON.stringify(postsIndex, null, 2)
-);
-
-console.log(`Built ${outDir}`);
+    

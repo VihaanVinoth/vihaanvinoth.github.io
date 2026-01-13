@@ -1,10 +1,20 @@
 [
   {
-    "title": "Hello",
+    "title": "Test",
+    "summary": "",
+    "cover": "/assets/uploads/img_7942.jpeg",
+    "slug": "test",
+    "url": "/posts/test",
+    "date": "2026-01-13T03:02:00.000Z",
+    "displayDate": "13 January, 2026",
+    "readingTime": 1
+  },
+  {
+    "title": "Welcome to my Blog",
     "summary": "",
     "cover": "/assets/uploads/welcome-to.png",
     "slug": "hello",
-    "url": "/posts/hello.html",
+    "url": "/posts/hello",
     "date": "2026-01-09T06:15:00.000Z",
     "displayDate": "09 January, 2026",
     "readingTime": 1
