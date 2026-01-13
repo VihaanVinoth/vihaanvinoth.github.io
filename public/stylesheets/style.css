@@ -67,13 +67,6 @@
   --selection-text-color: white;
 }
 
-.projects,
-.blog,
-.footer,
-.icons-box {
-    contain-intrinsic-size: 600px;
-}
-
 #theme-toggle {
   border: var(--bg-toggle-border);
   background: var(--bg-toggle);
@@ -179,9 +172,9 @@ main {
 
 section:not(.footer) {
   position: relative;
-  min-height: 100vh;
+  padding-bottom: 2rem;
+  min-height: 0;
   height: auto;
-  scroll-snap-align: start;
 }
 
 .projects {
@@ -539,13 +532,12 @@ time, .summary {
 }
 
 .blog {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 10px;
+  flex-direction: column;
   color: var(--text);
-  min-height: 100vh;
-  height: auto;
-  scroll-snap-align: start;
+  height: fit-content;
+  overflow: clip;
 }
 
 article {
