@@ -342,7 +342,7 @@ hr {
 .project-img, article > img {
   width: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
   aspect-ratio: 3 / 2;
 }
 
