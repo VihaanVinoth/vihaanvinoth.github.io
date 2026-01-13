@@ -159,10 +159,6 @@ main {
   }
 }
 
-.hero-text {
-  line-height: 1.2;
-}
-
 .content {
   opacity: 0;
   transform: translateY(16px);
@@ -245,6 +241,10 @@ section p {
 
   .map-box {
     margin: 1rem 0;
+  }
+
+  .hero-text {
+    line-height: 1.2;
   }
 }
 
