@@ -179,6 +179,8 @@ section:not(.footer) {
 
 section p {
   text-align: left;
+  font-family: var(--sans-font);
+  text-transform: none;
 }
 
 .projects {
