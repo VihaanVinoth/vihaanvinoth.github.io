@@ -521,6 +521,11 @@ time, .summary {
   text-align: center;
 }
 
+.post-preview {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .post-preview .cover {
   width: 100%;
   border-radius: 12px;
