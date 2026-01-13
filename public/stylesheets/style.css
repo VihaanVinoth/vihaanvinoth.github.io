@@ -549,7 +549,7 @@ time, .summary {
 article {
   border: var(--border);
   border-radius: 5px;
-  height: 50%;
+  height: 55%;
   text-align: left;
   padding: 14px 16px;
 }
