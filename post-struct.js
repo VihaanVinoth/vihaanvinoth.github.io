@@ -9,10 +9,9 @@ const md = new MarkdownIt({
   linkify: true,
 });
 
-const ROOT = process.cwd();
-const postsDir = path.join(ROOT, "blog/posts");
-const outDir = path.join(ROOT, "public/posts");
-const indexFile = path.join(ROOT, "public/posts.json");
+const postsDir = "blog/posts";
+const outDir = "public/posts";
+const indexFile = "public/posts.json";
 
 if (!fs.existsSync(postsDir)) {
   console.error("Post directory not found");
