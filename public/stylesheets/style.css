@@ -309,7 +309,7 @@ hr {
 }
 
 .project-box {
-  border: lightslategrey;
+  border: 1px solid rgb(38, 38, 38);
   background: var(--bg);
   border-radius: 5px;
   height: auto;
