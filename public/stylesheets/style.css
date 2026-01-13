@@ -551,7 +551,7 @@ article {
 
 a, a:link, a:visited {
   color: var(--text);
-  text-decoration: none;
+  text-decoration: dotted underline darkslategray;
 }
 
 .read-more {
