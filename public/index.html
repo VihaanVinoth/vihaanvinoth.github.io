@@ -259,6 +259,7 @@
     <script type="text/javascript">
         (async () => {
             const container = document.getElementById("posts");
+            if (!container) return;
 
             try {
                 const res = await fetch("/posts.json");
@@ -271,7 +272,7 @@
                     article.className = "post-preview content";
 
                     article.innerHTML = `
-                    ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy` : ""}
+                    ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy">` : ""}
                     <div class="post-text">
                         <time datetime="${post.date}">
                             ${post.displayDate} · ${post.readingTime} min read
