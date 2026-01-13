@@ -87,7 +87,7 @@
 body,
 html {
   font-family: var(--sans-font);
-  background: red;
+  background: var(--bg);
   color: var(--text);
   scrollbar-width: thin;
 }
