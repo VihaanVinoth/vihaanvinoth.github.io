@@ -521,11 +521,6 @@ time, .summary {
   text-align: center;
 }
 
-.post-preview {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
 .post-preview .cover {
   width: 100%;
   border-radius: 12px;
@@ -536,7 +531,10 @@ time, .summary {
   font-size: 0.9rem;
 }
 
-.read-more {
+a .read-more {
   display: inline-block;
   margin-top: 0.5rem;
+  border: 1px solid darkslategray;
+  border-radius: 7px;
+  color: var(--text);
 }
