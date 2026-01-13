@@ -521,13 +521,6 @@ time, .summary {
   text-align: center;
 }
 
-article {
-  background-color: red;
-  border: 1px solid white;
-  color: white;
-  height: 100%;
-}
-
 .post-preview {
   margin-bottom: 3rem;
 }
