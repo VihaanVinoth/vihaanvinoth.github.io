@@ -42,13 +42,15 @@ for (const file of fs.readdirSync(postsDir)) {
   const cover = data.cover ?? "";
   const dateNow = data.date ?? "";
 
+  const dateObj = dateNow ? new Date(dateNow) : null;
+
   const options = {
     day: "2-digit",
     month: "long",
     year: "numeric",
   };
 
-  const dateFormat = new Intl.DateTimeFormat("en-GB", options).format(dateNow);
+  const dateFormat = dateObj ? new Intl.DateTimeFormat("en-GB", options).format(dateObj) : "";
 
   const parts = dateFormat.split(" ");
 
@@ -161,7 +163,7 @@ for (const file of fs.readdirSync(postsDir)) {
     slug,
     url: `/posts/${slug}.html`,
     date: dateNow,
-    options,
+    displayDate: date,
     readingTime: mins,
   });
 }
