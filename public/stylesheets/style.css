@@ -448,7 +448,7 @@ hr {
   width: 40px;
   background: var(--icon-track-fade-verse);
   position: absolute;
-  left: 0px;
+  left: -0.1px;
   z-index: 100;
 }
 
@@ -459,7 +459,7 @@ hr {
   background: var(--icon-track-fade-reverse);
   position: absolute;
   top: 0;
-  right: 0px;
+  right: -0.1px;
   z-index: 100;
 }
 
