@@ -82,11 +82,11 @@ for (const file of fs.readdirSync(postsDir)) {
     </head>
     <body>
         <main class="content" id="mainContent">
-            <a href="../index.html" id="logo"><img src="../VVNormal.png" fetchpriority="high"></a>
+            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="../VVNormal.png" alt="Vihaan Vinoth Logo" fetchpriority="high"></a>
             <br>
             <br>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
+                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" alt="Theme toggle icon" fetchpriority="high">
             </button>
             <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
@@ -108,12 +108,12 @@ for (const file of fs.readdirSync(postsDir)) {
             <br>
             <hr>
             <section class="footer content">
-                <a href="https://github.com/VihaanVinoth">
+                <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
                     <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
                     <p>Github</p>
                 </a>
                 <p>&nbsp;&nbsp;</p>
-                <a href="mailto:dalx900@gmail.com">
+                <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
                     <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                         loading="lazy" width="20px" fill="#FFFFFF">
                         <path
@@ -145,59 +145,4 @@ for (const file of fs.readdirSync(postsDir)) {
                 entries => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            entry.target.classList.add("visible");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.1 }
-            );
-
-            document.querySelectorAll(".content").forEach(el => observer.observe(el));
-
-            if ('scrollRestoration' in history) {
-                history.scrollRestoration = 'manual';
-            }
-        });
-
-        const toggle = document.getElementById("theme-toggle");
-        const root = document.documentElement;
-
-        const savedTheme = localStorage.getItem("theme");
-        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-        if (savedTheme) {
-            root.dataset.theme = savedTheme;
-        } else {
-            root.dataset.theme = systemDark ? "dark" : "light";
-        }
-
-        toggle.addEventListener("click", () => {
-            const isDark = root.dataset.theme === "dark";
-            root.dataset.theme = isDark ? "light" : "dark";
-            localStorage.setItem("theme", root.dataset.theme);
-        });
-        </script>
-    </body>
-    </html>
-    `;
-
-  fs.writeFileSync(path.join(outDir, `${slug}.html`), html);
-
-  postsIndex.push({
-    title,
-    summary,
-    cover,
-    slug,
-    url: `/posts/${slug}`,
-    date: dateNow,
-    displayDate: date,
-    readingTime: mins,
-  });
-}
-
-postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-fs.writeFileSync(indexFile, JSON.stringify(postsIndex, null, 2));
-
-console.log(`Built ${outDir}`);
+                         
