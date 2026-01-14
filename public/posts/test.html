@@ -88,4 +88,11 @@
         }
 
         toggle.addEventListener("click", () => {
-            const isDark = root.dataset.theme === 
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+        </script>
+    </body>
+    </html>
+    

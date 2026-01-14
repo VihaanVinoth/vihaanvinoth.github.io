@@ -6,4 +6,17 @@
     "slug": "test",
     "url": "/posts/test",
     "date": "2026-01-13T03:02:00.000Z",
-    "displayDate": "13 January, 2026
+    "displayDate": "13 January, 2026",
+    "readingTime": 1
+  },
+  {
+    "title": "Welcome to my Blog",
+    "summary": "This is the first post of my blog.",
+    "cover": "/assets/uploads/welcome-to.png",
+    "slug": "hello",
+    "url": "/posts/hello",
+    "date": "2026-01-09T06:15:00.000Z",
+    "displayDate": "09 January, 2026",
+    "readingTime": 1
+  }
+]

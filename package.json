@@ -17,4 +17,7 @@
     "react": "^19.2.3"
   },
   "devDependencies": {
-    "@n
+    "@netlify/plugin-sitemap": "^0.8.1",
+    "chokidar": "^5.0.0"
+  }
+}

@@ -191,4 +191,130 @@
                 { threshold: 0.1 }
             );
 
-            document.querySelectorAll(".content").forEach(el => observer
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+
+        const toggle = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme) {
+            root.dataset.theme = savedTheme;
+        } else {
+            root.dataset.theme = systemDark ? "dark" : "light";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+    </script>
+    <script type="text/javascript">
+        function loadLeafletCSS() {
+            if (document.getElementById('leaflet-css')) return;
+
+            const link = document.createElement('link');
+            link.id = 'leaflet-css';
+            link.rel = 'stylesheet';
+            link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+            link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+            link.crossOrigin = '';
+
+            document.head.appendChild(link);
+        }
+
+        function loadLeafletJS() {
+            return new Promise(resolve => {
+                if (window.L) return resolve();
+
+                const script = document.createElement('script');
+                script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+                script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+                script.crossOrigin = '';
+                script.onload = resolve;
+
+                document.head.appendChild(script);
+            });
+        }
+
+        function initMap() {
+            var map = L.map('map', {
+                center: [-37.81562, 144.96340],
+                zoom: 13,
+                zoomControl: false
+            });
+
+            L.tileLayer('https://tile.tracestrack.com/topo__/{z}/{x}/{y}.webp?key=fb53325118a0289c76508fc0d65ae853', {
+                maxZoom: 13,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" aria-label="Attribution to OpenStreetMap">OpenStreetMap</a>'
+            }).addTo(map);
+
+            L.control.attribution({
+                position: 'topright'
+            }).addTo(map);
+        }
+
+        const mapObserver = new IntersectionObserver(entries => {
+            if (!entries[0].isIntersecting) return;
+
+            loadLeafletCSS();
+            loadLeafletJS().then(initMap);
+
+            mapObserver.disconnect();
+
+        }, { threshold: 0.25 });
+
+        mapObserver.observe(document.getElementById('map'));
+    </script>
+    <script type="text/javascript">
+        (async () => {
+            const container = document.getElementById("posts");
+            if (!container) return;
+
+            try {
+                const res = await fetch("/posts.json");
+                if (!res.ok) throw new Error("Failed to load posts");
+
+                const posts = await res.json();
+
+                posts.forEach(post => {
+                    const article = document.createElement("article");
+                    article.className = "post-preview content";
+
+                    article.innerHTML = `
+                    <div class="post-text">
+                        <time datetime="${post.date}">
+                            ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
+                        </time>
+
+                        <h2>${post.title}</h2>
+
+                        <p class="summary">${post.summary}</p>
+
+                        <a class="read-more" href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
+                            Read
+                        </a>
+                    </div>
+                    `;
+
+                    container.appendChild(article);
+                });
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = "<p>Failed to load posts.</p>";
+            }
+        })();
+    </script>
+</body>
+
+</html>
+
+<!-- Article - IndexHTML -->
+<!-- ${post.cover ? `<img class="cover" src="${post.cover}" loading="lazy">` : ""} -->
