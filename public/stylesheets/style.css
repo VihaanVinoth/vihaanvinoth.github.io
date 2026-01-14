@@ -656,8 +656,8 @@ article > h2:hover {
 }
 
 .contact-form .error-message {
-  background: rgba(255, 0, 0, 0.5);
-  border: 1px solid red;
-  padding: 10px;
-  border-radius: 6px;
+  background: rgba(255, 0, 0, 0.5) !important;
+  border: 1px solid red !important;
+  padding: 10px !important;
+  border-radius: 6px !important;
 }
