@@ -185,7 +185,7 @@ section p {
 
 section p > img {
   width: 500px;
-  height: 500px;
+  height: fit-content;
 }
 
 .projects {
