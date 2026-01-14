@@ -626,12 +626,12 @@ article > h2:hover {
   transform: translateX(0);
 }
 
-form {
+.contact-form form {
   display: flex;
   flex-direction: column;
 }
 
-input, textarea, button[type="submit"] {
+.contact-form input, .contact-form textarea, .contact-form button[type="submit"] {
   background: transparent;
   border: 1px solid darkslategray;
   color: var(--text);
@@ -641,21 +641,21 @@ input, textarea, button[type="submit"] {
   outline: none;
 }
 
-button[type="submit"]:hover {
+.contact-form button[type="submit"]:hover {
   background: var(--text);
   color: var(--text-opp);
   transition: all 500ms;
   cursor: pointer;
 }
 
-.success-message {
+.contact-form .success-message {
   background: rgba(0, 128, 0, 0.5);
   border: 1px solid green;
   padding: 10px;
   border-radius: 6px;
 }
 
-.error-message {
+.contact-form .error-message {
   background: rgba(255, 0, 0, 0.5);
   border: 1px solid red;
   padding: 10px;
