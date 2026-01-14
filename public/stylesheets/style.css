@@ -631,28 +631,28 @@ article > h2:hover {
   flex-direction: column;
 }
 
-.contact-form input, .contact-form textarea, .contact-form button[type="submit"] {
-  background: transparent;
-  border: 1px solid darkslategray;
-  color: var(--text);
-  padding: 10px;
-  border-radius: 6px;
-  margin: 10px;
-  outline: none;
+.contact-form input, .contact-form textarea, .contact-form button {
+  background: transparent !important;
+  border: 1px solid darkslategray !important;
+  color: var(--text) !important;
+  padding: 10px !important;
+  border-radius: 6px !important;
+  margin: 10px !important;
+  outline: none !important;
 }
 
 .contact-form button[type="submit"]:hover {
-  background: var(--text);
-  color: var(--text-opp);
-  transition: all 500ms;
-  cursor: pointer;
+  background: var(--text) !important;
+  color: var(--text-opp) !important;
+  transition: all 500ms !important;
+  cursor: pointer !important;
 }
 
 .contact-form .success-message {
-  background: rgba(0, 128, 0, 0.5);
-  border: 1px solid green;
-  padding: 10px;
-  border-radius: 6px;
+  background: rgba(0, 128, 0, 0.5) !important;
+  border: 1px solid green !important;
+  padding: 10px !important;
+  border-radius: 6px !important;
 }
 
 .contact-form .error-message {
