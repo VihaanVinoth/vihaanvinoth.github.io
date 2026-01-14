@@ -167,7 +167,7 @@ section:not(.footer) {
 }
 
 section p {
-  text-align: left;
+  text-align: justify;
   font-family: var(--sans-font);
   text-transform: none;
 }
