@@ -193,11 +193,4 @@ for (const file of fs.readdirSync(postsDir)) {
     date: dateNow,
     displayDate: date,
     readingTime: mins,
-  });
-}
-
-postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-fs.writeFileSync(indexFile, JSON.stringify(postsIndex, null, 2));
-
-console.log(`Built ${outDir}`);
+  })
