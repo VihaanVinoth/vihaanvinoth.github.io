@@ -13,6 +13,7 @@
   --border-radius-map: 10px;
   --bg: linear-gradient(rgb(24, 24, 24) 0%, rgba(0, 0, 0, 1) 20%);
   --text: #ffffff;
+  --text-opp: #000000;
   --border: 1px solid #ffffff;
   --icon-filter: brightness(0) invert(1);
   --bg-toggle-border: 1px solid darkslategray;
@@ -40,6 +41,7 @@
 [data-theme="light"] {
   --bg: linear-gradient(rgba(255, 255, 0, 0.5) 0%, rgba(255, 255, 255, 1) 5%);
   --text: #000000;
+  --text-opp: #ffffff;
   --border: 1px solid #000000;
   --icon-filter: brightness(0) invert(0);
   --bg-toggle-border: 1px solid rgb(233, 233, 233);
@@ -622,4 +624,40 @@ article > h2:hover {
 
 .read-more:not(:hover)::after {
   transform: translateX(0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea, button[type="submit"] {
+  background: transparent;
+  border: 1px solid darkslategray;
+  color: var(--text);
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px;
+  outline: none;
+}
+
+button[type="submit"]:hover {
+  background: var(--text);
+  color: var(--text-opp);
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.success-message {
+  background: rgba(0, 128, 0, 0.5);
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.5);
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 6px;
 }
