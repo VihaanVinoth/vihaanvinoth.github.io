@@ -145,4 +145,59 @@ for (const file of fs.readdirSync(postsDir)) {
                 entries => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-       
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+
+        const toggle = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme) {
+            root.dataset.theme = savedTheme;
+        } else {
+            root.dataset.theme = systemDark ? "dark" : "light";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+        </script>
+    </body>
+    </html>
+    `;
+
+  fs.writeFileSync(path.join(outDir, `${slug}.html`), html);
+
+  postsIndex.push({
+    title,
+    summary,
+    cover,
+    slug,
+    url: `/posts/${slug}`,
+    date: dateNow,
+    displayDate: date,
+    readingTime: mins,
+  });
+}
+
+postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+fs.writeFileSync(indexFile, JSON.stringify(postsIndex, null, 2));
+
+console.log(`Built ${outDir}`);
