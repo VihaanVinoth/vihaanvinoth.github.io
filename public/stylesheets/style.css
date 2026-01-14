@@ -110,7 +110,6 @@ body {
 html {
   max-height: 100%;
   overflow-y: auto;
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -184,6 +183,10 @@ section p {
   text-transform: none;
 }
 
+section p > img {
+  width: 500px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -191,7 +194,6 @@ section p {
   color: var(--text);
   min-height: 100svh;
   height: auto;
-  scroll-snap-align: start;
 }
 
 ::selection {
@@ -631,5 +633,3 @@ article > h2:hover {
 .read-more:not(:hover)::after {
   transform: translateX(0);
 }
-
-@media (max-width: 600px) {}
