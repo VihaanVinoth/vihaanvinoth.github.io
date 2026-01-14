@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <title>Vihaan Vinoth - Full Stack Developer</title>
-    <link rel="stylesheet" href="./stylesheets/reset.css">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <meta name="description"
+    <link rel="stylesheet" href="/stylesheets/reset.css?v=1.1">
+    <link rel="stylesheet" href="/stylesheets/style.css?v=1.1">
+    <meta name="description">
         content="Hey! I'm Vihaan Vinoth, a local full-stack developer based in Melbourne, Australia.">
     <meta property="og:title" content="Vihaan Vinoth">
     <meta property="og:description"
@@ -270,7 +270,7 @@
             <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
         </section>
     </main>
-    <script>
+    <script data-cfasync="false">
         const form = document.getElementById("contactForm");
         const successMessage = form.querySelector(".success-message");
         const errorMessage = form.querySelector(".error-message");
@@ -307,10 +307,10 @@
             }
         });
     </script>
-    <script>
+    <script data-cfasync="false">
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" data-cfasync="false">
         window.addEventListener("load", () => {
             const observer = new IntersectionObserver(
                 entries => {
@@ -349,7 +349,7 @@
             localStorage.setItem("theme", root.dataset.theme);
         });
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" data-cfasync="false">
         function loadLeafletCSS() {
             if (document.getElementById('leaflet-css')) return;
 
