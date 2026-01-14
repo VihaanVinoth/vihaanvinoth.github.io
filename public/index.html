@@ -220,7 +220,7 @@
             <h2>Want to contact me?</h2>
             <p>Send me a message for a free quote!</p>
 
-            <form name="contact" id="contactForm" method="POST">
+            <form name="contact" id="contactForm" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact">
                 <br>
                 <label for="name">Name</label>
@@ -278,10 +278,17 @@
 
             const formData = new FormData(form);
 
+            const encode = (data) => {
+                return [...data.entries()]
+                    .map(([key, value]) => encodeURIComponent(key) + "=" + encodeURIComponent(value))
+                    .join("&");
+            };
+
             try {
                 const response = await fetch("/", {
                     method: "POST",
-                    body: formData
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: encode(formData)
                 });
 
                 if (response.ok) {
@@ -292,9 +299,9 @@
                     throw new Error("Form submission failed");
                 }
             } catch (err) {
+                console.error(err);
                 successMessage.hidden = true;
                 errorMessage.hidden = false;
-                console.error(err);
             }
         });
     </script>
