@@ -109,7 +109,7 @@ for (const file of fs.readdirSync(postsDir)) {
             <hr>
             <section class="footer content">
                 <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
-                    <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
+                    <img id="git-icon" src="../icons/github-icon.png" alt="Github Logo" loading="lazy">
                     <p>Github</p>
                 </a>
                 <p>&nbsp;&nbsp;</p>
