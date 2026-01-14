@@ -72,21 +72,21 @@ for (const file of fs.readdirSync(postsDir)) {
         <meta property="og:description" content="${summary}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://vihaanvinoth.com/${slug}">
-        <meta property="og:image" content="https://vihaanvinoth.com/og-image.png">
+        <meta property="og:image" content="https://cdn.vihaanvinoth.com/og-image.png">
         <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.vihaanvinoth.com/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
         <link rel="manifest" href="favicon/site.webmanifest">
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
         <main class="content" id="mainContent">
-            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="../VVNormal.png" alt="Vihaan Vinoth Logo" fetchpriority="high"></a>
+            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" fetchpriority="high"></a>
             <br>
             <br>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" alt="Theme toggle icon" fetchpriority="high">
+                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" alt="Theme toggle icon" fetchpriority="high">
             </button>
             <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
@@ -109,7 +109,7 @@ for (const file of fs.readdirSync(postsDir)) {
             <hr>
             <section class="footer content">
                 <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
-                    <img id="git-icon" src="../icons/github-icon.png" alt="Github Logo" loading="lazy">
+                    <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo" loading="lazy">
                     <p>Github</p>
                 </a>
                 <p>&nbsp;&nbsp;</p>
