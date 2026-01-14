@@ -626,3 +626,38 @@ article > h2:hover {
   transform: translateX(0);
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea, button[type="submit"] {
+  background: transparent;
+  border: 1px solid darkslategray;
+  color: var(--text);
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px;
+  outline: none;
+}
+
+button[type="submit"]:hover {
+  background: var(--text);
+  color: var(--text-opp);
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.success-message {
+  background: rgba(0, 128, 0, 0.5);
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.error-message {
+  background: rgba(255, 0, 0, 0.5);
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 6px;
+}
