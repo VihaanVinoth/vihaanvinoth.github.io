@@ -92,17 +92,6 @@ html {
   scrollbar-width: thin;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-html {
-  overflow-y: auto;
-  scroll-behavior: smooth;
-}
-
 body {
   overflow-x: hidden;
   display: flex;
