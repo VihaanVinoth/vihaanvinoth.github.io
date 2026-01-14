@@ -4,6 +4,8 @@
     <head>
         <meta charset="utf-8">
         <title>test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="../stylesheets/reset.css">
         <meta name="description" content="This is a final test before publishing">
@@ -23,7 +25,6 @@
                     <br>
                     <br>
                     <time datetime="13 January, 2026">13 January, 2026 · Vihaan Vinoth · 1 min read</time>
-                    <p class="summary">This is a final test before publishing</p>
                     <header>
                         <h1 id="article-title">Test</h1>
                     </header>
@@ -47,9 +48,12 @@
                     </svg>
                     <p>Contact</p>
                 </a>
-                <p id="footer-reserved">©2025 Made with 🌶️ by Vihaan Vinoth.</p>
+                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
             </section>
         </main>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
         <script type="text/javascript">
         window.addEventListener("load", () => {
             const observer = new IntersectionObserver(
