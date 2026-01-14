@@ -49,7 +49,9 @@ for (const file of fs.readdirSync(postsDir)) {
     year: "numeric",
   };
 
-  const dateFormat = dateObj ? new Intl.DateTimeFormat("en-GB", options).format(dateObj) : "";
+  const dateFormat = dateObj
+    ? new Intl.DateTimeFormat("en-GB", options).format(dateObj)
+    : "";
 
   const parts = dateFormat.split(" ");
 
@@ -66,7 +68,7 @@ for (const file of fs.readdirSync(postsDir)) {
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="../stylesheets/reset.css">
         <meta name="description" content="${summary}">
-        <meta property="og:title" content="${slug} - Vihaan Vinoth">
+        <meta property="og:title" content="${slug} - Vihaan Vinoth Developer Portfolio">
         <meta property="og:description" content="${summary}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://vihaanvinoth.com/${slug}">
@@ -122,6 +124,18 @@ for (const file of fs.readdirSync(postsDir)) {
                 <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
             </section>
         </main>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vihaan Vinoth",
+            "url": "https://vihaanvinoth.com",
+            "jobTitle": "Full-Stack Developer",
+            "sameAs": [
+                "https://github.com/VihaanVinoth"
+            ]
+            }
+        </script>
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
         </script>
@@ -182,13 +196,8 @@ for (const file of fs.readdirSync(postsDir)) {
   });
 }
 
-postsIndex.sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-);
+postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-fs.writeFileSync(
-    indexFile,
-    JSON.stringify(postsIndex, null, 2)
-);
+fs.writeFileSync(indexFile, JSON.stringify(postsIndex, null, 2));
 
 console.log(`Built ${outDir}`);
