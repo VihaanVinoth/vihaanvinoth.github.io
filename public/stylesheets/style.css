@@ -642,6 +642,7 @@ article > h2:hover {
   margin: 10px !important;
   outline: none !important;
   width: 100%;
+  resize: vertical;
 }
 
 .contact-form button[type="submit"]:hover {
