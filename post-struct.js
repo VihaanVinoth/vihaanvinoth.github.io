@@ -79,6 +79,7 @@ for (const file of fs.readdirSync(postsDir)) {
         <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
         <link rel="manifest" href="favicon/site.webmanifest">
         <meta name="theme-color" content="#ffffff">
+        <meta name="google-adsense-account" content="ca-pub-8253398098387796">
     </head>
     <body>
         <main class="content" id="mainContent">
