@@ -181,6 +181,10 @@ section p > img {
   margin-bottom: 10px;
 }
 
+.about {
+  height: fit-content;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -334,10 +338,13 @@ img {
   opacity: 1;
 }
 
-kbd {
+h2.mono {
   border: 1px solid darkslategray;
   border-radius: 5px;
   padding: 7px;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 hr {
