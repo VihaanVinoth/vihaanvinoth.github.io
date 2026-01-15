@@ -722,6 +722,7 @@ pre > code {
   border: 1px solid rgb(38, 38, 38);
   text-align: left;
   border-radius: 5px;
+  width: 100%;
 }
 
 code {
@@ -729,8 +730,9 @@ code {
   padding: 5px;
   border-radius: 5px;
   margin: 2% 0;
+  width: 100%;
 }
 
-.article-text:not(.article-text > header) {
+.article-text:not(header) {
   text-align: left;
 }
