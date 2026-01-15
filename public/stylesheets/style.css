@@ -601,7 +601,7 @@ time, .summary {
   overflow: clip;
 }
 
-.blog:has(> article:nth-last-child(n + 1):nth-child(n + 3)) article:nth-child(n + 3) {
+.blog:has(> :nth-child(2)) > :first-child {
   display: none;
 }
 
