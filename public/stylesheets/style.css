@@ -601,6 +601,10 @@ time, .summary {
   overflow: clip;
 }
 
+.blog:has(> article:nth-last-child(n + 1):nth-child(n + 3)) article:nth-child(n + 3) {
+  display: none;
+}
+
 article {
   border: 1px solid rgb(38, 38, 38);
   border-radius: 5px;
