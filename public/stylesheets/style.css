@@ -177,8 +177,8 @@ section p {
 section p > img {
   width: 500px;
   height: fit-content;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .projects {
@@ -641,7 +641,6 @@ article > h2:hover {
   border-radius: 6px !important;
   margin: 10px !important;
   outline: none !important;
-  width: 100%;
   resize: vertical;
 }
 
