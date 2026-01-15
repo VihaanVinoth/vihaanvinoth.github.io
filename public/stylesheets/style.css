@@ -572,11 +572,11 @@ time, .summary {
 .article-text {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   position: relative;
   top: -100px;
-  text-align: center;
+  text-align: left;
 }
 
 .post-preview {
@@ -718,7 +718,7 @@ article > h2:hover {
 
 pre > code {
   display: block;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid rgb(38, 38, 38);
   text-align: left;
   border-radius: 5px;
