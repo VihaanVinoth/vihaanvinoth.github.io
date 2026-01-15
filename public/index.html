@@ -449,7 +449,7 @@
 
                     const tagsHTML = post.tags?.length
                         ? `<ul class="post-tags">
-                            ${post.tags.map(tag => `<li class="post-tag">{tag}</li>`).join("")}
+                            ${post.tags.map(tag => `<li class="post-tag">${tag}</li>`).join("")}
                           </ul>`
                         : "";
 

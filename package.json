@@ -4,13 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "post-struct": "node post-struct.js",
-    "watch:css": "node auto-commit.js"
+    "post-struct": "node post-struct.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
@@ -19,5 +17,6 @@
   "devDependencies": {
     "@netlify/plugin-sitemap": "^0.8.1",
     "chokidar": "^5.0.0"
-  }
+  },
+  "description": ""
 }
