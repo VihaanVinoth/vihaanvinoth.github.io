@@ -1,5 +1,15 @@
 [
   {
+    "title": "How to setup VS Code",
+    "summary": "This is a quick article on how to setup VS Code for programming",
+    "cover": "https://cdn.hashnode.com/res/hashnode/image/upload/v1700266538216/b88498a0-c6ae-4eda-b47a-e63053dff5b8.png",
+    "slug": "how-to-setup-vs-code",
+    "url": "/posts/how-to-setup-vs-code",
+    "date": "2026-01-14T02:35:00.000Z",
+    "displayDate": "14 January, 2026",
+    "readingTime": 2
+  },
+  {
     "title": "Test",
     "summary": "This is a final test before publishing",
     "cover": "/assets/uploads/img_7942.jpeg",

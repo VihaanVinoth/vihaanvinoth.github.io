@@ -3,20 +3,32 @@
     <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>hello</title>
+        <title>hello | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="../stylesheets/reset.css">
         <meta name="description" content="This is the first post of my blog.">
+        <meta property="og:title" content="hello - Vihaan Vinoth Developer Portfolio">
+        <meta property="og:description" content="This is the first post of my blog.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://vihaanvinoth.com/hello">
+        <meta property="og:image" content="https://cdn.vihaanvinoth.com/og-image.png">
+        <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.vihaanvinoth.com/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="google-adsense-account" content="ca-pub-8253398098387796">
     </head>
     <body>
         <main class="content" id="mainContent">
-            <a href="../index.html" id="logo"><img src="../VVNormal.png" fetchpriority="high"></a>
+            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" fetchpriority="high"></a>
             <br>
             <br>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="../icons/light-mode-icon.svg" fetchpriority="high">
+                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" alt="Theme toggle icon" fetchpriority="high">
             </button>
             <section class="article content">
                 <img class="cover" src="/assets/uploads/welcome-to.png">
@@ -35,12 +47,12 @@
             <br>
             <hr>
             <section class="footer content">
-                <a href="https://github.com/VihaanVinoth">
-                    <img id="git-icon" src="../icons/github-icon.png" loading="lazy">
+                <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
+                    <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo" loading="lazy">
                     <p>Github</p>
                 </a>
                 <p>&nbsp;&nbsp;</p>
-                <a href="mailto:dalx900@gmail.com">
+                <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
                     <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                         loading="lazy" width="20px" fill="#FFFFFF">
                         <path
@@ -51,6 +63,18 @@
                 <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
             </section>
         </main>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vihaan Vinoth",
+            "url": "https://vihaanvinoth.com",
+            "jobTitle": "Full-Stack Developer",
+            "sameAs": [
+                "https://github.com/VihaanVinoth"
+            ]
+            }
+        </script>
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
         </script>
