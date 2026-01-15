@@ -603,7 +603,7 @@ time, .summary {
   overflow: clip;
 }
 
-.blog > :nth-child(n+4) {
+.blog > :nth-child(n+5) {
   display: none;
 }
 
@@ -613,6 +613,7 @@ time, .summary {
   padding: 10px;
   color: var(--text);
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .blog > a:hover {
