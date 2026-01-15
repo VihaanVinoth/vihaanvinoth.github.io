@@ -350,7 +350,7 @@ hr {
 .blog,
 .footer,
 .icons-box {
-    contain: content;
+  contain: content;
 }
 
 .project-box {
@@ -493,7 +493,7 @@ hr {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 

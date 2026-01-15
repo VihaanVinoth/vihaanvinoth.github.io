@@ -79,15 +79,14 @@ for (const file of fs.readdirSync(postsDir)) {
         <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
         <link rel="manifest" href="favicon/site.webmanifest">
         <meta name="theme-color" content="#ffffff">
-        <meta name="google-adsense-account" content="ca-pub-8253398098387796">
     </head>
     <body>
         <main class="content" id="mainContent">
-            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" fetchpriority="high"></a>
+            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
             <br>
             <br>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" alt="Theme toggle icon" fetchpriority="high">
+                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" loading="eager" alt="Theme toggle icon" fetchpriority="high">
             </button>
             <section class="article content">
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
