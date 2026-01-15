@@ -74,8 +74,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.2">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.2">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.3">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.3">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
