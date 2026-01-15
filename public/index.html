@@ -38,7 +38,8 @@
         </button>
         <section class="hero content">
             <a href="index.html" id="logo" aria-label="Redirects back to main site"><img
-                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
+                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
+                    fetchpriority="high"></a>
             <h1>Hey, I'm Vihaan <span id="wave">👋</span></h1>
             <p class="hero-text">A <i>full-stack developer</i> based in <kbd>Melbourne, Australia</kbd>.</p>
             <p class="hire-container">
@@ -243,7 +244,8 @@
             <h2>Want to contact me?</h2>
             <p>Send me a message for a free quote!</p>
 
-            <form name="contact" id="contactForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+            <form name="contact" id="contactForm" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                action="/">
                 <input type="hidden" name="form-name" value="contact">
                 <br>
                 <label for="name">Name</label>
@@ -435,17 +437,18 @@
             const container = document.getElementById("posts");
             if (!container) return;
 
-            try {
-                const res = await fetch("/posts.json");
-                if (!res.ok) throw new Error("Failed to load posts");
+            if (container.children.length <= 2) {
+                try {
+                    const res = await fetch("/posts.json");
+                    if (!res.ok) throw new Error("Failed to load posts");
 
-                const posts = await res.json();
+                    const posts = await res.json();
 
-                posts.forEach(post => {
-                    const article = document.createElement("article");
-                    article.className = "post-preview content";
+                    posts.forEach(post => {
+                        const article = document.createElement("article");
+                        article.className = "post-preview content";
 
-                    article.innerHTML = `
+                        article.innerHTML = `
                     <div class="post-text">
                         <time datetime="${post.date}">
                             ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
@@ -461,13 +464,15 @@
                     </div>
                     `;
 
-                    container.appendChild(article);
-                });
-            } catch (err) {
-                console.error(err);
-                container.innerHTML = "<p>Failed to load posts.</p>";
+                        container.appendChild(article);
+                    });
+                } catch (err) {
+                    console.error(err);
+                    container.innerHTML = "<p>Failed to load posts.</p>";
+                }
             }
-        })();
+        })
+            ();
     </script>
 </body>
 
