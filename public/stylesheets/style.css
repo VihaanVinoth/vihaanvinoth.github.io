@@ -161,7 +161,7 @@ main {
   will-change: opacity, transform;
 }
 
-section:not(.footer) {
+section:not(.footer):not(.about) {
   position: relative;
   padding-bottom: 2rem;
   min-height: 100vh;
