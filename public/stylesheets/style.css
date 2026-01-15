@@ -182,7 +182,11 @@ section p > img {
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
   height: fit-content;
+  overflow: clip;
 }
 
 .projects {
@@ -345,6 +349,7 @@ h2.mono {
   font-family: monospace;
   font-size: 16px;
   font-weight: normal;
+  width: fit-content;
 }
 
 hr {
