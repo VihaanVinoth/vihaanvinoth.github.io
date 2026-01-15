@@ -177,8 +177,8 @@ section p {
 section p > img {
   width: 500px;
   height: fit-content;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .projects {
