@@ -614,6 +614,7 @@ time, .summary {
   color: var(--text);
   text-decoration: none;
   border-radius: 5px;
+  transition: all 500ms;
 }
 
 .blog > a:hover {
@@ -703,7 +704,9 @@ article > h2:hover {
   flex-direction: row;
   gap: 3px;
   list-style-type: none;
-  margin: 10px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .post-tag {
