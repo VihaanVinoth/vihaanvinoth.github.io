@@ -697,3 +697,15 @@ article > h2:hover {
   padding: 10px !important;
   border-radius: 6px !important;
 }
+
+.post-tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-tag {
+  border: 1px solid darkslategray;
+  border-radius: 500px;
+  background: transparent;
+  font-size: 10px;
+}

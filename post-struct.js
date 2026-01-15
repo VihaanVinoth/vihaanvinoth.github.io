@@ -36,6 +36,15 @@ for (const file of fs.readdirSync(postsDir)) {
   const words = content.trim().split(/\s+/).length;
   const mins = Math.max(1, Math.ceil(words / wpm));
 
+  const rawTags = data.tags ?? [];
+
+  const tags = Array.isArray(rawTags)
+    ? rawTags.map(t => String(t).toLowerCase().trim())
+    : String(rawTags)
+        .split(",")
+        .map(t => t.toLowerCase().trim)
+        .filter(Boolean);
+
   const title = data.title ?? slug;
   const summary = data.description ?? "";
   const cover = data.cover ?? "";
@@ -65,8 +74,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.1">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.1">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -194,6 +203,7 @@ for (const file of fs.readdirSync(postsDir)) {
     date: dateNow,
     displayDate: date,
     readingTime: mins,
+    tags,
   });
 }
 

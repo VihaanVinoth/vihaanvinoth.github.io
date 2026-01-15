@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <title>Vihaan Vinoth - Full Stack Developer</title>
-    <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9">
-    <link rel="stylesheet" href="/stylesheets/style.css?v=1.9">
+    <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.1">
+    <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.1">
     <meta name="description"
         content="Hey! I'm Vihaan Vinoth, a local full-stack developer based in Melbourne, Australia.">
     <meta property="og:title" content="Vihaan Vinoth">
@@ -447,6 +447,12 @@
                     const article = document.createElement("article");
                     article.className = "post-preview content";
 
+                    const tagsHTML = post.tags?.length
+                        ? `<ul class="post-tags">
+                            ${post.tags.map(tag => `<li class="post-tag">{tag}</li>`).join("")}
+                          </ul>`
+                        : "";
+
                     article.innerHTML = `
                     <div class="post-text">
                         <time datetime="${post.date}">
@@ -454,6 +460,8 @@
                         </time>
 
                         <h2>${post.title}</h2>
+
+                        ${tagsHTML}
 
                         <p class="summary">${post.summary}</p>
 
