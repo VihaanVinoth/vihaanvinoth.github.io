@@ -62,13 +62,13 @@ for (const file of fs.readdirSync(postsDir)) {
     <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>${slug} | Vihaan Vinoth</title>
+        <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
         <link rel="stylesheet" href="../stylesheets/style.css">
         <link rel="stylesheet" href="../stylesheets/reset.css">
         <meta name="description" content="${summary}">
-        <meta property="og:title" content="${slug} - Vihaan Vinoth Developer Portfolio">
+        <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://vihaanvinoth.com/${slug}">
