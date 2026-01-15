@@ -12,6 +12,7 @@
   --sans-font: "Atkinson Hyperlegible", system-ui, sans-serif;
   --border-radius-map: 10px;
   --bg: linear-gradient(rgb(24, 24, 24) 0%, rgba(0, 0, 0, 1) 20%);
+  --bg-hover: linear-gradient(rgba(255, 255, 0, 0.5) 0%, rgba(255, 255, 255, 1) 5%);
   --text: #ffffff;
   --text-opp: #000000;
   --border: 1px solid #ffffff;
@@ -40,6 +41,7 @@
 
 [data-theme="light"] {
   --bg: linear-gradient(rgba(255, 255, 0, 0.5) 0%, rgba(255, 255, 255, 1) 5%);
+  --bg-hover: linear-gradient(rgb(24, 24, 24) 0%, rgba(0, 0, 0, 1) 20%);
   --text: #000000;
   --text-opp: #ffffff;
   --border: 1px solid #000000;
@@ -603,6 +605,19 @@ time, .summary {
 
 .blog > :nth-child(n+4) {
   display: none;
+}
+
+.blog > a, .blog > a:link, .blog > a:visited {
+  border: 1px solid darkslategrey;
+  background: var(--bg);
+  padding: 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.blog > a:hover {
+  background: var(--bg-hover);
+  color: var(--text-opp);
 }
 
 article {
