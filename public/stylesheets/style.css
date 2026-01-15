@@ -718,11 +718,19 @@ article > h2:hover {
 
 pre > code {
   display: block;
+  padding: 5px;
   border: 1px solid rgb(38, 38, 38);
   text-align: left;
+  border-radius: 5px;
 }
 
 code {
   border: 1px solid rgb(38, 38, 38);
   padding: 5px;
+  border-radius: 5px;
+  margin: 2% 0;
+}
+
+.article-text:not(.article-text > header) {
+  text-align: left;
 }
