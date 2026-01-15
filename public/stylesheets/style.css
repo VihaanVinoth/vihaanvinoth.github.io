@@ -355,7 +355,7 @@ h2.mono {
 hr {
   border: 0.5px solid darkslategrey;
   padding: 0;
-  margin: -10px;
+  margin: 0;
 }
 
 .projects,
