@@ -187,6 +187,7 @@ section p > img {
   color: var(--text);
   height: fit-content;
   overflow: clip;
+  font-size: 0.85em;
 }
 
 .projects {
