@@ -603,7 +603,7 @@ time, .summary {
   overflow: clip;
 }
 
-.blog > :nth-child(n+4) {
+.blog > :nth-child(n+5) {
   display: none;
 }
 
