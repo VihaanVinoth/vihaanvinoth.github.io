@@ -701,6 +701,8 @@ article > h2:hover {
 .post-tags {
   display: flex;
   flex-direction: row;
+  gap: 3px;
+  list-style-type: none;
 }
 
 .post-tag {
@@ -708,4 +710,5 @@ article > h2:hover {
   border-radius: 500px;
   background: transparent;
   font-size: 10px;
+  padding: 5px;
 }
