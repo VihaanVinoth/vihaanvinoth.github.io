@@ -550,6 +550,7 @@ hr {
   width: 100%;
   max-width: 500px;
   object-fit: cover;
+  z-index: 0;
 }
 
 .cover-blur {
@@ -557,7 +558,7 @@ hr {
   width: 100%;
   max-width: 458px;
   height: 5em;
-  z-index: 100;
+  z-index: 200;
   position: relative;
   top: -80px;
   background: var(--blur-grad);
