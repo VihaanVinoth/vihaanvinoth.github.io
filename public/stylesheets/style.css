@@ -722,9 +722,8 @@ pre > code {
   border: 1px solid rgb(38, 38, 38);
   text-align: left;
   border-radius: 5px;
-  max-width: none !important;
-  width: 100vw !important;
-  margin-left: calc(-50vw + 50%) !important;
+  width: 100%;
+  max-width: 30em;
 }
 
 code {
