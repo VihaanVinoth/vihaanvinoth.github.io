@@ -100,7 +100,7 @@ for (const file of fs.readdirSync(postsDir)) {
                 <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" loading="eager" alt="Theme toggle icon" fetchpriority="high">
             </button>
             <section class="article content">
-                ${cover ? `<img class="cover" src="..${cover}">` : ""}
+                ${cover ? `<img class="cover" src="${cover}">` : ""}
                 <div class="cover-blur"></div>
                 <div class="article-text">
                     <br>
