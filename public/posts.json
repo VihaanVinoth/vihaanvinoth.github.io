@@ -1,5 +1,38 @@
 [
   {
+    "title": "8 Common HTML Mistakes Beginners Always Make",
+    "summary": "Covers mistake that at some point any HTML beginner will make",
+    "cover": "/assets/uploads/html-mistakes-thumbnail.png",
+    "slug": "8-common-html-mistakes-beginners-always-make",
+    "url": "/posts/8-common-html-mistakes-beginners-always-make",
+    "date": "2026-01-16T08:53:00.000Z",
+    "displayDate": "16 January, 2026",
+    "readingTime": 4,
+    "tags": [
+      "html",
+      "mistakes",
+      "beginner",
+      "coding"
+    ]
+  },
+  {
+    "title": "Semantic HTML explained",
+    "summary": "A concise introduction to Semantic HTML",
+    "cover": "https://media.geeksforgeeks.org/wp-content/uploads/20241127115416984900/html-sementics-layout.png",
+    "slug": "semantic-html-explained",
+    "url": "/posts/semantic-html-explained",
+    "date": "2026-01-15T09:44:00.000Z",
+    "displayDate": "15 January, 2026",
+    "readingTime": 4,
+    "tags": [
+      "html",
+      "css",
+      "design",
+      "semantic",
+      "best-practice"
+    ]
+  },
+  {
     "title": "How to setup VS Code",
     "summary": "This is a quick article on how to setup VS Code for programming",
     "cover": "https://cdn.hashnode.com/res/hashnode/image/upload/v1700266538216/b88498a0-c6ae-4eda-b47a-e63053dff5b8.png",
@@ -7,17 +40,13 @@
     "url": "/posts/how-to-setup-vs-code",
     "date": "2026-01-14T02:35:00.000Z",
     "displayDate": "14 January, 2026",
-    "readingTime": 2
-  },
-  {
-    "title": "Test",
-    "summary": "This is a final test before publishing",
-    "cover": "/assets/uploads/img_7942.jpeg",
-    "slug": "test",
-    "url": "/posts/test",
-    "date": "2026-01-13T03:02:00.000Z",
-    "displayDate": "13 January, 2026",
-    "readingTime": 1
+    "readingTime": 2,
+    "tags": [
+      "coding",
+      "html",
+      "css",
+      "vscode"
+    ]
   },
   {
     "title": "Welcome to my Blog",
@@ -27,6 +56,7 @@
     "url": "/posts/hello",
     "date": "2026-01-09T06:15:00.000Z",
     "displayDate": "09 January, 2026",
-    "readingTime": 1
+    "readingTime": 1,
+    "tags": []
   }
 ]

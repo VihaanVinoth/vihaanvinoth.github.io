@@ -1,0 +1,171 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>8 Common HTML Mistakes Beginners Always Make | Vihaan Vinoth</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.9.9.2">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.9.9.2">
+        <meta name="description" content="Covers mistake that at some point any HTML beginner will make">
+        <meta property="og:title" content="8 Common HTML Mistakes Beginners Always Make - Vihaan Vinoth">
+        <meta property="og:description" content="Covers mistake that at some point any HTML beginner will make">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://vihaanvinoth.com/8-common-html-mistakes-beginners-always-make">
+        <meta property="og:image" content="https://cdn.vihaanvinoth.com/og-image.png">
+        <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.vihaanvinoth.com/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="google-adsense-account" content="ca-pub-8253398098387796">
+        <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
+    </head>
+    <body>
+        <main class="content" id="mainContent">
+            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
+            <br>
+            <br>
+            <button class="content" id="theme-toggle" aria-label="Toggle theme">
+                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" loading="eager" alt="Theme toggle icon" fetchpriority="high">
+            </button>
+            <section class="article content">
+                <img class="cover" src="/assets/uploads/html-mistakes-thumbnail.png">
+                <div class="cover-blur"></div>
+                <div class="article-text">
+                    <br>
+                    <br>
+                    <time datetime="16 January, 2026">16 January, 2026 · Vihaan Vinoth · 4 min read</time>
+                    <header>
+                        <h1 id="article-title">8 Common HTML Mistakes Beginners Always Make</h1>
+                    </header>
+                    <p>HTML is often the first language people learn when delving into the vast world of web development. While it looks pretty simple on the surface, beginners frequently develop habits that can lead to messy markup, poor accessibility, and harder-to-maintain websites. Understanding these common mistakes early on can save you a lot of frustration as your projects grow.</p>
+<h2>1. Overusing <code>&lt;div&gt;</code> for everything</h2>
+<p>One of the most common mistakes beginners make is wrapping <strong>everything</strong> in <code>&lt;div&gt;</code> elements. While <code>&lt;div&gt;</code> is useful as a generic container, it provides no semantic meaning on its own.</p>
+<pre><code>&lt;div class=&quot;header&quot;&gt;
+  &lt;div class=&quot;nav&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Home&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This approach works more visually, but it makes your HTML harder to understand, and less accessible in return. Instead, you should implement semantic elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> whenever possible in areas which incorporate meaning. These elements describe the role of the content, not just its layout or orientation.</p>
+<h2>2. Skipping heading levels</h2>
+<p>Headings are not just for styling — they define the textual structure of your page. A common mistake that can arouse in your code is by jumping straight from <code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code> or using headings based purely on size.</p>
+<pre><code>&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;h4&gt;About&lt;/h4&gt;
+</code></pre>
+<p>Headings should follow a logical and concise order, just like an outline. Skipping levels can confuse screen readers and search engines. Always structure your headings hierarchically to reflect the content flow.</p>
+<h2>3. Using HTML for styling instead of CSS</h2>
+<p>Beginners often use HTML elements to control appearance instead of structure, such as <code>&lt;br&gt;</code> for spacing or <code>&lt;b&gt;</code> for bold text.</p>
+<pre><code>&lt;p&gt;This is &lt;b&gt;important&lt;/b&gt;&lt;br&gt;&lt;br&gt;Text&lt;/p&gt;
+</code></pre>
+<p>This assorts the presentation with content. Instead, use CSS for styling and spacing, and semantic elements like <code>&lt;strong&gt;</code> or <code>&lt;em&gt;</code> when emphasis is meaningful and significant.</p>
+<h2>4. Forgetting accessibility attributes</h2>
+<p>Accessibility is frequently overlooked early on in the 21st Century. It is a fundamtental aspect in sites, and search engines like Google overlook these components. Missing <code>alt</code> text for images, unlabeled form inputs, and clickable elements without keyboard support are all common issues, and can affect SEO rankings.</p>
+<pre><code>&lt;img src=&quot;logo.png&quot;&gt;
+</code></pre>
+<p>Always provide alternative text and proper labels so assistive technologies are compatible with our site, and can interpret your content correctly. Accessible HTML benefits everyone, not just users with disabilities, and can address all demographics.</p>
+<h2>5. Nesting elements incorrectly</h2>
+<p>Invalid nesting can cause unpredictable layouts and browser quirks. A classic example is placing block-level elements inside inline elements, scrambling the layout of your site.</p>
+<pre><code>&lt;a href=&quot;#&quot;&gt;
+  &lt;div&gt;Click me&lt;/div&gt;
+&lt;/a&gt;
+</code></pre>
+<p>While browsers may still be able to render this, it’s invalid HTML. Understanding which elements can be nested inside others helps prevent subtle bugs and layout issues like the one above.</p>
+<h2>6. Reusing IDs</h2>
+<p>An <code>id</code> must be unique within a page. Beginners often reuse the same ID for styling or JavaScript hooks, and can cause disfunctions within the styling of. your HTML. Note that you can address an <code>id</code> tag <strong>once</strong> per page.</p>
+<pre><code>&lt;div id=&quot;card&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;card&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>This can break JavaScript selectors and lead to unexpected behavior. Use classes when you need to target multiple elements. Reserve IDs for unique elements only, and classes for continuous element.</p>
+<h2>7. Ignoring document structure</h2>
+<p>Some beginners skip important foundational elements like <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, or even <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code>. While browsers may attempt to fix this automatically, it results in unclear and fragile markup.</p>
+<p>A well-structured document makes your page easier to navigate, debug, and extend in the future. This paves the way for a seamless, and scalable website.</p>
+<h2>8. Not validating HTML</h2>
+<p>HTML errors often do go unnoticed, because browsers are forgiving. Missing closing tags, invalid attributes, or typos can silently cause layout issues within your codebase.</p>
+<p>Using an HTML validator helps catch mistakes and bugs early, and ensures your markup follows baseline web standards.</p>
+<h2>Final Thoughts</h2>
+<p>Making mistakes in HTML is part of learning — every developer has done it all more than once in their life. The key is understanding why these mistakes matter and correcting them early. Writing clean, semantic, and accessible HTML sets a strong foundation for CSS, JavaScript, and larger frameworks down the line, by learning the fundamentals of web development.</p>
+<p>Focus on these three things: meaning, structure, and styling — and your HTML will scale with you as you grow throughout your coding career.</p>
+<p>Happy coding! 🌶️</p>
+
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section class="footer content">
+                <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
+                    <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo" loading="lazy">
+                    <p>Github</p>
+                </a>
+                <p>&nbsp;&nbsp;</p>
+                <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
+                    <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        loading="lazy" width="20px" fill="#FFFFFF">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg>
+                    <p>Contact</p>
+                </a>
+                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
+            </section>
+        </main>
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vihaan Vinoth",
+            "url": "https://vihaanvinoth.com",
+            "jobTitle": "Full-Stack Developer",
+            "sameAs": [
+                "https://github.com/VihaanVinoth"
+            ]
+            }
+        </script>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+        <script type="text/javascript">
+        window.addEventListener("load", () => {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+
+        const toggle = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme) {
+            root.dataset.theme = savedTheme;
+        } else {
+            root.dataset.theme = systemDark ? "dark" : "light";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+        </script>
+    </body>
+    </html>
+    
