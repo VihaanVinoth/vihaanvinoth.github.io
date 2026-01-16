@@ -344,7 +344,7 @@ img {
   opacity: 1;
 }
 
-h2.mono {
+h2.mono, kbd {
   border: 1px solid darkslategray;
   border-radius: 5px;
   padding: 7px;
