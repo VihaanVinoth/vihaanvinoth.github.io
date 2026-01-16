@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>Vihaan Vinoth - Full Stack Developer</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.9.9">
+    <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.9.9">
+    <meta name="description"
+        content="View Developer blog Posts made by Vihaan Vinoth about Web Development, Graphic Design, and more.">
+    <meta property="og:title" content="Vihaan Vinoth - Blog Posts">
+    <meta property="og:description"
+        content="View Developer blog Posts made by Vihaan Vinoth about Web Development, Graphic Design, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vihaanvinoth.com/">
+    <meta property="og:image" content="https://cdn.vihaanvinoth.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vihaan Vinoth – Blog Posts">
+    <meta name="twitter:description"
+        content="View Developer blog Posts made by Vihaan Vinoth about Web Development, Graphic Design, and more.">
+    <meta name="twitter:image" content="https://cdn.vihaanvinoth.com/og-image.png">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.vihaanvinoth.com/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <main class="content" id="mainContent">
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg"
+                alt="Theme toggle icon" loading="eager" fetchpriority="high">
+        </button>
+        <section class="blog content" id="posts">
+            <a href="index.html" id="logo" aria-label="Redirects back to main site"><img
+                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
+                    fetchpriority="high"></a>
+        <h2>Vihaan Vinoth's Blog</h2>
+        </section>
+        <hr>
+        <br>
+        <h2 class="mono">Contact Me</h2>
+        <br>
+        <br>
+        <section class="contact-form content">
+            <h2>Want to contact me?</h2>
+            <p>Send me a message for a free quote!</p>
+
+            <form name="contact" id="contactForm" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                action="/">
+                <input type="hidden" name="form-name" value="contact">
+                <br>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                <br>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <br>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="6"
+                    required></textarea>
+                <br>
+                <input type="hidden" name="bot-field">
+                <button type="submit">Send Message</button>
+
+                <p class="success-message" hidden>Thanks! Your message has been sent.</p>
+                <p class="error-message" hidden>Oops! Something went wrong. Please try again.</p>
+            </form>
+        </section>
+        <br>
+        <hr>
+        <section class="footer content">
+            <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
+                <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo"
+                    loading="lazy">
+                <p>Github</p>
+            </a>
+            <p>&nbsp;&nbsp;</p>
+            <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
+                <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    loading="lazy" width="20px" fill="#FFFFFF">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <p>Contact</p>
+            </a>
+            <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
+        </section>
+    </main>
+    <script data-cfasync="false">
+        const form = document.getElementById("contactForm");
+        const successMessage = form.querySelector(".success-message");
+        const errorMessage = form.querySelector(".error-message");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            const encode = (data) => {
+                return [...data.entries()]
+                    .map(([key, value]) => encodeURIComponent(key) + "=" + encodeURIComponent(value))
+                    .join("&");
+            };
+
+            try {
+                const response = await fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: encode(formData)
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    successMessage.hidden = false;
+                    errorMessage.hidden = true;
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            } catch (err) {
+                console.error(err);
+                successMessage.hidden = true;
+                errorMessage.hidden = false;
+            }
+        });
+    </script>
+    <script data-cfasync="false">
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script type="text/javascript" data-cfasync="false">
+        window.addEventListener("load", () => {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+
+        const toggle = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme) {
+            root.dataset.theme = savedTheme;
+        } else {
+            root.dataset.theme = systemDark ? "dark" : "light";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+    </script>
+    <script type="text/javascript">
+        (async () => {
+            const container = document.getElementById("posts");
+            if (!container) return;
+
+            try {
+                const res = await fetch("/posts.json");
+                if (!res.ok) throw new Error("Failed to load posts");
+
+                const posts = await res.json();
+
+                posts.forEach(post => {
+                    const article = document.createElement("article");
+                    article.className = "post-preview content";
+
+                    const tagsHTML = post.tags?.length
+                        ? `<ul class="post-tags">
+                            ${post.tags.map(tag => `<li class="post-tag">${tag}</li>`).join("")}
+                          </ul>`
+                        : "";
+
+                    article.innerHTML = `
+                    <div class="post-text">
+                        <time datetime="${post.date}">
+                            ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
+                        </time>
+
+                        <h2>${post.title}</h2>
+
+                        ${tagsHTML}
+
+                        <p class="summary">${post.summary}</p>
+
+                        <a class="read-more" href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
+                            Read
+                        </a>
+                    </div>
+                    `;
+
+                    container.appendChild(article);
+                });
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = "<p>Failed to load posts.</p>";
+            }
+        })();
+    </script>
+</body>
+
+</html>
