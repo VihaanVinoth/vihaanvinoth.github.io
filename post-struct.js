@@ -39,10 +39,10 @@ for (const file of fs.readdirSync(postsDir)) {
   const rawTags = data.tags ?? [];
 
   const tags = Array.isArray(rawTags)
-    ? rawTags.map(t => String(t).toLowerCase().trim())
+    ? rawTags.map((t) => String(t).toLowerCase().trim())
     : String(rawTags)
         .split(",")
-        .map(t => t.toLowerCase().trim())
+        .map((t) => t.toLowerCase().trim())
         .filter(Boolean);
 
   const title = data.title ?? slug;
@@ -58,7 +58,12 @@ for (const file of fs.readdirSync(postsDir)) {
     cover = cover[0] || null;
   }
 
-  if (cover && !cover.startsWith("/")) {
+  if (
+    cover &&
+    !cover.startsWith("/") &&
+    !cover.startsWith("http://") &&
+    !cover.startsWith("https://")
+  ) {
     cover = "/" + cover;
   }
 
