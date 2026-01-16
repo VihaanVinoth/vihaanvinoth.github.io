@@ -594,7 +594,7 @@ time, .summary {
   font-size: 0.9rem;
 }
 
-.blog {
+.blog, .blog-page {
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -603,11 +603,12 @@ time, .summary {
   overflow: clip;
 }
 
-.blog > :nth-child(n+6) {
+.blog:not(.blog-page) > :nth-child(n+6) {
   display: none;
 }
 
-.blog > a:not(#logo), .blog > a:not(#logo):link, .blog > a:not(#logo):visited {
+.blog > a:not(#logo), .blog > a:not(#logo):link, .blog > a:not(#logo):visited,
+.blog-page > a:not(#logo), .blog-page > a:not(#logo):link, .blog-page > a:not(#logo):visited {
   border: 1px solid darkslategrey;
   background: var(--bg);
   padding: 10px;
@@ -617,7 +618,8 @@ time, .summary {
   transition: all 500ms;
 }
 
-.blog > a:hover {
+.blog > a:not(#logo):hover,
+.blog-page > a:not(#logo):hover {
   background: var(--bg-hover);
   color: var(--text-opp);
 }
