@@ -42,13 +42,13 @@ for (const file of fs.readdirSync(postsDir)) {
     ? rawTags.map(t => String(t).toLowerCase().trim())
     : String(rawTags)
         .split(",")
-        .map(t => t.toLowerCase().trim)
+        .map(t => t.toLowerCase().trim())
         .filter(Boolean);
 
   const title = data.title ?? slug;
   const summary = data.description ?? "";
 
-  const cover = data.cover ?? null;
+  let cover = data.cover ?? null;
 
   if (typeof cover === "object" && cover !== null) {
     cover = cover.image || cover.path || null;
