@@ -74,8 +74,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.9.6">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.9.6">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=1.9.9.7">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=1.9.9.7">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -89,6 +89,7 @@ for (const file of fs.readdirSync(postsDir)) {
         <link rel="manifest" href="favicon/site.webmanifest">
         <meta name="theme-color" content="#ffffff">
         <meta name="google-adsense-account" content="ca-pub-8253398098387796">
+        <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
     </head>
     <body>
         <main class="content" id="mainContent">

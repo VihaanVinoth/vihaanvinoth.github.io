@@ -702,7 +702,7 @@ article > h2:hover {
 .post-tags {
   display: flex;
   flex-direction: row;
-  gap: 1px;
+  gap: 3px;
   list-style-type: none;
   margin: 3% 0;
 }
@@ -735,15 +735,15 @@ section code {
   margin: 5% 0;
 }
 
-section li {
+.article-text li {
   margin-left: 25px;
 }
 
-section .article-text:not(header) {
+.article-text:not(header) {
   text-align: left;
 }
 
-section .article-text > * {
+.article-text > * {
   margin-bottom: 1.2rem;
 }
 
