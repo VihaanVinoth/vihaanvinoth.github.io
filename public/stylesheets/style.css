@@ -716,14 +716,17 @@ article > h2:hover {
   padding: 5px;
 }
 
+section pre {
+  width: 100%;
+}
+
 section pre > code {
   display: block;
   padding: 10px;
   border: 1px solid rgb(38, 38, 38);
   text-align: left;
   border-radius: 5px;
-  width: 100%;
-  max-width: 30em;
+  max-width: none;
 }
 
 section code {
