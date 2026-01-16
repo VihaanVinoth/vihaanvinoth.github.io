@@ -32,7 +32,6 @@ When building a website, it can be confusing to decide which approach to use, es
 ```
 
 In this example, the structure relies heavily on generic containers and class names. While it may render correctly in the browser, the markup provides no inherent meaning, nor are they any links to get you anywhere. This quickly becomes cluttered, difficult to interpret, and harder to maintain as the project grows. Neither browsers nor assistive technologies can easily determine what this section represents.
-<br>
 
 ### Semantic ✅
 ```
