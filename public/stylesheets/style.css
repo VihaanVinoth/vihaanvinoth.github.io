@@ -748,5 +748,12 @@ section code {
 }
 
 table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
   border: 1px solid var(--text);
+  padding: 8px;
+  text-align: left;
 }
