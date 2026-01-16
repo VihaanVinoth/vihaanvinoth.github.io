@@ -428,7 +428,7 @@ hr {
   z-index: 600;
 }
 
-#logo {
+#logo, #logo a {
   width: auto;
 }
 
@@ -607,7 +607,7 @@ time, .summary {
   display: none;
 }
 
-.blog > a, .blog > a:link, .blog > a:visited {
+.blog > a:not(#logo), .blog > a:not(#logo):link, .blog > a:not(#logo):visited {
   border: 1px solid darkslategrey;
   background: var(--bg);
   padding: 10px;
