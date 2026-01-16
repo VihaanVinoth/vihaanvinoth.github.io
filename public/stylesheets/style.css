@@ -716,7 +716,7 @@ article > h2:hover {
   padding: 5px;
 }
 
-pre > code {
+section pre > code {
   display: block;
   padding: 10px;
   border: 1px solid rgb(38, 38, 38);
@@ -726,13 +726,13 @@ pre > code {
   max-width: 30em;
 }
 
-code {
+section code {
   border: 1px solid rgb(38, 38, 38);
   padding: 5px;
   border-radius: 5px;
   margin: 2% 0;
 }
 
-.article-text:not(header) {
+section .article-text:not(header) {
   text-align: left;
 }
