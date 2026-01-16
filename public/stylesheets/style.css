@@ -743,3 +743,7 @@ section li {
 section .article-text:not(header) {
   text-align: left;
 }
+
+section .article-text > p {
+  margin-bottom: 1.2rem;
+}
