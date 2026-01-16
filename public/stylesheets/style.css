@@ -736,6 +736,10 @@ section code {
   margin: 2% 0;
 }
 
+section li {
+  margin-left: 10px;
+}
+
 section .article-text:not(header) {
   text-align: left;
 }
