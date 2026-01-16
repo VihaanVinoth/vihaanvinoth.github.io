@@ -47,7 +47,21 @@ for (const file of fs.readdirSync(postsDir)) {
 
   const title = data.title ?? slug;
   const summary = data.description ?? "";
-  const cover = data.cover ?? "";
+
+  const cover = data.cover ?? null;
+
+  if (typeof cover === "object" && cover !== null) {
+    cover = cover.image || cover.path || null;
+  }
+
+  if (Array.isArray(cover)) {
+    cover = cover[0] || null;
+  }
+
+  if (cover && !cover.startsWith("/")) {
+    cover = "/" + cover;
+  }
+
   const dateNow = data.date ?? "";
 
   const dateObj = dateNow ? new Date(dateNow) : null;
