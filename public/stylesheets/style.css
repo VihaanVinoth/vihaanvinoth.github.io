@@ -97,6 +97,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -785,11 +786,15 @@ section pre > code {
 }
 
 section code {
-  border: 1px solid rgba(38, 38, 38, 0.5);
-  color: yellow;
+  border: 1px solid rgb(38, 38, 38);
   padding: 5px;
   border-radius: 5px;
   margin: 5% 0;
+}
+
+code {
+  background: yellow;
+  color: black;
 }
 
 .article-text li {
