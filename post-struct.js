@@ -134,7 +134,7 @@ for (const file of fs.readdirSync(postsDir)) {
                 <div class="article-text">
                     <br>
                     <br>
-                    <p><a href="https://vihaanvinoth.com">Home</a> > <a href="https://vihaanvinoth.com/blog">Blog</> > ${title}</p>
+                    <p><a href="https://vihaanvinoth.com">Home</a> > <a href="https://vihaanvinoth.com/blog">Blog</a> > ${title}</p>
                     <br>
                     <br>
                     ${
