@@ -12,7 +12,7 @@ tags:
   - coding
 cover: https://miro.medium.com/1*m2Q3kRG9yl5WyNIyoe15XA.png
 ---
-WWhen it comes to learning about **CSS Grids and Flexbox**, you’re not just learning about aligning elements or making layouts responsive, you’re learning a foundational skill for building modern, accessible, and scalable web pages. Both Flexbox and Grid help maintain unity and consistency across your designs while giving you precise control over spacing, sizing, and alignment. Understanding these tools also allows you to implement layouts thoughtfully with real-world use cases, improving both the usability and performance of your website.
+When it comes to learning about **CSS Grids and Flexbox**, you’re not just learning about aligning elements or making layouts responsive, you’re learning a foundational skill for building modern, accessible, and scalable web pages. Both Flexbox and Grid help maintain unity and consistency across your designs while giving you precise control over spacing, sizing, and alignment. Understanding these tools also allows you to implement layouts thoughtfully with real-world use cases, improving both the usability and performance of your website.
 
 ## What is Flexbox?
 Flexbox, or the **Flexible Box Layout**, is a **one-dimensional layout system** in CSS. It is perfect for arranging items either **horizontally (row)** or **vertically (column)** inside a container. Unlike traditional layouts that rely on floats or inline-blocks, Flexbox simplifies alignment, spacing, and distribution of elements, making it ideal for smaller components such as menus, buttons, and form elements.
