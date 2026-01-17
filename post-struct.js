@@ -93,8 +93,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.9.9">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=2.9.9">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=3">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=3">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -164,7 +164,7 @@ for (const file of fs.readdirSync(postsDir)) {
                     </svg>
                     <p>Contact</p>
                 </a>
-                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
+                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth. <a href="https://vihaanvinoth.com/privacy">Privacy Policy</a></p>
             </section>
         </main>
         <script type="application/ld+json">

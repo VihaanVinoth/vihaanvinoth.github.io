@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>Vihaan Vinoth - Privacy Policy</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css?v=3">
+    <link rel="stylesheet" href="/stylesheets/style.css?v=3">
+    <meta name="description" content="Privacy policy for Vihaan Vinoth.">
+    <meta property="og:title" content="Vihaan Vinoth - Privacy Policy">
+    <meta property="og:description" content="Privacy Policy for Vihaan Vinoth.">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.vihaanvinoth.com/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <main id="mainContent">
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg"
+                alt="Theme toggle icon" loading="eager" fetchpriority="high">
+        </button>
+        <section class="privacy content">
+            <a href="index.html" id="logo" aria-label="Redirects back to main site"><img
+                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
+                    fetchpriority="high"></a>
+            <nav>
+                <ul class="navlinks">
+                    <li><a href="https://vihaanvinoth.com" aria-label="Redirects back to home">Home</a></li>
+                    <li><a href="https://vihaanvinoth.com/#about-me" aria-label="Takes you to about me section">About
+                            Me</a></li>
+                    <li><a href="https://vihaanvinoth.com/#projects"
+                            aria-label="Takes you to projects section">Projects</a></li>
+                    <li><a href="https://vihaanvinoth.com/#contact"
+                            aria-label="Takes you to contact section">Contact</a></li>
+                    <li><a href="https://vihaanvinoth.com/blog" aria-label="Takes you to blog page">Blog</a></li>
+                    <li><a href="https://vihaanvinoth.com/services" aria-label="Takes you to services page">Services</a>
+                    </li>
+                </ul>
+            </nav>
+            <br>
+            <br>
+            <h1>Privacy Policy</h1>
+            <p>
+                This Privacy Policy document explains how information is collected and used
+                when you visit <strong>vihaanvinoth.com</strong>.
+            </p>
+            <br>
+            <h2>Information we Collect</h2>
+            <p>
+                We do not collect personal information unless you voluntarily provide it,
+                such as when contacting us via email or forms.
+            </p>
+            <br>
+            <h2>Cookies and Web Beacons</h2>
+            <p>
+                vihaanvinoth.com uses cookies to store information about visitors’ preferences
+                and to optimize the user experience.
+            </p>
+            <br>
+            <h2>Google AdSense</h2>
+            <p>
+                Google, as a third-party vendor, uses cookies (including the DoubleClick cookie)
+                to serve ads based on users’ visits to this and other websites.
+            </p>
+            <p>
+                Users may opt out of personalized advertising by visiting:
+                <a href="https://adssettings.google.com" target="_blank" rel="noopener">
+                    Google Ad Settings
+                </a>
+            </p>
+            <br>
+            <h2>Third-Party Privacy Policies</h2>
+            <p>
+                vihaanvinoth.com’s Privacy Policy does not apply to other advertisers or websites.
+                We advise you to consult the respective Privacy Policies of third-party ad servers.
+            </p>
+            <br>
+            <h2>Consent</h2>
+            <p>
+                By using our website, you consent to our Privacy Policy.
+            </p>
+            <br>
+            <p>
+                If you have any questions, you can contact us at:
+                <a href="mailto:dalx900@gmail.com">dalx900@gmail.com</a>
+            </p>
+        </section>
+        <hr>
+        <section class="footer content">
+            <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
+                <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo"
+                    loading="lazy">
+                <p>Github</p>
+            </a>
+            <p>&nbsp;&nbsp;</p>
+            <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
+                <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    loading="lazy" width="20px" fill="#FFFFFF">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>
+                <p>Contact</p>
+            </a>
+            <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth. <a href="https://vihaanvinoth.com/privacy">Privacy Policy</a></p>
+        </section>
+    </main>
+    <script data-cfasync="false">
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script type="text/javascript" data-cfasync="false">
+        window.addEventListener("load", () => {
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".content").forEach(el => observer.observe(el));
+
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+        });
+
+        const toggle = document.getElementById("theme-toggle");
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme) {
+            root.dataset.theme = savedTheme;
+        } else {
+            root.dataset.theme = systemDark ? "dark" : "light";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isDark = root.dataset.theme === "dark";
+            root.dataset.theme = isDark ? "light" : "dark";
+            localStorage.setItem("theme", root.dataset.theme);
+        });
+    </script>
+</body>
+
+</html>
