@@ -1,7 +1,7 @@
 ---
 title: 8 Common HTML Mistakes Beginners Always Make
 date: 2026-01-16T19:53:00.000+11:00
-description: Covers mistake that at some point any HTML beginner will make
+description: Covers mistakes that at some point any HTML beginner will make
 tags:
   - HTML
   - mistakes
