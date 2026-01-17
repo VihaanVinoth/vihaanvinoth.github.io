@@ -93,8 +93,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.9.5">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=2.9.5">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.9.6">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=2.9.6">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -115,12 +115,12 @@ for (const file of fs.readdirSync(postsDir)) {
             <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
             <nav>
                 <ul class="navlinks">
-                    <li><a href="https://vihaanvinoth.com">Home</a></li>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="https://vihaanvinoth.com/services">Services</a></li>
+                    <li><a href="https://vihaanvinoth.com" aria-label="Redirects back to home">Home</a></li>
+                    <li><a href="https://vihaanvinoth.com/#about-me" aria-label="Takes you to about me section">About Me</a></li>
+                    <li><a href="https://vihaanvinoth.com/#projects" aria-label="Takes you to projects section" >Projects</a></li>
+                    <li><a href="https://vihaanvinoth.com/#contact" aria-label="Takes you to contact section" >Contact</a></li>
+                    <li><a href="https://vihaanvinoth.com/blog" aria-label="Takes you to blog page" >Blog</a></li>
+                    <li><a href="https://vihaanvinoth.com/services" aria-label="Takes you to services page">Services</a></li>
                 </ul>
             </nav>
             <br>
