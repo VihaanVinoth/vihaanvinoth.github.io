@@ -28,7 +28,6 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
 </head>
-
 <body>
     <main class="content" id="mainContent">
         <button id="theme-toggle" aria-label="Toggle theme">
@@ -50,6 +49,9 @@
                 </ul>
             </nav>
             <h1>Vihaan Vinoth's Blog</h1>
+            <div class="tag-search">
+                <input type="text" id="tagInput" placeholder="Search posts by tag...">
+            </div>
         </section>
         <hr>
         <br>
@@ -139,6 +141,25 @@
                 successMessage.hidden = true;
                 errorMessage.hidden = false;
             }
+        });
+    </script>
+    <script data-cfasync="false">
+        const tagInput = document.getElementById("tagInput");
+
+        tagInput.addEventListener("input", () => {
+            const query = tagInput.value.toLowerCase().trim();
+            const posts = document.querySelectorAll("#posts .post-preview");
+
+            posts.forEach(post => {
+                const tags = Array.from(post.querySelectorAll(".post-tag"))
+                                  .map(tagEl => tagEl.textContent.toLowerCase());
+
+                if (query === "" || tags.some(tag => tag.includes(query))) {
+                    post.style.display = "block";
+                } else {
+                    post.style.display = "none";
+                }
+            });
         });
     </script>
     <script data-cfasync="false">
