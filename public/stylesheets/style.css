@@ -21,8 +21,8 @@
   --bg-toggle: linear-gradient(rgba(27, 46, 46, 1) 5%, rgba(0, 0, 0, 1) 50%);
   --blur-grad: linear-gradient(
     180deg,
-    rgba(24, 24, 24, 0) 0%,
-    rgba(24, 24, 24, 1) 70%
+    rgba(11, 11, 11, 0) 0%,
+    rgba(11, 11, 11, 1) 70%
   );
   --map: invert(0.9) hue-rotate(180deg) brightness(100%) contrast(100%)
     grayscale(1);
