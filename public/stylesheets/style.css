@@ -106,6 +106,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 main {
   border-left: 1px solid rgb(38, 38, 38);
   border-right: 1px solid rgb(38, 38, 38);
@@ -291,26 +297,6 @@ section p > img {
   color: var(--selection-text-color);
 }
 
-@media (max-width: 600px) {
-  .breadcrumb {
-    flex-wrap: wrap;
-  }
-
-  .breadcrumb li {
-    margin-left: 0;
-  }
-
-  .breadcrumb li::before,
-  .breadcrumb li::after {
-    display: none;
-  }
-
-  .breadcrumb a,
-  .breadcrumb li[aria-current="page"] {
-    padding: 0.5em 0.75em;
-  }
-}
-
 @media (max-width: 500px) {
   main {
     max-width: 100%;
@@ -351,6 +337,15 @@ section p > img {
   .hero-text {
     line-height: 2;
   }
+
+  header nav {
+    white-space: normal;
+  }
+
+  .navlinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 img {
@@ -361,18 +356,19 @@ img {
   border-radius: var(--border-radius-map);
   outline: none;
   position: relative;
+  width: 100%;
+  max-width: 38em;
+  margin-inline: auto;
+  overflow: hidden;
 }
 
 .map-box::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: auto 0 0 0;
   height: 40%;
-  width: 100%;
   background: var(--blur-grad);
-  z-index: 100;
+  z-index: 2;
   border-radius: var(--border-radius-map);
   outline: none;
   pointer-events: none;
@@ -381,7 +377,6 @@ img {
 #map {
   height: 144px;
   width: 100%;
-  max-width: 38em;
   border-radius: var(--border-radius-map);
   filter: var(--map);
 }

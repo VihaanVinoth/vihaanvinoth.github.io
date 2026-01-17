@@ -93,8 +93,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.8.6">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=2.8.6">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.8.7">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=2.8.7">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -132,23 +132,6 @@ for (const file of fs.readdirSync(postsDir)) {
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 <div class="cover-blur"></div>
                 <div class="article-text">
-                    <nav aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <ol class="breadcrumb">
-                            <li>
-                                <a href="https://vihaanvinoth.com">Home</a>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M9 6l6 6-6 6" />
-                                </svg>
-                            </li>
-                            <li>
-                                <a href="https://vihaanvinoth.com/blog">Blog Posts</a>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M9 6l6 6-6 6" />
-                                </svg>
-                            </li>
-                            <li aria-current="page">${title}</li>
-                        </ol>
-                    </nav>
                     <br>
                     <br>
                     ${
