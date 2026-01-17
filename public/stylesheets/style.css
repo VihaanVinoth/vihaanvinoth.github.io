@@ -124,6 +124,7 @@ nav {
   margin: 20px;
   font-family: var(--mono-font);
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .navlinks {
@@ -138,6 +139,7 @@ nav {
 .navlinks a {
   color: var(--text);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .navlinks li:not(:last-child)::after {
