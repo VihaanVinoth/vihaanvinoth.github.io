@@ -154,82 +154,53 @@ header nav {
 
 .breadcrumb {
   display: flex;
-  overflow: visible;
-  list-style: none;
-  padding: 0;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 0.4em;
+  list-style: none;
+  overflow: visible;
+  padding: 0;
   margin: 0;
   font-family: var(--mono-cfont);
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: #222;
+  padding: 0.45em 0.75em;
+  border-radius: 4px;
+}
+
+.breadcrumb a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: dotted underline darkslategray;
+}
+
+.breadcrumb svg {
+  width: 0.9em;
+  height: 0.9em;
+  stroke: var(--text);
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.breadcrumb li[aria-current="page"] {
+  background: #555;
+  color: var(--text);
+  font-weight: 500;
 }
 
 .breadcrumb a:focus-visible {
   outline: 2px dotted currentColor;
   outline-offset: 2px;
-}
-
-.breadcrumb li {
-  position: relative;
-}
-
-.breadcrumb a,
-.breadcrumb li[aria-current="page"] {
-  display: block;
-  padding: 0.6em 1.2em 0.6em 1.6em;
-  background: #222;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.breadcrumb li:first-child a {
-  padding-left: 1.2em;
-}
-
-.breadcrumb li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -1em;
-  width: 0;
-  height: 0;
-  border-top: 1.2em solid transparent;
-  border-bottom: 1.2em solid transparent;
-  border-left: 1em solid #222;
-  z-index: 2;
-}
-
-.breadcrumb li:not(:first-child) a {
-  margin-left: -1em;
-}
-
-.breadcrumb li:not(:first-child)::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 1.2em solid transparent;
-  border-bottom: 1.2em solid transparent;
-  border-left: 1em solid #fff;
-  z-index: 1;
-}
-
-.breadcrumb a:hover {
-  background: #444;
-}
-
-.breadcrumb li:hover::after {
-  border-left-color: #444;
-}
-
-.breadcrumb li[aria-current="page"] {
-  background: #555;
-  justify-content: flex-start;
-  margin: 0;
-  color: #fff;
-  max-width: 100%;
-  white-space: normal;
-  word-break: break-word;
 }
 
 #wave:hover {
