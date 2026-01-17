@@ -117,7 +117,7 @@ main {
   text-align: justify;
 }
 
-nav {
+header nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -154,10 +154,17 @@ nav {
 
 .breadcrumb {
   display: flex;
+  overflow: visible;
   list-style: none;
   padding: 0;
+  flex-wrap: wrap;
   margin: 0;
   font-family: var(--mono-font);
+}
+
+.breadcrumb a:focus-visible {
+  outline: 2px dotted currentColor;
+  outline-offset: 2px;
 }
 
 .breadcrumb li {
@@ -186,7 +193,7 @@ nav {
   height: 0;
   border-top: 1.2em solid transparent;
   border-bottom: 1.2em solid transparent;
-  border-left: 1em solid #222;
+  border-left-color: var(--bg, #000);
   z-index: 2;
 }
 
@@ -217,6 +224,8 @@ nav {
 
 .breadcrumb li[aria-current="page"] {
   background: #555;
+  justify-content: flex-start;
+  margin: 0;
   color: #fff;
 }
 
@@ -739,7 +748,7 @@ article {
   background: var(--bg);
   text-align: left;
   padding: 14px 16px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 a, a:link, a:visited {
