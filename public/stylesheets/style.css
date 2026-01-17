@@ -140,11 +140,94 @@ nav {
   color: var(--text);
   text-decoration: none;
   white-space: nowrap;
+  transition: all 500ms;
+}
+
+.navlinks a:hover {
+  text-decoration: dotted underline darkslategray;
 }
 
 .navlinks li:not(:last-child)::after {
   content: "/";
   margin-left: 10px;
+}
+
+.breadcrumb {
+  list-style: none;
+  overflow: hidden;
+  font-family: var(--mono-font);
+  font-size: 18px;
+}
+
+.breadcrumb li {
+  float: left;
+}
+
+.breadcrumb li a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 0 10px 65px;
+  background-color: brown;
+  background: hsla(34,85%,35%,1);
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.breadcrumb li a::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid hsla(34,85%,35%,1);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+
+.breadcrumb li a::before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+
+.breadcrumb li:first-child a {
+  padding-left: 10px;
+}
+
+.breadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
+.breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
+
+.breadcrumb li:last-child a {
+  background: transparent !important;
+  color: var(--text);
+  pointer-events: none;
+  cursor: default;
+}
+
+.breadcrumb li:last-child a::after { 
+  border: 0; 
+}
+
+.breadcrumb li a:hover { 
+  background: hsla(34, 85%, 25%, 1); 
+}
+.breadcrumb li a:hover:after { 
+  border-left-color: hsla(34, 85%, 25%, 1) !important; 
 }
 
 #wave:hover {
