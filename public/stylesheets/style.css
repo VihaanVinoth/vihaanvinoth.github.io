@@ -580,6 +580,10 @@ time, .summary {
   text-align: left;
 }
 
+.article-text p {
+  line-height: 1.2;
+}
+
 .post-preview {
   opacity: 1 !important;
   transform: none !important;
