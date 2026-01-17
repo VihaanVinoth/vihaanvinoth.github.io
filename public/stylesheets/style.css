@@ -160,15 +160,16 @@ header nav {
   list-style: none;
   overflow: visible;
   padding: 0;
-  margin: 0;
-  font-family: var(--mono-cfont);
+  margin: 2% 0;
+  font-family: var(--mono-font);
 }
 
 .breadcrumb li {
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  background: #222;
+  border: 1px solid #222;
+  background: var(--bg);
   padding: 0.45em 0.75em;
   border-radius: 4px;
 }
@@ -176,9 +177,12 @@ header nav {
 .breadcrumb a {
   color: var(--text);
   text-decoration: none;
+  transition: all 500ms;
 }
 
 .breadcrumb a:hover {
+  background: var(--bg-hover);
+  color: var(--text-opp);
   text-decoration: dotted underline darkslategray;
 }
 
@@ -193,9 +197,10 @@ header nav {
 }
 
 .breadcrumb li[aria-current="page"] {
-  background: #555;
+  border: 1px solid #555;
+  background: var(--bg);
   color: var(--text);
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .breadcrumb a:focus-visible {
