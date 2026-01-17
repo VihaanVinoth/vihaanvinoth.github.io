@@ -153,81 +153,71 @@ nav {
 }
 
 .breadcrumb {
+  display: flex;
   list-style: none;
-  overflow: hidden;
+  padding: 0;
+  margin: 0;
   font-family: var(--mono-font);
-  font-size: 18px;
 }
 
 .breadcrumb li {
-  float: left;
+  position: relative;
 }
 
-.breadcrumb li a {
+.breadcrumb a,
+.breadcrumb li[aria-current="page"] {
+  display: block;
+  padding: 0.6em 1.2em 0.6em 1.6em;
+  background: #222;
   color: var(--text);
   text-decoration: none;
-  padding: 10px 0 10px 65px;
-  background-color: brown;
-  background: hsla(34,85%,35%,1);
-  position: relative;
-  display: block;
-  float: left;
-}
-
-.breadcrumb li a::after {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 30px solid hsla(34,85%,35%,1);
-  position: absolute;
-  top: 50%;
-  margin-top: -50px;
-  left: 100%;
-  z-index: 2;
-}
-
-.breadcrumb li a::before {
-  content: " ";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 30px solid transparent;
-  position: absolute;
-  top: 50%;
-  margin-top: -50px;
-  margin-left: 1px;
-  left: 100%;
-  z-index: 1;
 }
 
 .breadcrumb li:first-child a {
-  padding-left: 10px;
+  padding-left: 1.2em;
 }
 
-.breadcrumb li:nth-child(2) a       { background:        hsla(34,85%,45%,1); }
-.breadcrumb li:nth-child(2) a:after { border-left-color: hsla(34,85%,45%,1); }
-
-.breadcrumb li:last-child a {
-  background: transparent !important;
-  color: var(--text);
-  pointer-events: none;
-  cursor: default;
+.breadcrumb li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1em;
+  width: 0;
+  height: 0;
+  border-top: 1.2em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-left: 1em solid #222;
+  z-index: 2;
 }
 
-.breadcrumb li:last-child a::after { 
-  border: 0; 
+.breadcrumb li:not(:first-child) a {
+  margin-left: -1em;
 }
 
-.breadcrumb li a:hover { 
-  background: hsla(34, 85%, 25%, 1); 
+.breadcrumb li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 1.2em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-left: 1em solid #fff;
+  z-index: 1;
 }
-.breadcrumb li a:hover:after { 
-  border-left-color: hsla(34, 85%, 25%, 1) !important; 
+
+.breadcrumb a:hover {
+  background: #444;
+}
+
+.breadcrumb li:hover::after {
+  border-left-color: #444;
+}
+
+.breadcrumb li[aria-current="page"] {
+  background: #555;
+  color: #fff;
 }
 
 #wave:hover {
