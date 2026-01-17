@@ -132,6 +132,8 @@ for (const file of fs.readdirSync(postsDir)) {
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 <div class="cover-blur"></div>
                 <div class="article-text">
+                    <br>
+                    <br>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="https://vihaanvinoth.com">Home</a></li>
