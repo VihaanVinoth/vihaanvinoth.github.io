@@ -161,59 +161,38 @@ header nav {
 }
 
 .breadcrumb {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.4em;
   list-style: none;
-  overflow: visible;
   padding: 0;
-  margin: 0;
+  display: flex; 
 }
 
 .breadcrumb li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  padding: 0.45em 0.75em;
-  border-radius: 4px;
+  display: inline;
 }
 
-.breadcrumb a {
+.breadcrumb li + li::before {
+  content: " > "; 
+  padding: 0 8px;
+  color: var(--text);
+}
+
+.breadcrumb li a {
   color: var(--text);
   text-decoration: none;
+  border: 1px solid #222;
+  background: var(--bg);
+  padding: 10px;
   transition: all 500ms;
 }
 
-.breadcrumb a:hover {
-  text-decoration: dotted underline darkslategray;
-}
-
-.breadcrumb svg {
-  width: 0.9em;
-  height: 0.9em;
-  stroke: var(--text);
-  stroke-width: 2;
-  fill: none;
-  opacity: 0.7;
-  flex-shrink: 0;
+.breadcrumb li a:hover {
+  color: var(--text-opp);
+  background: var(--bg-hover);
 }
 
 .breadcrumb li[aria-current="page"] {
   color: var(--text);
   font-weight: bold;
-}
-
-.breadcrumb a:focus-visible {
-  outline: 2px dotted currentColor;
-  outline-offset: 2px;
-}
-
-#wave:hover {
-  display: inline-block;
-  cursor: pointer;
-  animation: waveAnimation 2.5s linear forwards;
-  transform-origin: 70%;
 }
 
 @keyframes waveAnimation {

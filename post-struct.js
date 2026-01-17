@@ -93,8 +93,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.8.7">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=2.8.7">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.8.8">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=2.8.8">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -132,6 +132,15 @@ for (const file of fs.readdirSync(postsDir)) {
                 ${cover ? `<img class="cover" src="${cover}">` : ""}
                 <div class="cover-blur"></div>
                 <div class="article-text">
+                    <div class="breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li aria-current="page">${title}</li>
+                            </ol>
+                        </nav>
+                    </div>
                     <br>
                     <br>
                     ${
