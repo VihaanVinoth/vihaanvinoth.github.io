@@ -160,47 +160,6 @@ header nav {
   margin-left: 10px;
 }
 
-.breadcrumb {
-  list-style: none;
-  gap: 6px;
-  display: flex; 
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.breadcrumb li:not(:last-child) a::after {
-  content: " >";
-  margin-left: 8px;
-  opacity: 0.6;
-}
-
-.breadcrumb li {
-  display: inline;
-  align-items: center;
-}
-
-.breadcrumb li a {
-  color: var(--text);
-  text-decoration: none;
-  border: 1px solid #222;
-  background: var(--bg);
-  transition: all 500ms;
-  padding: 4px 8px;
-  border-radius: 5px;
-}
-
-.breadcrumb li a:hover {
-  color: var(--text-opp);
-  background: var(--bg-hover);
-}
-
-.breadcrumb a[aria-current="page"] {
-  color: var(--text);
-  font-weight: bold;
-  pointer-events: none;
-}
-
 @keyframes waveAnimation {
   0% {
     transform: rotate(0deg);
