@@ -93,6 +93,7 @@ html {
   font-family: var(--sans-font);
   color: var(--text);
   scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 body {
