@@ -93,8 +93,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.4">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=2.4">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.5">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=2.5">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -111,22 +111,18 @@ for (const file of fs.readdirSync(postsDir)) {
         <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
     </head>
     <body>
-        <nav>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">
-                ☰
-            </label>
-            <ul class="navlinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Services</a></li>
-            </ul>
-        </nav>
         <main class="content" id="mainContent">
             <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
+            <nav>
+                <ul class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
             <br>
             <br>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">

@@ -122,6 +122,8 @@ nav {
   justify-content: flex-end;
   align-items: center;
   margin: 20px;
+  font-family: var(--mono-font);
+  font-size: 12px;
 }
 
 .navlinks {
@@ -141,56 +143,6 @@ nav {
 .navlinks li:not(:last-child)::after {
   content: "/";
   margin-left: 10px;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  position: absolute;
-  right: 4em;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  nav {
-    justify-content: space-between;
-  }
-  
-  .menu-icon {
-    display: block;
-  }
-  
-  .navlinks {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    right: 0;
-    flex-direction: column;
-    background: var(--bg);
-    padding: 10px;
-    opacity: 0;
-    transform: translateX(100%);
-    visibility: hidden;
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease,
-      visibility 0.25s;
-  }
-  
-  .navlinks li::after {
-    content: "/";
-    margin-left: 10px;
-  }
-  
-  #menu-toggle:checked + .menu-icon + .navlinks {
-    opacity: 1;
-    transform: translateX(0);
-    visibility: visible;
-  }
 }
 
 #wave:hover {
