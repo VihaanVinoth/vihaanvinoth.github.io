@@ -159,7 +159,7 @@ header nav {
   padding: 0;
   flex-wrap: wrap;
   margin: 0;
-  font-family: var(--mono-font);
+  font-family: var(--mono-cfont);
 }
 
 .breadcrumb a:focus-visible {
@@ -193,7 +193,7 @@ header nav {
   height: 0;
   border-top: 1.2em solid transparent;
   border-bottom: 1.2em solid transparent;
-  border-left-color: var(--bg, #000);
+  border-left: 1em solid #222;
   z-index: 2;
 }
 
@@ -227,6 +227,9 @@ header nav {
   justify-content: flex-start;
   margin: 0;
   color: #fff;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
 }
 
 #wave:hover {
@@ -315,6 +318,26 @@ section p > img {
 ::selection {
   background: var(--text);
   color: var(--selection-text-color);
+}
+
+@media (max-width: 600px) {
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb li {
+    margin-left: 0;
+  }
+
+  .breadcrumb li::before,
+  .breadcrumb li::after {
+    display: none;
+  }
+
+  .breadcrumb a,
+  .breadcrumb li[aria-current="page"] {
+    padding: 0.5em 0.75em;
+  }
 }
 
 @media (max-width: 500px) {
