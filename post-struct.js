@@ -110,6 +110,7 @@ for (const file of fs.readdirSync(postsDir)) {
         <meta name="google-adsense-account" content="ca-pub-8253398098387796">
         <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
     </head>
+    <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
     <body>
         <main class="content" id="mainContent">
             <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
