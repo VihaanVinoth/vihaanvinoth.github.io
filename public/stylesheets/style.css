@@ -181,8 +181,8 @@ header nav {
   text-decoration: none;
   border: 1px solid #222;
   background: var(--bg);
-  padding: 10px;
   transition: all 500ms;
+  border-radius: 5px;
 }
 
 .breadcrumb li a:hover {
