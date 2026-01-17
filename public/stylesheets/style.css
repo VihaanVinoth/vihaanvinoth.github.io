@@ -162,18 +162,19 @@ header nav {
 
 .breadcrumb {
   list-style: none;
-  padding: 0;
+  gap: 6px;
   display: flex; 
+}
+
+.breadcrumb li:not(:last-child) a::after {
+  content: " >";
+  margin-left: 8px;
+  opacity: 0.6;
 }
 
 .breadcrumb li {
   display: inline;
-}
-
-.breadcrumb li + li::before {
-  content: " > "; 
-  padding: 0 8px;
-  color: var(--text);
+  align-items: center;
 }
 
 .breadcrumb li a {
@@ -182,6 +183,7 @@ header nav {
   border: 1px solid #222;
   background: var(--bg);
   transition: all 500ms;
+  padding: 4px 8px;
   border-radius: 5px;
 }
 
@@ -190,9 +192,10 @@ header nav {
   background: var(--bg-hover);
 }
 
-.breadcrumb li[aria-current="page"] {
+.breadcrumb a[aria-current="page"] {
   color: var(--text);
   font-weight: bold;
+  pointer-events: none;
 }
 
 @keyframes waveAnimation {
