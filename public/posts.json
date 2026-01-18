@@ -1,7 +1,24 @@
 [
   {
+    "title": "A guide to CSS Grids and Flexbox",
+    "summary": "CSS layout can feel overwhelming at first, but mastering Grid and Flexbox will dramatically improve your ability to build responsive, modern websites.",
+    "cover": "https://miro.medium.com/1*m2Q3kRG9yl5WyNIyoe15XA.png",
+    "slug": "a-guide-to-css-grids-and-flexbox",
+    "url": "/posts/a-guide-to-css-grids-and-flexbox",
+    "date": "2026-01-17T10:47:00.000Z",
+    "displayDate": "17 January, 2026",
+    "readingTime": 4,
+    "tags": [
+      "css",
+      "layout",
+      "flexbox",
+      "html",
+      "coding"
+    ]
+  },
+  {
     "title": "8 Common HTML Mistakes Beginners Always Make",
-    "summary": "Covers mistake that at some point any HTML beginner will make",
+    "summary": "Covers mistakes that at some point any HTML beginner will make",
     "cover": "https://cdn.vihaanvinoth.com/assets/uploads/html-mistakes-thumbnail.png",
     "slug": "8-common-html-mistakes-beginners-always-make",
     "url": "/posts/8-common-html-mistakes-beginners-always-make",
@@ -40,7 +57,7 @@
     "url": "/posts/how-to-setup-vs-code",
     "date": "2026-01-14T02:35:00.000Z",
     "displayDate": "14 January, 2026",
-    "readingTime": 2,
+    "readingTime": 3,
     "tags": [
       "coding",
       "html",
@@ -56,7 +73,15 @@
     "url": "/posts/hello",
     "date": "2026-01-09T06:15:00.000Z",
     "displayDate": "09 January, 2026",
-    "readingTime": 1,
-    "tags": []
+    "readingTime": 3,
+    "tags": [
+      "intro",
+      "coding",
+      "html",
+      "css",
+      "programmer",
+      "vihaan",
+      "first"
+    ]
   }
 ]

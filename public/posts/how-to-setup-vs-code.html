@@ -6,8 +6,8 @@
         <title>How to setup VS Code | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=2.9.2">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=2.9.2">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=3">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=3">
         <meta name="description" content="This is a quick article on how to setup VS Code for programming">
         <meta property="og:title" content="How to setup VS Code - Vihaan Vinoth">
         <meta property="og:description" content="This is a quick article on how to setup VS Code for programming">
@@ -28,12 +28,12 @@
             <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
             <nav>
                 <ul class="navlinks">
-                    <li><a href="https://vihaanvinoth.com">Home</a></li>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="https://vihaanvinoth.com/services">Services</a></li>
+                    <li><a href="https://vihaanvinoth.com" aria-label="Redirects back to home">Home</a></li>
+                    <li><a href="https://vihaanvinoth.com/#about-me" aria-label="Takes you to about me section">About Me</a></li>
+                    <li><a href="https://vihaanvinoth.com/#projects" aria-label="Takes you to projects section" >Projects</a></li>
+                    <li><a href="https://vihaanvinoth.com/#contact" aria-label="Takes you to contact section" >Contact</a></li>
+                    <li><a href="https://vihaanvinoth.com/blog" aria-label="Takes you to blog page" >Blog</a></li>
+                    // <li><a href="https://vihaanvinoth.com/services" aria-label="Takes you to services page">Services</a></li>
                 </ul>
             </nav>
             <br>
@@ -50,24 +50,66 @@
                     <p><a href="https://vihaanvinoth.com">Home</a> > <a href="https://vihaanvinoth.com/blog">Blog</a> > How to setup VS Code</p>
                     <br>
                     <br>
-                    <time datetime="14 January, 2026">14 January, 2026 · Vihaan Vinoth · 2 min read</time>
+                    <time datetime="14 January, 2026">14 January, 2026 · Vihaan Vinoth · 3 min read</time>
                     <header>
                         <h1 id="article-title">How to setup VS Code</h1>
                     </header>
-                    <p>Let's say you've been dreaming about making that one website, but, you are using a not-so-great application that relies only on you with your skills like Notepad. We're going to use VSC, also known as Visual Studio Code which is the hallmark for programmers because it is a code editor. There's many editors in the 21st century, but VS Code include capabilities which are unmatched from many.</p>
-<h2>Installing Visual Studio Code</h2>
-<p>Firstly, go to the official VSC website at <a href="https://code.visualstudio.com">https://code.visualstudio.com</a>.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1700264771451/fe06bac1-8c61-466d-ad7d-712f3df522ee.png" alt=""></p>
-<p>Simply click the blue button (aka the most stable version) to download to the code editor. On the top of the screen where the address bar is, you should see that the file is downloading; it's the blue down arrow on the right.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1700264917248/7002b5ed-ce82-44c8-b5c4-d45168f4a3d6.png" alt=""></p>
-<p>Now once you have downloaded the file, it may show you some prompts. Press 'Ok' or 'Yes' for all of them.</p>
-<h2>Installing the Live Server Extension</h2>
-<p>Once you've installed VS Code, you can open the application. However, we're not done just yet... we will need to install Live Server Extension - which will allow us to host a preview server on your network. On the sidebar, just press the icon which has the four squares on it.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1700265208915/a12fe184-e818-4667-8648-2478bfaa9f8a.png" alt=""></p>
-<p>Now when you are in the section, type in the search bar 'live server' and press the top option. For me it shows two buttons, 'Disable' and 'Uninstall', but for you it will only say 'Install'.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1700265511880/ac67b2c0-ce57-473f-bf5c-63f8921162e2.png" alt=""></p>
+                    <p>If you’ve ever dreamed of building your own website or learning how to code, choosing the right tools is one of the most important first steps. Many beginners start with very basic text editors such as Notepad, but these tools lack essential features that make coding easier, faster, and more enjoyable.</p>
+<p>In this guide, you’ll learn how to install and set up <strong>Visual Studio Code (VS Code)</strong>, one of the most popular and powerful code editors used by developers around the world. By the end of this tutorial, you’ll have a professional development environment ready for building websites and projects.</p>
+<h2>What Is Visual Studio Code?</h2>
+<p><strong>Visual Studio Code</strong>, often shortened to <strong>VS Code</strong>, is a free, open-source code editor developed by Microsoft. It supports a wide range of programming languages including HTML, CSS, JavaScript, Python, and many more. What makes VS Code stand out is its balance between simplicity and powerful features.</p>
+<p>Some key benefits of VS Code include:</p>
+<ul>
+<li>Syntax highlighting for many languages</li>
+<li>Built-in Git and GitHub support</li>
+<li>A massive extension marketplace</li>
+<li>Lightweight performance</li>
+<li>Customizable themes and settings</li>
+</ul>
+<p>Because of these features, VS Code has become the editor of choice for many web developers, software engineers, and students.</p>
+<h2>Step 1: Installing Visual Studio Code</h2>
+<p>To get started, you’ll need to download Visual Studio Code from the official website.</p>
+<ol>
+<li>Open your web browser and go to the official VS Code website at:<br>
+<a href="https://code.visualstudio.com">https://code.visualstudio.com</a>.</li>
+<li>On the homepage, you’ll see a large blue button labeled “<strong>Download</strong>”. This button automatically selects the correct version for your operating system (Windows, macOS, or Linux).</li>
+<li>Click the button to begin downloading the installer.</li>
+</ol>
+<p>Once the download starts, you should see the progress in your browser’s download bar or in the top-right corner of the screen.</p>
+<h2>Step 2: Installing Visual Studio Code</h2>
+<p>After the download finishes:</p>
+<ol>
+<li>Open the downloaded file.</li>
+<li>Follow the installation prompts.</li>
+<li>Accept the default settings unless you have a specific preference.</li>
+<li>Click “<strong>Next</strong>”, “<strong>Install</strong>”, or “<strong>Yes</strong>” when prompted.</li>
+</ol>
+<p>The installation process usually takes only a few minutes. Once it’s complete, you can launch Visual Studio Code from your applications menu.</p>
+<h2>Step 3: Opening VS Code for the First Time</h2>
+<p>When you open VS Code for the first time, you’ll see a clean and minimal interface. On the left side, there’s a vertical toolbar with icons for files, search, source control, and extensions.</p>
+<p>Don’t worry if it looks overwhelming at first — VS Code is designed to be beginner-friendly, and you’ll become comfortable with it quickly.</p>
+<h2>Step 4: Installing the Live Server Extension</h2>
+<p>One of the most useful extensions for web development is <strong>Live Server</strong>. This extension allows you to preview your website in a browser and see changes instantly as you edit your code.</p>
+<p>To install Live Server:</p>
+<ol>
+<li>Click the <strong>Extensions</strong> icon on the left sidebar (it looks like four squares).</li>
+<li>In the search bar, type “<strong>Live Server</strong>”.</li>
+<li>Click the top result created by <strong>Ritwick Dey</strong>.</li>
+<li>Press the <strong>Install</strong> button.</li>
+</ol>
+<p>Once installed, Live Server will automatically be available in VS Code.</p>
+<h2>Step 5: Using Live Server</h2>
+<p>To use Live Server:</p>
+<ol>
+<li>Open a folder containing your HTML files in VS Code.</li>
+<li>Right-click your <code>index.html</code> file.</li>
+<li>Click “<strong>Open with Live Server</strong>”.</li>
+</ol>
+<p>Your website will open in a browser, and any changes you make will update automatically. This makes development faster and more efficient.</p>
 <h2>Conclusion</h2>
-<p>Woohoo! You have successfully installed VS Code. Now you just have to press the file icon on the sidebar, drag a folder and start developiing! Overall, you have now learnt how to install and setup Visual Studio Code to prepare to code websites.</p>
+<p>Congratulations! You’ve successfully installed and set up <strong>Visual Studio Code</strong> for web development. You now have a professional code editor that supports modern development workflows and helps you write cleaner, more efficient code.</p>
+<p>With VS Code and Live Server installed, you’re ready to start building websites, experimenting with code, and improving your programming skills. As you grow, you can explore additional extensions, themes, and settings to customize your setup even further.</p>
+<p>Happy coding! 🌶️</p>
 
                 </div>
             </section>
@@ -87,7 +129,7 @@
                     </svg>
                     <p>Contact</p>
                 </a>
-                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth.</p>
+                <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth. <a href="https://vihaanvinoth.com/privacy">Privacy Policy</a></p>
             </section>
         </main>
         <script type="application/ld+json">
