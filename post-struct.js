@@ -120,7 +120,6 @@ for (const file of fs.readdirSync(postsDir)) {
                     <li><a href="https://vihaanvinoth.com/#projects" aria-label="Takes you to projects section" >Projects</a></li>
                     <li><a href="https://vihaanvinoth.com/#contact" aria-label="Takes you to contact section" >Contact</a></li>
                     <li><a href="https://vihaanvinoth.com/blog" aria-label="Takes you to blog page" >Blog</a></li>
-                    // <li><a href="https://vihaanvinoth.com/services" aria-label="Takes you to services page">Services</a></li>
                 </ul>
             </nav>
             <br>
