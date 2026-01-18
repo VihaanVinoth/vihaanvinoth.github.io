@@ -109,6 +109,7 @@ for (const file of fs.readdirSync(postsDir)) {
         <meta name="theme-color" content="#ffffff">
         <meta name="google-adsense-account" content="ca-pub-8253398098387796">
         <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8253398098387796" crossorigin="anonymous"></script>
     </head>
     <body>
         <main class="content" id="mainContent">
