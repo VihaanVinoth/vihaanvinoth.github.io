@@ -71,6 +71,26 @@
 <p>Flexbox, or the <strong>Flexible Box Layout</strong>, is a <strong>one-dimensional layout system</strong> in CSS. It is perfect for arranging items either <strong>horizontally (row)</strong> or <strong>vertically (column)</strong> inside a container. Unlike traditional layouts that rely on floats or inline-blocks, Flexbox simplifies alignment, spacing, and distribution of elements, making it ideal for smaller components such as menus, buttons, and form elements.</p>
 <h3>Centering items in a navbar</h3>
 <p>One of the most common use cases for Flexbox is a navigation bar. With just a few lines of CSS, you can perfectly align your menu items:</p>
+  <div class="ad ad-in-article ad-desktop">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8253398098387796"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="fluid"
+      data-ad-layout="in-article">
+    </ins>
+  </div>
+  
+  <div class="ad ad-in-article ad-mobile">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8253398098387796"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="fluid"
+      data-ad-layout="in-article">
+    </ins>
+  </div>
+  </p>
 <pre><code>nav {
   display: flex;
   justify-content: space-between;
@@ -173,6 +193,15 @@
                 "https://github.com/VihaanVinoth"
             ]
             }
+        </script>
+        <script>
+            window.addEventListener("load", () => {
+                document.querySelectorAll(".adsbygoogle").forEach(ad => {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {}
+                });
+            });         
         </script>
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();

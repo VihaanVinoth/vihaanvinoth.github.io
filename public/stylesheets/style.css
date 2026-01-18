@@ -280,6 +280,16 @@ section p > img {
   color: var(--selection-text-color);
 }
 
+@media (min-width: 768px) {
+  .ad-mobile { display: none; }
+  .ad-desktop { display: block; }
+}
+
+@media (max-width: 767px) {
+  .ad-desktop { display: none; }
+  .ad-mobile { display: block; }
+}
+
 @media (max-width: 500px) {
   main {
     max-width: 100%;

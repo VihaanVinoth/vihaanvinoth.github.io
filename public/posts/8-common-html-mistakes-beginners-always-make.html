@@ -76,6 +76,26 @@
 &lt;/div&gt;
 </code></pre>
 <p>This approach works more visually, but it makes your HTML harder to understand, and less accessible in return. Instead, you should implement semantic elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> whenever possible in areas which incorporate meaning. These elements describe the role of the content, not just its layout or orientation.</p>
+  <div class="ad ad-in-article ad-desktop">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8253398098387796"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="fluid"
+      data-ad-layout="in-article">
+    </ins>
+  </div>
+  
+  <div class="ad ad-in-article ad-mobile">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8253398098387796"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="fluid"
+      data-ad-layout="in-article">
+    </ins>
+  </div>
+  </p>
 <h2>2. Skipping heading levels</h2>
 <p>Headings are not just for styling — they define the textual structure of your page. A common mistake that can arouse in your code is by jumping straight from <code>&lt;h1&gt;</code> to <code>&lt;h4&gt;</code> or using headings based purely on size.</p>
 <pre><code>&lt;h1&gt;My Website&lt;/h1&gt;
@@ -148,6 +168,15 @@
                 "https://github.com/VihaanVinoth"
             ]
             }
+        </script>
+        <script>
+            window.addEventListener("load", () => {
+                document.querySelectorAll(".adsbygoogle").forEach(ad => {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {}
+                });
+            });         
         </script>
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();

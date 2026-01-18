@@ -25,11 +25,44 @@ const postsIndex = [];
 for (const file of fs.readdirSync(postsDir)) {
   if (!file.endsWith(".md")) continue;
 
+  const inArticleAd = `
+  <div class="ad ad-in-article ad-desktop">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8253398098387796"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="fluid"
+      data-ad-layout="in-article">
+    </ins>
+  </div>
+  `
+
+  const mobileinArticleAd = `
+  <div class="ad ad-in-article ad-mobile">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-8253398098387796"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="fluid"
+      data-ad-layout="in-article">
+    </ins>
+  </div>
+  `
+
   const mdContent = fs.readFileSync(path.join(postsDir, file), "utf-8");
 
   const { data, content } = matter(mdContent);
 
-  const htmlBody = md.render(content);
+  let htmlBody = md.render(content);
+
+  const paragraphs = htmlBody.split("</p>");
+
+  if (paragraphs.length > 3) {
+    paragraphs.splice(3, 0, inArticleAd + mobileinArticleAd);
+  }
+
+  htmlBody = paragraphs.join("</p>");  
+
   const slug = path.basename(file, ".md");
 
   const wpm = 225;
@@ -93,8 +126,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=3.1">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=3.1">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=3.2">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=3.2">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -190,6 +223,15 @@ for (const file of fs.readdirSync(postsDir)) {
                 "https://github.com/VihaanVinoth"
             ]
             }
+        </script>
+        <script>
+            window.addEventListener("load", () => {
+                document.querySelectorAll(".adsbygoogle").forEach(ad => {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {}
+                });
+            });         
         </script>
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
