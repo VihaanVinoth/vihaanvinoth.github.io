@@ -93,8 +93,8 @@ for (const file of fs.readdirSync(postsDir)) {
         <title>${title} | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=3">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=3">
+        <link rel="stylesheet" href="/stylesheets/reset.css?v=3.1">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=3.1">
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -133,7 +133,21 @@ for (const file of fs.readdirSync(postsDir)) {
                 <div class="article-text">
                     <br>
                     <br>
-                    <p><a href="https://vihaanvinoth.com">Home</a> > <a href="https://vihaanvinoth.com/blog">Blog</a> > ${title}</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li>
+                            <a href="https://vihaanvinoth.com" aria-label="Takes you to Vihaan Vinoth page">Home</a>
+                            </li>
+                            >
+                            <li> 
+                            <a href="https://vihaanvinoth.com/blog" aria-label="Takes you to Blog page">Blog</a>
+                            </li>
+                            >
+                            <li>
+                            ${title}
+                            </li>
+                        </ol>
+                    </nav>
                     <br>
                     <br>
                     ${
@@ -233,7 +247,7 @@ for (const file of fs.readdirSync(postsDir)) {
     summary,
     cover,
     slug,
-    url: `/posts/${slug}`,
+    url: `/blog/${slug}`,
     date: dateNow,
     displayDate: date,
     readingTime: mins,

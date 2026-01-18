@@ -175,6 +175,30 @@ li {
   margin-left: 10px;
 }
 
+nav[aria-label="breadcrumb"] {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ol {
+  list-style: none;
+  margin-left: -1.5em;
+}
+
+nav ol li {
+  display: inline-block;
+}
+
+nav ol li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav ol li a:hover {
+  text-decoration: dotted underline darkslategray;
+  transition: alsl 500ms;
+}
+
 @keyframes waveAnimation {
   0% {
     transform: rotate(0deg);
