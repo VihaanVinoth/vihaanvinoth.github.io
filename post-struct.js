@@ -363,11 +363,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <body>
         <main class="content" id="mainContent">
             <a href="../index.html" id="logo" width="50" height="59" aria-label="Redirects back to main site">
-                <picture>
-                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal-200w.webp" media="(max-width: 500px)" type="image/webp">
-                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal-400w.webp" media="(min-width: 501px)" type="image/webp">
-                    <img src="https://cdn.vihaanvinoth.com/VVNormal-400w.webp" alt="Vihaan Vinoth Logo" id="logo" width="400" height="auto">
-                </picture>
+                <img src="https://cdn.vihaanvinoth.com/VVNormal.webp" alt="Vihaan Vinoth Logo" id="logo">
             </a>
             <nav>
                 <ul class="navlinks">
