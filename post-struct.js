@@ -61,9 +61,13 @@ for (const file of fs.readdirSync(postsDir)) {
   const paragraphs = htmlBody.split("</p>");
 
   if (paragraphs.length > 3) paragraphs.splice(3, 0, inArticleAd);
-  if (paragraphs.length > 3) paragraphs.splice(3, 0, mobileinArticleAd);
+  if (paragraphs.length > 4) paragraphs.splice(4, 0, mobileinArticleAd);
 
-  htmlBody = paragraphs.join("</p>");  
+  htmlBody = paragraphs
+    .slice(0, 2).join("</p>") +
+    inArticleAd +
+    mobileinArticleAd +
+    paragraphs.slice(2).join("</p>");  
 
   const slug = path.basename(file, ".md");
 
@@ -82,7 +86,7 @@ for (const file of fs.readdirSync(postsDir)) {
 
   const title = data.title ?? slug;
   const summary = data.description ?? "";
-
+  
   let cover = data.cover ?? null;
 
   if (typeof cover === "object" && cover !== null) {
