@@ -6,8 +6,8 @@
         <title>Semantic HTML explained | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="/stylesheets/reset.css?v=3.2">
-        <link rel="stylesheet" href="/stylesheets/style.css?v=3.2">
+        <link rel="preload" href="/stylesheets/style.css?v=3.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.3"></noscript>
         <meta name="description" content="A concise introduction to Semantic HTML">
         <meta property="og:title" content="Semantic HTML explained - Vihaan Vinoth">
         <meta property="og:description" content="A concise introduction to Semantic HTML">
@@ -19,12 +19,90 @@
         <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
         <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.vihaanvinoth.com/favicon/apple-touch-icon.png">
         <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style"
+            href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100..700&display=swap"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100..700&display=swap">
+        </noscript>
         <meta name="theme-color" content="#ffffff">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8253398098387796" crossorigin="anonymous"></script>
+        <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                interpolate-size: allow-keywords;
+            }
+        }
+
+        body {
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-wrap: balance;
+        }
+
+        #root,
+        #__next {
+            isolation: isolate;
+        }
+    </style>
     </head>
     <body>
         <main class="content" id="mainContent">
-            <a href="../index.html" id="logo" aria-label="Redirects back to main site"><img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager" fetchpriority="high"></a>
+            <a href="../index.html" id="logo" width="50" height="59" aria-label="Redirects back to main site">
+                <picture>
+                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal.webp" type="image/webp">
+                    <img
+                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
+                    fetchpriority="high" width="50" height="59">
+                </picture>
+            </a>
             <nav>
                 <ul class="navlinks">
                     <li><a href="https://vihaanvinoth.com" aria-label="Redirects back to home">Home</a></li>
@@ -37,10 +115,10 @@
             <br>
             <br>
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
-                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" loading="eager" alt="Theme toggle icon" fetchpriority="high">
+                <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" width="18" height="18" loading="eager" alt="Theme toggle icon" fetchpriority="high">
             </button>
             <section class="article content">
-                <img class="cover" src="https://media.geeksforgeeks.org/wp-content/uploads/20241127115416984900/html-sementics-layout.png">
+                <img class="cover" width="457" height="257" src="https://media.geeksforgeeks.org/wp-content/uploads/20241127115416984900/html-sementics-layout.png">
                 <div class="cover-blur"></div>
                 <div class="article-text">
                     <br>
@@ -214,12 +292,12 @@ Misusing semantic elements can negatively impact accessibility and SEO. If an el
             <hr>
             <section class="footer content">
                 <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
-                    <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo" loading="lazy">
+                    <img id="git-icon" width="20" height="20" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo" loading="lazy">
                     <p>Github</p>
                 </a>
                 <p>&nbsp;&nbsp;</p>
                 <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
-                    <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
                         loading="lazy" width="20px" fill="#FFFFFF">
                         <path
                             d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
@@ -253,7 +331,7 @@ Misusing semantic elements can negatively impact accessibility and SEO. If an el
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
         </script>
-        <script type="text/javascript">
+        <script type="text/javascript" defer>
         window.addEventListener("load", () => {
             const observer = new IntersectionObserver(
                 entries => {
@@ -293,7 +371,7 @@ Misusing semantic elements can negatively impact accessibility and SEO. If an el
         });
         </script>
 
-        <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
+        <script async type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
     </body>
     </html>
     
