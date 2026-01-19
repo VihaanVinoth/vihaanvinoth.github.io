@@ -6,6 +6,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <title>Vihaan Vinoth - Full Stack Developer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            font-family: var(--sans-font);
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-family: var(--mono-font);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .navlinks li {
+            list-style-type: none;
+        }
+
+        .navlinks a {
+            color: var(--text);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 250ms;
+        }
+
+        .navlinks a:hover {
+            text-decoration: dotted underline darkslategray;
+        }
+
+        .navlinks li:not(:last-child)::after {
+            content: "/";
+            margin-left: 10px;
+        }
+
+        section.hero {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        section.hero h1 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+
+        section.hero p {
+            margin-top: 0.75rem;
+        }
+
+        .project-box,
+        .project-img {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: 3 / 2;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #theme-toggle {
+            border: var(--bg-toggle-border);
+            background: var(--bg-toggle);
+            border-radius: 5px;
+            padding: 5px 5px;
+            color: var(--text);
+            width: 30px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        #theme-toggle-icon {
+            filter: var(--icon-filter);
+        }
+
+        ::selection {
+            background: var(--text);
+            color: var(--selection-text-color);
+        }
+
+        @media (max-width: 767px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                max-width: 100%;
+                border: none;
+            }
+
+            .navlinks {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
     <link rel="preload" href="/stylesheets/style.css?v=3.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="/stylesheets/style.css?v=3.3">
@@ -114,7 +255,10 @@
         <section class="hero content">
             <a href="index.html" id="logo" aria-label="Redirects back to main site">
                 <picture>
-                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal.webp" type="image/webp">
+                    <source srcset="
+                        https://cdn.vihaanvinoth.com/VVNormal-50x59.webp 1x,
+                        https://cdn.vihaanvinoth.com/VVNormal-100x118.webp 2x
+                    " type="image/webp">
                     <img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
                         fetchpriority="high" width="50" height="59">
                 </picture>
@@ -292,8 +436,14 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/AugustusCaesar"
                     aria-label="Takes you to the Augustus Caesar virtual museum GitHub page" target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/augustus-thumbnail.webp"
-                        alt="Augustus Caesar Thumbnail" loading="lazy" width="423" height="282">
+                    <picture>
+                        <source srcset="
+                        https://cdn.vihaanvinoth.com/augustus-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/augustus-thumbnail-735.webp 735w
+                        " type="image/webp" sizes="(max-width: 768px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/augustus-thumbnail-735.webp" width="735" height="404" alt="Augustus Caesar Thumbnail"
+                        loading="lazy">
+                    </picture>
                     <h2>Augustus Museum</h2>
                 </a>
                 <p>HTML · CSS</p>
@@ -302,8 +452,14 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/aristotle"
                     aria-label="Takes you to the Aristotle CSS Framework GitHub page" target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/aristotle-thumbnail.webp"
-                        alt="Aristotle Thumbnail" loading="lazy" width="423" height="282">
+                    <picture>
+                        <source srcset="
+                        https://cdn.vihaanvinoth.com/aristotle-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/aristotle-thumbnail-735.webp 735w
+                        " type="image/webp" sizes="(max-width: 768px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/aristotle-thumbnail-735.webp" width="735" height="404" alt="Aristotle Thumbnail"
+                        loading="lazy">
+                    </picture>
                     <h2>Aristotle CSS Framework</h2>
                 </a>
                 <p>HTML · CSS</p>
@@ -312,8 +468,14 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/verty"
                     aria-label="Takes you to the Verty email application GitHub page" target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/verty-thumbnail.webp"
-                        alt="Verty Thumbnail" loading="lazy" width="423" height="282">
+                    <picture>
+                        <source srcset="
+                        https://cdn.vihaanvinoth.com/verty-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/verty-thumbnail-735.webp 735w
+                        " type="image/webp" sizes="(max-width: 768px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/verty-thumbnail-735.webp" width="735" height="404" alt="Verty Thumbnail"
+                        loading="lazy">
+                    </picture>
                     <h2>Verty, Email Service</h2>
                 </a>
                 <p>HTML · CSS · PHP · MySQL/MariaDB · Apache</p>
@@ -322,8 +484,14 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/V_blog" aria-label="Takes you to the VBlog GitHub page"
                     target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/vblog-thumbnail.webp"
-                        alt="VBlog Thumbnail" loading="lazy" width="423" height="282">
+                    <picture>
+                        <source srcset="
+                        https://cdn.vihaanvinoth.com/vblog-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/vblog-thumbnail-735.webp 735w
+                        " type="image/webp" sizes="(max-width: 768px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/vblog-thumbnail-735.webp" width="735" height="404" alt="VBlog Thumbnail"
+                        loading="lazy">
+                    </picture>
                     <h2>VBlog</h2>
                 </a>
                 <p>Astro · HTML · CSS · JS</p>
