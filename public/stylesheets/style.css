@@ -190,7 +190,7 @@ nav ol li a {
 
 nav ol li a:hover {
   text-decoration: dotted underline darkslategray;
-  transition: all 500ms;
+  transition: alsl 500ms;
 }
 
 @keyframes waveAnimation {
@@ -297,6 +297,7 @@ section p > img {
 
   .article-text {
     padding: 1rem 0;
+    text-align: left;
   }
 
   section.hero {
@@ -336,7 +337,7 @@ section p > img {
 }
 
 img {
-  max-width: 100%;
+  width: 50px;
 }
 
 .map-box {
