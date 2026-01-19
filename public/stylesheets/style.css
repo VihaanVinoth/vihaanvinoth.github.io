@@ -339,8 +339,7 @@ section p > img {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  width: 50px;
 }
 
 .map-box {
@@ -486,7 +485,6 @@ hr {
 
 .project-img, article > img {
   width: 100%;
-  height: auto;
   border-radius: 5px;
   object-fit: cover;
   object-position: center;

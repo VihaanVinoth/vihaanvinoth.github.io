@@ -273,8 +273,8 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
             }
         </style>
-        <link rel="preload" href="/stylesheets/style.css?v=3.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.4"></noscript>
+        <link rel="preload" href="/stylesheets/style.css?v=3.5" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.5"></noscript>
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
