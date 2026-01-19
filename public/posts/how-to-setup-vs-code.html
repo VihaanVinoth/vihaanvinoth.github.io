@@ -6,8 +6,149 @@
         <title>How to setup VS Code | Vihaan Vinoth</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow">
-        <link rel="preload" href="/stylesheets/style.css?v=3.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.3"></noscript>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body,
+            html {
+                font-family: var(--sans-font);
+                color: var(--text);
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background: var(--bg);
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+
+            header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            header nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                font-family: var(--mono-font);
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            .navlinks {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .navlinks li {
+                list-style-type: none;
+            }
+
+            .navlinks a {
+                color: var(--text);
+                text-decoration: none;
+                white-space: nowrap;
+                transition: all 250ms;
+            }
+
+            .navlinks a:hover {
+                text-decoration: dotted underline darkslategray;
+            }
+
+            .navlinks li:not(:last-child)::after {
+                content: "/";
+                margin-left: 10px;
+            }
+
+            section.hero {
+                padding-top: 1rem;
+                padding-bottom: 2rem;
+            }
+
+            section.hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            section.hero p {
+                margin-top: 0.75rem;
+            }
+
+            .project-box,
+            .project-img {
+                width: 100%;
+                border-radius: 5px;
+                object-fit: cover;
+                object-position: center;
+                aspect-ratio: 3 / 2;
+            }
+
+            .projects {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                color: var(--text);
+                min-height: 100vh;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            #theme-toggle {
+                border: var(--bg-toggle-border);
+                background: var(--bg-toggle);
+                border-radius: 5px;
+                padding: 5px 5px;
+                color: var(--text);
+                width: 30px;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                cursor: pointer;
+            }
+
+            #theme-toggle-icon {
+                filter: var(--icon-filter);
+            }
+
+            ::selection {
+                background: var(--text);
+                color: var(--selection-text-color);
+            }
+
+            @media (max-width: 767px) {
+                .projects {
+                    grid-template-columns: 1fr;
+                }
+
+                main {
+                    max-width: 100%;
+                    border: none;
+                }
+
+                .navlinks {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        </style>
+        <link rel="preload" href="/stylesheets/style.css?v=3.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.4"></noscript>
         <meta name="description" content="This is a quick article on how to setup VS Code for programming">
         <meta property="og:title" content="How to setup VS Code - Vihaan Vinoth">
         <meta property="og:description" content="This is a quick article on how to setup VS Code for programming">
@@ -97,10 +238,12 @@
         <main class="content" id="mainContent">
             <a href="../index.html" id="logo" width="50" height="59" aria-label="Redirects back to main site">
                 <picture>
-                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal.webp" type="image/webp">
-                    <img
-                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
-                    fetchpriority="high" width="50" height="59">
+                    <source srcset="
+                        https://cdn.vihaanvinoth.com/VVNormal-50x59.webp 1x,
+                        https://cdn.vihaanvinoth.com/VVNormal-100x118.webp 2x
+                    " type="image/webp">
+                    <img src="https://cdn.vihaanvinoth.com/VVNormal.webp" alt="Vihaan Vinoth Logo" loading="eager"
+                        fetchpriority="high" width="50" height="59">
                 </picture>
             </a>
             <nav>
