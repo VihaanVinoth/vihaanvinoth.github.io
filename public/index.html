@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
     <title>Vihaan Vinoth - Full Stack Developer</title>
-    <link rel="stylesheet" href="/stylesheets/reset.css?v=3.2">
-    <link rel="stylesheet" href="/stylesheets/style.css?v=3.2">
+    <link rel="preload" href="/stylesheets/style.css?v=3.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/stylesheets/style.css?v=3.3">
+    </noscript>
     <meta name="description"
         content="Hey! I'm Vihaan Vinoth, a local full-stack developer based in Melbourne, Australia.">
     <meta property="og:title" content="Vihaan Vinoth">
@@ -15,12 +17,12 @@
         content="Hey! I'm Vihaan Vinoth, a local full-stack developer based in Melbourne, Australia.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vihaanvinoth.com/">
-    <meta property="og:image" content="https://cdn.vihaanvinoth.com/og-image.png">
+    <meta property="og:image" content="https://cdn.vihaanvinoth.com/og-image.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vihaan Vinoth – Developer Portfolio">
     <meta name="twitter:description"
         content="Hey! I'm Vihaan Vinoth, a local full-stack developer based in Melbourne, Australia.">
-    <meta name="twitter:image" content="https://cdn.vihaanvinoth.com/og-image.png">
+    <meta name="twitter:image" content="https://cdn.vihaanvinoth.com/og-image.webp">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.vihaanvinoth.com/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.vihaanvinoth.com/favicon/favicon-32x32.png">
@@ -28,25 +30,105 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
     <meta name="google-adsense-account" content="ca-pub-8253398098387796">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8253398098387796" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100..700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100..700&display=swap">
+    </noscript>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8253398098387796"
+        crossorigin="anonymous"></script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                interpolate-size: allow-keywords;
+            }
+        }
+
+        body {
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-wrap: balance;
+        }
+
+        #root,
+        #__next {
+            isolation: isolate;
+        }
+    </style>
 </head>
+
 <body>
     <main id="mainContent">
         <button id="theme-toggle" aria-label="Toggle theme">
             <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg"
-                alt="Theme toggle icon" loading="eager" fetchpriority="high">
+                alt="Theme toggle icon" loading="eager" fetchpriority="high" width="18" height="18">
         </button>
         <section class="hero content">
-            <a href="index.html" id="logo" aria-label="Redirects back to main site"><img
-                    src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
-                    fetchpriority="high"></a>
+            <a href="index.html" id="logo" aria-label="Redirects back to main site">
+                <picture>
+                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal.webp" type="image/webp">
+                    <img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
+                        fetchpriority="high" width="50" height="59">
+                </picture>
+            </a>
             <nav>
                 <ul class="navlinks">
                     <li><a href="https://vihaanvinoth.com" aria-label="Redirects back to home">Home</a></li>
-                    <li><a href="https://vihaanvinoth.com/#about-me" aria-label="Takes you to about me section">About Me</a></li>
-                    <li><a href="https://vihaanvinoth.com/#projects" aria-label="Takes you to projects section" >Projects</a></li>
-                    <li><a href="https://vihaanvinoth.com/#contact" aria-label="Takes you to contact section" >Contact</a></li>
-                    <li><a href="https://vihaanvinoth.com/blog" aria-label="Takes you to blog page" >Blog</a></li>
+                    <li><a href="https://vihaanvinoth.com/#about-me" aria-label="Takes you to about me section">About
+                            Me</a></li>
+                    <li><a href="https://vihaanvinoth.com/#projects"
+                            aria-label="Takes you to projects section">Projects</a></li>
+                    <li><a href="https://vihaanvinoth.com/#contact"
+                            aria-label="Takes you to contact section">Contact</a></li>
+                    <li><a href="https://vihaanvinoth.com/blog" aria-label="Takes you to blog page">Blog</a></li>
                     <!-- <li><a href="https://vihaanvinoth.com/services" aria-label="Takes you to services page">Services</a></li> -->
                 </ul>
             </nav>
@@ -73,7 +155,8 @@
             <div class="map-box">
                 <div id="map"></div>
             </div>
-            <p id="about-text">I’m an Australian full-stack web developer and designer from Melbourne with over four years of experience crafting
+            <p id="about-text">I’m an Australian full-stack web developer and designer from Melbourne with over four
+                years of experience crafting
                 websites and
                 digital interfaces. I enjoy blending web development with graphic design, using tools like Photoshop and
                 Illustrator to craft clean, intuitive, and visually engaging experiences.</p>
@@ -82,97 +165,97 @@
             <div class="icons-box">
                 <div class="icon-track">
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/css-logo.svg" loading="lazy"
-                        decoding="async" alt="CSS Logo" />
+                        decoding="async" alt="CSS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/django-logo.svg" loading="lazy"
-                        decoding="async" alt="Django Logo" />
+                        decoding="async" alt="Django Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/flask-logo.svg" loading="lazy"
-                        decoding="async" alt="Flask Logo" />
+                        decoding="async" alt="Flask Logo" width="123" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/html-logo.svg" loading="lazy"
-                        decoding="async" alt="HTML Logo" />
+                        decoding="async" alt="HTML Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/js-logo.svg" loading="lazy"
-                        decoding="async" alt="JS Logo" />
+                        decoding="async" alt="JS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/lua-logo.svg" loading="lazy"
-                        decoding="async" alt="Lua Logo" />
+                        decoding="async" alt="Lua Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mariadb-logo.svg" loading="lazy"
-                        decoding="async" alt="MariaDB Logo" />
+                        decoding="async" alt="MariaDB Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mysql-logo.svg" loading="lazy"
-                        decoding="async" alt="MySQL Logo" />
+                        decoding="async" alt="MySQL Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/nodejs-logo.svg" loading="lazy"
-                        decoding="async" alt="NodeJS Logo" />
+                        decoding="async" alt="NodeJS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/php-logo.svg" loading="lazy"
-                        decoding="async" alt="PHP Logo" />
+                        decoding="async" alt="PHP Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/python-logo.svg" loading="lazy"
-                        decoding="async" alt="Python Logo" />
+                        decoding="async" alt="Python Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/css-logo.svg" loading="lazy"
-                        decoding="async" alt="CSS Logo" />
+                        decoding="async" alt="CSS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/django-logo.svg" loading="lazy"
-                        decoding="async" alt="Django Logo" />
+                        decoding="async" alt="Django Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/flask-logo.svg" loading="lazy"
-                        decoding="async" alt="Flask Logo" />
+                        decoding="async" alt="Flask Logo" width="123" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/html-logo.svg" loading="lazy"
-                        decoding="async" alt="HTML Logo" />
+                        decoding="async" alt="HTML Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/js-logo.svg" loading="lazy"
-                        decoding="async" alt="JS Logo" />
+                        decoding="async" alt="JS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/lua-logo.svg" loading="lazy"
-                        decoding="async" alt="Lua Logo" />
+                        decoding="async" alt="Lua Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mariadb-logo.svg" loading="lazy"
-                        decoding="async" alt="MariaDB Logo" />
+                        decoding="async" alt="MariaDB Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mysql-logo.svg" loading="lazy"
-                        decoding="async" alt="MySQL Logo" />
+                        decoding="async" alt="MySQL Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/nodejs-logo.svg" loading="lazy"
-                        decoding="async" alt="NodeJS Logo" />
+                        decoding="async" alt="NodeJS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/php-logo.svg" loading="lazy"
-                        decoding="async" alt="PHP Logo" />
+                        decoding="async" alt="PHP Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/python-logo.svg" loading="lazy"
-                        decoding="async" alt="Python Logo" />
+                        decoding="async" alt="Python Logo" width="48" height="48" />
                 </div>
             </div>
             <div class="icons-box">
                 <div class="icon-track reverse">
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/css-logo.svg" loading="lazy"
-                        decoding="async" alt="CSS Logo" />
+                        decoding="async" alt="CSS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/django-logo.svg" loading="lazy"
-                        decoding="async" alt="Django Logo" />
+                        decoding="async" alt="Django Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/flask-logo.svg" loading="lazy"
-                        decoding="async" alt="Flask Logo" />
+                        decoding="async" alt="Flask Logo" width="123" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/html-logo.svg" loading="lazy"
-                        decoding="async" alt="HTML Logo" />
+                        decoding="async" alt="HTML Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/js-logo.svg" loading="lazy"
-                        decoding="async" alt="JS Logo" />
+                        decoding="async" alt="JS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/lua-logo.svg" loading="lazy"
-                        decoding="async" alt="Lua Logo" />
+                        decoding="async" alt="Lua Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mariadb-logo.svg" loading="lazy"
-                        decoding="async" alt="MariaDB Logo" />
+                        decoding="async" alt="MariaDB Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mysql-logo.svg" loading="lazy"
-                        decoding="async" alt="MySQL Logo" />
+                        decoding="async" alt="MySQL Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/nodejs-logo.svg" loading="lazy"
-                        decoding="async" alt="NodeJS Logo" />
+                        decoding="async" alt="NodeJS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/php-logo.svg" loading="lazy"
-                        decoding="async" alt="PHP Logo" />
+                        decoding="async" alt="PHP Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/python-logo.svg" loading="lazy"
-                        decoding="async" alt="Python Logo" />
+                        decoding="async" alt="Python Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/css-logo.svg" loading="lazy"
-                        decoding="async" alt="CSS Logo" />
+                        decoding="async" alt="CSS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/django-logo.svg" loading="lazy"
-                        decoding="async" alt="Django Logo" />
+                        decoding="async" alt="Django Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/flask-logo.svg" loading="lazy"
-                        decoding="async" alt="Flask Logo" />
+                        decoding="async" alt="Flask Logo" width="123" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/html-logo.svg" loading="lazy"
-                        decoding="async" alt="HTML Logo" />
+                        decoding="async" alt="HTML Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/js-logo.svg" loading="lazy"
-                        decoding="async" alt="JS Logo" />
+                        decoding="async" alt="JS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/lua-logo.svg" loading="lazy"
-                        decoding="async" alt="Lua Logo" />
+                        decoding="async" alt="Lua Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mariadb-logo.svg" loading="lazy"
-                        decoding="async" alt="MariaDB Logo" />
+                        decoding="async" alt="MariaDB Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/mysql-logo.svg" loading="lazy"
-                        decoding="async" alt="MySQL Logo" />
+                        decoding="async" alt="MySQL Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/nodejs-logo.svg" loading="lazy"
-                        decoding="async" alt="NodeJS Logo" />
+                        decoding="async" alt="NodeJS Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/php-logo.svg" loading="lazy"
-                        decoding="async" alt="PHP Logo" />
+                        decoding="async" alt="PHP Logo" width="48" height="48" />
                     <img class="icon" src="https://cdn.vihaanvinoth.com/icons/python-logo.svg" loading="lazy"
-                        decoding="async" alt="Python Logo" />
+                        decoding="async" alt="Python Logo" width="48" height="48" />
                 </div>
             </div>
             <br>
@@ -209,8 +292,8 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/AugustusCaesar"
                     aria-label="Takes you to the Augustus Caesar virtual museum GitHub page" target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/augustus-thumbnail.png"
-                        alt="Augustus Caesar Thumbnail" loading="lazy">
+                    <img class="project-img" src="https://cdn.vihaanvinoth.com/augustus-thumbnail.webp"
+                        alt="Augustus Caesar Thumbnail" loading="lazy" width="423" height="282">
                     <h2>Augustus Museum</h2>
                 </a>
                 <p>HTML · CSS</p>
@@ -219,8 +302,8 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/aristotle"
                     aria-label="Takes you to the Aristotle CSS Framework GitHub page" target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/aristotle-thumbnail.png"
-                        alt="Aristotle Thumbnail" loading="lazy">
+                    <img class="project-img" src="https://cdn.vihaanvinoth.com/aristotle-thumbnail.webp"
+                        alt="Aristotle Thumbnail" loading="lazy" width="423" height="282">
                     <h2>Aristotle CSS Framework</h2>
                 </a>
                 <p>HTML · CSS</p>
@@ -229,8 +312,8 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/verty"
                     aria-label="Takes you to the Verty email application GitHub page" target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/verty-thumbnail.png"
-                        alt="Verty Thumbnail" loading="lazy">
+                    <img class="project-img" src="https://cdn.vihaanvinoth.com/verty-thumbnail.webp"
+                        alt="Verty Thumbnail" loading="lazy" width="423" height="282">
                     <h2>Verty, Email Service</h2>
                 </a>
                 <p>HTML · CSS · PHP · MySQL/MariaDB · Apache</p>
@@ -239,8 +322,8 @@
             <div class="project-box">
                 <a href="https://github.com/VihaanVinoth/V_blog" aria-label="Takes you to the VBlog GitHub page"
                     target="_blank">
-                    <img class="project-img" src="https://cdn.vihaanvinoth.com/vblog-thumbnail.png"
-                        alt="VBlog Thumbnail" loading="lazy">
+                    <img class="project-img" src="https://cdn.vihaanvinoth.com/vblog-thumbnail.webp"
+                        alt="VBlog Thumbnail" loading="lazy" width="423" height="282">
                     <h2>VBlog</h2>
                 </a>
                 <p>Astro · HTML · CSS · JS</p>
@@ -294,23 +377,24 @@
         <hr>
         <section class="footer content">
             <a href="https://github.com/VihaanVinoth" aria-label="Directs you to the VihaanVinoth GitHub page">
-                <img id="git-icon" src="https://cdn.vihaanvinoth.com/icons/github-icon.png" alt="Github Logo"
-                    loading="lazy">
+                <img id="git-icon" width="20" height="20" src="https://cdn.vihaanvinoth.com/icons/github-icon.png"
+                    alt="Github Logo" loading="lazy">
                 <p>Github</p>
             </a>
             <p>&nbsp;&nbsp;</p>
             <a href="mailto:dalx900@gmail.com" aria-label="Send a mail to dalx900@gmail.com (Vihaan)">
-                <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
                     loading="lazy" width="20px" fill="#FFFFFF">
                     <path
                         d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                 </svg>
                 <p>Contact</p>
             </a>
-            <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth. <a href="https://vihaanvinoth.com/privacy">Privacy Policy</a></p>
+            <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth. <a
+                    href="https://vihaanvinoth.com/privacy">Privacy Policy</a></p>
         </section>
     </main>
-    <script data-cfasync="false">
+    <script data-cfasync="false" defer>
         const form = document.getElementById("contactForm");
         const successMessage = form.querySelector(".success-message");
         const errorMessage = form.querySelector(".error-message");
@@ -389,7 +473,7 @@
             localStorage.setItem("theme", root.dataset.theme);
         });
     </script>
-    <script type="text/javascript" data-cfasync="false">
+    <script type="text/javascript" data-cfasync="false" defer>
         function loadLeafletCSS() {
             if (document.getElementById('leaflet-css')) return;
 
@@ -446,7 +530,7 @@
 
         mapObserver.observe(document.getElementById('map'));
     </script>
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
         (async () => {
             const container = document.getElementById("posts");
             if (!container) return;
@@ -493,7 +577,7 @@
             }
         })();
     </script>
-    <script type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
+    <script async type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
 </body>
 
 </html>
