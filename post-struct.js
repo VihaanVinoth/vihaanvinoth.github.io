@@ -25,12 +25,15 @@ const postsIndex = [];
 for (const file of fs.readdirSync(postsDir)) {
   if (!file.endsWith(".md")) continue;
 
+  const desktopSlot = "6016588243";
+  const mobileSlot = "8339499258";
+
   const inArticleAd = `
   <div class="ad ad-in-article ad-desktop">
     <ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-8253398098387796"
-      data-ad-slot="XXXXXXXXXX"
+      data-ad-slot="${desktopSlot}"
       data-ad-format="fluid"
       data-ad-layout="in-article">
     </ins>
@@ -42,7 +45,7 @@ for (const file of fs.readdirSync(postsDir)) {
     <ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-8253398098387796"
-      data-ad-slot="XXXXXXXXXX"
+      data-ad-slot="${mobileSlot}"
       data-ad-format="fluid"
       data-ad-layout="in-article">
     </ins>
@@ -57,9 +60,8 @@ for (const file of fs.readdirSync(postsDir)) {
 
   const paragraphs = htmlBody.split("</p>");
 
-  if (paragraphs.length > 3) {
-    paragraphs.splice(3, 0, inArticleAd + mobileinArticleAd);
-  }
+  if (paragraphs.length > 3) paragraphs.splice(3, 0, inArticleAd);
+  if (paragraphs.length > 3) paragraphs.splice(3, 0, mobileinArticleAd);
 
   htmlBody = paragraphs.join("</p>");  
 
