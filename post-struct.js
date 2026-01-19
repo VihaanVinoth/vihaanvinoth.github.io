@@ -273,8 +273,8 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
             }
         </style>
-        <link rel="preload" href="/stylesheets/style.css?v=3.3" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.3"></noscript>
+        <link rel="preload" href="/stylesheets/style.css?v=3.4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.4"></noscript>
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -368,7 +368,7 @@ for (const file of fs.readdirSync(postsDir)) {
                         https://cdn.vihaanvinoth.com/VVNormal-50x59.webp 1x,
                         https://cdn.vihaanvinoth.com/VVNormal-100x118.webp 2x
                     " type="image/webp">
-                    <img src="https://cdn.vihaanvinoth.com/VVNormal.png" alt="Vihaan Vinoth Logo" loading="eager"
+                    <img src="https://cdn.vihaanvinoth.com/VVNormal.webp" alt="Vihaan Vinoth Logo" loading="eager"
                         fetchpriority="high" width="50" height="59">
                 </picture>
             </a>
