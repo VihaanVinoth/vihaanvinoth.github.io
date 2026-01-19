@@ -7,7 +7,7 @@ tags:
   - extensions
   - vscode
   - coding
-cover: /assets/uploads/top-5-extensions-thumbnail.png
+cover: /assets/uploads/top-5-extensions-thumbnail.webp
 ---
 Visual Studio Code (aka VS Code) has quickly become one of the most popular code editors among developers. Its lightweight design, speed, and extensive library of extensions make it a perfect tool for both beginners and experienced programmers. While VS Code is powerful out-of-the-box, extensions are what truly elevate your development experience.
 

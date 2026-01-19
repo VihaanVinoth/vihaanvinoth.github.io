@@ -10,7 +10,7 @@ tags:
   - programmer
   - vihaan
   - first
-cover: /assets/uploads/welcome-to.png
+cover: /assets/uploads/welcome-to.webp
 ---
 Hello! I’m **Vihaan**, and I am currently full-stack developer from Australia that is passionate about technology, coding, and creating engaging digital experiences such as websites, **like this one**. This is the very first post on my blog, and I’m excited to start sharing my thoughts, tutorials, and insights with you. I will try to create fun, bite-sized content, which you can take in and learn new and budding topics in the technological world.
 

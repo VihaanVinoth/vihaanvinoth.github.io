@@ -147,9 +147,9 @@
             }
         }
     </style>
-    <link rel="preload" href="/stylesheets/style.css?v=3.5" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/stylesheets/style.css?v=3.6" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="/stylesheets/style.css?v=3.5">
+        <link rel="stylesheet" href="/stylesheets/style.css?v=3.6">
     </noscript>
     <meta name="description"
         content="Hey! I'm Vihaan Vinoth, a local full-stack developer based in Melbourne, Australia.">
@@ -255,12 +255,9 @@
         <section class="hero content">
             <a href="index.html" id="logo" aria-label="Redirects back to main site">
                 <picture>
-                    <source srcset="
-                        https://cdn.vihaanvinoth.com/VVNormal-50x59.webp 1x,
-                        https://cdn.vihaanvinoth.com/VVNormal-100x118.webp 2x
-                    " type="image/webp">
-                    <img src="https://cdn.vihaanvinoth.com/VVNormal.webp" alt="Vihaan Vinoth Logo" loading="eager"
-                        fetchpriority="high" width="50" height="59">
+                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal-200w.webp" media="(max-width: 500px)" type="image/webp">
+                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal-400w.webp" media="(min-width: 501px)" type="image/webp">
+                    <img src="https://cdn.vihaanvinoth.com/VVNormal-400w.webp" alt="Vihaan Vinoth Logo" id="logo" width="400" height="auto">
                 </picture>
             </a>
             <nav>
@@ -289,7 +286,7 @@
                             <svg loading="lazy" class="mail-icon" xmlns="http://www.w3.org/2000/svg" height="24px"
                                 viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
                                 <path
-                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                                    d="M160-160q-33 0-56.5-23.6T80-240v-480q0-33 23.6-56.5T160-800h640q33 0 56.5 23.6T880-720v480q0 33-23.6 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                             </svg>
                         </a>
                     </span>
@@ -439,9 +436,9 @@
                     <picture>
                         <source srcset="
                         https://cdn.vihaanvinoth.com/augustus-thumbnail-400.webp 400w,
-                        https://cdn.vihaanvinoth.com/augustus-thumbnail-423.webp 423w,
-                        https://cdn.vihaanvinoth.com/augustus-thumbnail-846.webp 846w
-                        " type="image/webp" sizes="(max-width: 767px) 400px, 423px">
+                        https://cdn.vihaanvinoth.com/augustus-thumbnail-735.webp 725w,
+                        https://cdn.vihaanvinoth.com/augustus-thumbnail-1470.webp 1470w
+                        " type="image/webp" sizes="(max-width: 767px) 400px, 735px">
                         <img src="https://cdn.vihaanvinoth.com/augustus-thumbnail-423.webp" width="423" height="404"
                             alt="Augustus Caesar Thumbnail" loading="lazy">
                     </picture>
@@ -455,12 +452,12 @@
                     aria-label="Takes you to the Aristotle CSS Framework GitHub page" target="_blank">
                     <picture>
                         <source srcset="
-                        https://cdn.vihaanvinoth.com/aristotle-thumbnail-400.webp 400w,
-                        https://cdn.vihaanvinoth.com/aristotle-thumbnail-423.webp 423w,
-                        https://cdn.vihaanvinoth.com/aristotle-thumbnail-846.webp 846w
-                        " type="image/webp" sizes="(max-width: 767px) 400px, 423px">
-                        <img src="https://cdn.vihaanvinoth.com/aristotle-thumbnail-423.webp" width="423" height="404"
-                            alt="Aristotle Thumbnail" loading="lazy">
+                        https://cdn.vihaanvinoth.com/webp-sizes/aristotle-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/webp-sizes/aristotle-thumbnail-735.webp 735w,
+                        https://cdn.vihaanvinoth.com/webp-sizes/aristotle-thumbnail-1470.webp 1470w
+                        " type="image/webp" sizes="(max-width: 767px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/webp-sizes/aristotle-thumbnail-735.webp"
+                            alt="Aristotle Thumbnail" width="735" height="404" loading="lazy">
                     </picture>
                     <h2>Aristotle CSS Framework</h2>
                 </a>
@@ -472,13 +469,14 @@
                     aria-label="Takes you to the Verty email application GitHub page" target="_blank">
                     <picture>
                         <source srcset="
-                        https://cdn.vihaanvinoth.com/verty-thumbnail-400.webp 400w,
-                        https://cdn.vihaanvinoth.com/verty-thumbnail-423.webp 423w,
-                        https://cdn.vihaanvinoth.com/verty-thumbnail-846.webp 846w
-                        " type="image/webp" sizes="(max-width: 767px) 400px, 423px">
-                        <img src="https://cdn.vihaanvinoth.com/verty-thumbnail-423.webp" width="423" height="404"
-                            alt="Verty Thumbnail" loading="lazy">
+                        https://cdn.vihaanvinoth.com/webp-sizes/verty-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/webp-sizes/verty-thumbnail-735.webp 735w,
+                        https://cdn.vihaanvinoth.com/webp-sizes/verty-thumbnail-1470.webp 1470w
+                        " type="image/webp" sizes="(max-width: 767px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/webp-sizes/verty-thumbnail-735.webp"
+                            alt="Verty Thumbnail" width="735" height="404" loading="lazy">
                     </picture>
+
                     <h2>Verty, Email Service</h2>
                 </a>
                 <p>HTML · CSS · PHP · MySQL/MariaDB · Apache</p>
@@ -489,14 +487,13 @@
                     target="_blank">
                     <picture>
                         <source srcset="
-                        https://cdn.vihaanvinoth.com/vblog-thumbnail-400.webp 400w,
-                        https://cdn.vihaanvinoth.com/vblog-thumbnail-423.webp 423w,
-                        https://cdn.vihaanvinoth.com/vblog-thumbnail-846.webp 846w
-                        " type="image/webp" sizes="(max-width: 767px) 400px, 423px">
-                        <img src="https://cdn.vihaanvinoth.com/vblog-thumbnail-423.webp" width="423" height="404"
-                            alt="VBlog Thumbnail" loading="lazy">
+                        https://cdn.vihaanvinoth.com/webp-sizes/vblog-thumbnail-400.webp 400w,
+                        https://cdn.vihaanvinoth.com/webp-sizes/vblog-thumbnail-735.webp 735w,
+                        https://cdn.vihaanvinoth.com/webp-sizes/vblog-thumbnail-1470.webp 1470w
+                        " type="image/webp" sizes="(max-width: 767px) 400px, 735px">
+                        <img src="https://cdn.vihaanvinoth.com/webp-sizes/vblog-thumbnail-735.webp"
+                            alt="VBlog Thumbnail" width="735" height="404" loading="lazy">
                     </picture>
-
                     <h2>VBlog</h2>
                 </a>
                 <p>Astro · HTML · CSS · JS</p>
@@ -559,7 +556,7 @@
                 <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
                     loading="lazy" width="20px" fill="#FFFFFF">
                     <path
-                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                        d="M160-160q-33 0-56.5-23.6T80-240v-480q0-33 23.6-56.5T160-800h640q33 0 56.5 23.6T880-720v480q0 33-23.6 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                 </svg>
                 <p>Contact</p>
             </a>

@@ -94,7 +94,6 @@ html {
 }
 
 body {
-  scroll-behavior: smooth;
   background: var(--bg);
   overflow-x: hidden;
   display: flex;
@@ -124,7 +123,6 @@ main {
 
 header nav {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   justify-content: center;
   margin: 20px;
@@ -192,7 +190,7 @@ nav ol li a {
 
 nav ol li a:hover {
   text-decoration: dotted underline darkslategray;
-  transition: alsl 500ms;
+  transition: all 500ms;
 }
 
 @keyframes waveAnimation {
@@ -249,7 +247,8 @@ section p {
 
 section p > img {
   width: 500px;
-  height: fit-content;
+  height: auto;
+  max-width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -299,7 +298,6 @@ section p > img {
 
   .article-text {
     padding: 1rem 0;
-    text-align: left;
   }
 
   section.hero {
@@ -339,7 +337,7 @@ section p > img {
 }
 
 img {
-  width: 50px;
+  max-width: 100%;
 }
 
 .map-box {
@@ -521,18 +519,13 @@ hr {
 
 #logo, #logo a {
   width: auto;
+  transition: filter 250ms ease-in-out;
 }
 
 #logo:hover,
 #logo a:hover {
   cursor: pointer;
-  transition: filter 250ms ease-in-out;
   filter: grayscale(1);
-}
-
-#logo:not(:hover) {
-  transition: filter 250ms ease-in-out;
-  filter: grayscale(0);
 }
 
 .icons-box {
@@ -860,5 +853,4 @@ th, td {
   border: 1px solid var(--text);
   padding: 8px;
   text-align: left;
-  border: 1px solid rgb(38, 38, 38);
 }

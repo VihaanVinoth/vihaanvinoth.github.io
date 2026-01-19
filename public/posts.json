@@ -2,7 +2,7 @@
   {
     "title": "My 5 VS Code Extensions I can't code without",
     "summary": "Over the years, I’ve tried countless extensions, but these five have become indispensable in my daily workflow.",
-    "cover": "/assets/uploads/top-5-extensions-thumbnail.png",
+    "cover": "/assets/uploads/top-5-extensions-thumbnail.webp",
     "slug": "my-5-vs-code-extensions-i-cant-code-without",
     "url": "/posts/my-5-vs-code-extensions-i-cant-code-without",
     "date": "2026-01-19T02:16:00.000Z",
@@ -34,7 +34,7 @@
   {
     "title": "8 Common HTML Mistakes Beginners Always Make",
     "summary": "Covers mistakes that at some point any HTML beginner will make",
-    "cover": "https://cdn.vihaanvinoth.com/assets/uploads/html-mistakes-thumbnail.png",
+    "cover": "https://cdn.vihaanvinoth.com/assets/uploads/html-mistakes-thumbnail.webp",
     "slug": "8-common-html-mistakes-beginners-always-make",
     "url": "/posts/8-common-html-mistakes-beginners-always-make",
     "date": "2026-01-16T08:53:00.000Z",
@@ -83,7 +83,7 @@
   {
     "title": "Welcome to my Blog",
     "summary": "This is the first post of my blog.",
-    "cover": "/assets/uploads/welcome-to.png",
+    "cover": "/assets/uploads/welcome-to.webp",
     "slug": "hello",
     "url": "/posts/hello",
     "date": "2026-01-09T06:15:00.000Z",

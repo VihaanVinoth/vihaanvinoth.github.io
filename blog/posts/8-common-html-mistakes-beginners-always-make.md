@@ -7,7 +7,7 @@ tags:
   - mistakes
   - beginner
   - coding
-cover: https://cdn.vihaanvinoth.com/assets/uploads/html-mistakes-thumbnail.png
+cover: https://cdn.vihaanvinoth.com/assets/uploads/html-mistakes-thumbnail.webp
 ---
 HTML is often the first language people learn when delving into the vast world of web development. While it looks pretty simple on the surface, beginners frequently develop habits that can lead to messy markup, poor accessibility, and harder-to-maintain websites. Understanding these common mistakes early on can save you a lot of frustration as your projects grow.
 

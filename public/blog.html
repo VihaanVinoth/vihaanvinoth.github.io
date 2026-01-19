@@ -147,8 +147,8 @@
             }
         }
     </style>
-    <link rel="preload" href="/stylesheets/style.css?v=3.5" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.5"></noscript>
+    <link rel="preload" href="/stylesheets/style.css?v=3.6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.6"></noscript>
     <meta name="description"
         content="View Developer blog Posts made by Vihaan Vinoth about Web Development, Graphic Design, and more.">
     <meta property="og:title" content="Vihaan Vinoth - Blog Posts">
@@ -250,12 +250,9 @@
         <section class="blog-page content" id="posts">
             <a href="index.html" id="logo" aria-label="Redirects back to main site">
                 <picture>
-                    <source srcset="
-                        https://cdn.vihaanvinoth.com/VVNormal-50x59.webp 1x,
-                        https://cdn.vihaanvinoth.com/VVNormal-100x118.webp 2x
-                    " type="image/webp">
-                    <img src="https://cdn.vihaanvinoth.com/VVNormal.webp" alt="Vihaan Vinoth Logo" loading="eager"
-                        fetchpriority="high" width="50" height="59">
+                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal-200w.webp" media="(max-width: 500px)" type="image/webp">
+                    <source srcset="https://cdn.vihaanvinoth.com/VVNormal-400w.webp" media="(min-width: 501px)" type="image/webp">
+                    <img src="https://cdn.vihaanvinoth.com/VVNormal-400w.webp" alt="Vihaan Vinoth Logo" id="logo" width="400" height="auto">
                 </picture>
             </a>
             <nav>
@@ -319,7 +316,7 @@
                 <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
                     loading="lazy" width="20px" fill="#FFFFFF">
                     <path
-                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                        d="M160-160q-33 0-56.5-23.6T80-240v-480q0-33 23.6-56.5T160-800h640q33 0 56.5 23.6T880-720v480q0 33-23.6 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                 </svg>
                 <p>Contact</p>
             </a>
