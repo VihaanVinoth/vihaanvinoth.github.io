@@ -273,8 +273,8 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
             }
         </style>
-        <link rel="preload" href="/stylesheets/style.css?v=3.6" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.6"></noscript>
+        <link rel="preload" href="/stylesheets/style.css?v=3.7" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/stylesheets/style.css?v=3.7"></noscript>
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -425,7 +425,7 @@ for (const file of fs.readdirSync(postsDir)) {
                     <svg class="mail-icon-add" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
                         loading="lazy" width="20px" fill="#FFFFFF">
                         <path
-                            d="M160-160q-33 0-56.5-23.6T80-240v-480q0-33 23.6-56.5T160-800h640q33 0 56.5 23.6T880-720v480q0 33-23.6 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                            d="M160-160q-33 0-56.5-23.7T80-240v-480q0-33 23.7-56.5T160-800h640q33 0 56.5 23.7T880-720v480q0 33-23.7 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
                     </svg>
                     <p>Contact</p>
                 </a>

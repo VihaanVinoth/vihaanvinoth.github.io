@@ -247,8 +247,7 @@ section p {
 
 section p > img {
   width: 500px;
-  height: auto;
-  max-width: 100%;
+  height: fit-content;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -519,13 +518,18 @@ hr {
 
 #logo, #logo a {
   width: auto;
-  transition: filter 250ms ease-in-out;
 }
 
 #logo:hover,
 #logo a:hover {
   cursor: pointer;
+  transition: filter 250ms ease-in-out;
   filter: grayscale(1);
+}
+
+#logo:not(:hover) {
+  transition: filter 250ms ease-in-out;
+  filter: grayscale(0);
 }
 
 .icons-box {
