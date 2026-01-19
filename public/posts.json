@@ -1,5 +1,20 @@
 [
   {
+    "title": "My 5 VS Code Extensions I can't code without",
+    "summary": "Over the years, I’ve tried countless extensions, but these five have become indispensable in my daily workflow.",
+    "cover": "/assets/uploads/top-5-extensions-thumbnail.png",
+    "slug": "my-5-vs-code-extensions-i-cant-code-without",
+    "url": "/posts/my-5-vs-code-extensions-i-cant-code-without",
+    "date": "2026-01-19T02:16:00.000Z",
+    "displayDate": "19 January, 2026",
+    "readingTime": 3,
+    "tags": [
+      "extensions",
+      "vscode",
+      "coding"
+    ]
+  },
+  {
     "title": "A guide to CSS Grids and Flexbox",
     "summary": "CSS layout can feel overwhelming at first, but mastering Grid and Flexbox will dramatically improve your ability to build responsive, modern websites.",
     "cover": "https://miro.medium.com/1*m2Q3kRG9yl5WyNIyoe15XA.png",
