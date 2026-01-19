@@ -275,8 +275,8 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
             }
         </style>
-        <link rel="preload" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=3.8" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=3.8"></noscript>
+        <link rel="preload" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=3.9" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=3.9"></noscript>
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">

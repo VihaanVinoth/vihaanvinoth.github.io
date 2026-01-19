@@ -135,6 +135,8 @@ header nav {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #tagInput {
@@ -243,6 +245,11 @@ section p {
   text-align: justify;
   font-family: var(--sans-font);
   text-transform: none;
+}
+
+section h1 {
+  font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 section p > img {
