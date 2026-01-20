@@ -442,21 +442,23 @@
 
                     article.innerHTML = `
                     <div class="post-text">
-                        <time datetime="${post.date}">
-                            ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
-                        </time>
-                        <br>
-                        <br>
-                        ${post.cover ? `<img class="cover" width="457" height="257" src="${post.cover}">` : ""}
-                        <br>
-                        <h2>${post.title}</h2>
+                        <a href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
+                            <time datetime="${post.date}">
+                                ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
+                            </time>
+                            <br>
+                            <br>
+                            ${post.cover ? `<img class="cover" width="457" height="257" src="${post.cover}">` : ""}
+                            <br>
+                            <h2>${post.title}</h2>
 
-                        ${tagsHTML}
+                            ${tagsHTML}
 
-                        <p class="summary">${post.summary}</p>
+                            <p class="summary">${post.summary}</p>
 
-                        <a class="read-more" href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
-                            Read
+                            <a class="read-more" href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
+                                Read
+                            </a>
                         </a>
                     </div>
                     `;
