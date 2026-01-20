@@ -445,8 +445,8 @@
                         <time datetime="${post.date}">
                             ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
                         </time>
-                        ${cover ? `<img class="cover" width="457" height="257" src="${cover}">` : ""}
-                        
+                        ${post.cover ? `<img class="cover" width="457" height="257" src="${post.cover}">` : ""}
+
                         <h2>${post.title}</h2>
 
                         ${tagsHTML}
