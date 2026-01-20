@@ -1,5 +1,23 @@
 [
   {
+    "title": "Why Your HTML “Works” but is Secretly Broken",
+    "summary": "You load your website in the browser. It looks fine. The layout is correct, the buttons click, and nothing seems obviously wrong. So your HTML must be good… right?",
+    "cover": "/assets/uploads/html-works-thumbnail.png",
+    "slug": "why-your-html-works-but-is-secretly-broken",
+    "url": "/posts/why-your-html-works-but-is-secretly-broken",
+    "date": "2026-01-20T11:22:00.000Z",
+    "displayDate": "20 January, 2026",
+    "readingTime": 4,
+    "tags": [
+      "html",
+      "problems",
+      "development",
+      "broken",
+      "fix",
+      "coding"
+    ]
+  },
+  {
     "title": "My 5 VS Code Extensions I can't code without",
     "summary": "Over the years, I’ve tried countless extensions, but these five have become indispensable in my daily workflow.",
     "cover": "/assets/uploads/top-5-extensions-thumbnail.webp",
