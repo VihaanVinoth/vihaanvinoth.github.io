@@ -11,7 +11,7 @@ tags:
   - broken
   - fix
   - coding
-cover: /assets/uploads/html-works-thumbnail.png
+cover: https://cdn.vihaanvinoth.com/assets/uploads/html-works-thumbnail.webp
 ---
 One of the most dangerous misconceptions in web development is making the statement that **“it renders”** is the same as **“it’s correct.”** Browsers are extremely forgiving, and they will silently suppress and resolve your mistakes, guess your intentions, and bend the rules just enough to make your page appear functional. Under the hood, however, your HTML may be breaking a lot more than you could comprehend - accessibility, SEO, performance, and long‑term maintainability.
 
