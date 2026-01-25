@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "post-struct": "node post-struct.js"
+    "post-struct": "node post-struct.js",
+    "increment-update": "node increment-update.js"
   },
   "keywords": [],
   "author": "",

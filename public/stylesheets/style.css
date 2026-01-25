@@ -810,6 +810,7 @@ article > h2:hover {
   gap: 3px;
   list-style-type: none;
   margin: 3% 0;
+  flex-wrap: wrap;
 }
 
 .post-tag {
