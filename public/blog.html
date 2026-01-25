@@ -474,6 +474,31 @@
         </section>
     </main>
     <script data-cfasync="false">
+        const tagInput = document.getElementById('tagInput');
+        const tags = document.querySelectorAll('.post-tag');
+
+        tags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const value = tag.textContent.trim();
+                tagInput.value = value;
+
+                filterPostsByTag(value);
+            });
+        });
+
+        function filterPostsByTag(tag) {
+            const posts = document.querySelectorAll('.post-preview');
+            posts.forEach(post => {
+                const postTags = Array.from(post.querySelectorAll('.post-tag')).map(t => t.textContent.trim().toLowerCase());
+                if (postTags.includes(tag.toLowerCase())) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script data-cfasync="false">
         const form = document.getElementById("contactForm");
         const successMessage = form.querySelector(".success-message");
         const errorMessage = form.querySelector(".error-message");
@@ -508,25 +533,6 @@
                 successMessage.hidden = true;
                 errorMessage.hidden = false;
             }
-        });
-    </script>
-    <script data-cfasync="false">
-        const tagInput = document.getElementById("tagInput");
-
-        tagInput.addEventListener("input", () => {
-            const query = tagInput.value.toLowerCase().trim();
-            const posts = document.querySelectorAll("#posts .post-preview");
-
-            posts.forEach(post => {
-                const tags = Array.from(post.querySelectorAll(".post-tag"))
-                    .map(tagEl => tagEl.textContent.toLowerCase());
-
-                if (query === "" || tags.some(tag => tag.includes(query))) {
-                    post.style.display = "block";
-                } else {
-                    post.style.display = "none";
-                }
-            });
         });
     </script>
     <script data-cfasync="false">
@@ -623,6 +629,30 @@
             }
         })();
     </script> -->
+    <script>
+        function filterPostsByTag(tag) {
+            const posts = document.querySelectorAll('#posts .post-preview');
+            const query = tag.toLowerCase().trim();
+
+            posts.forEach(post => {
+                const postTags = Array.from(post.querySelectorAll('.post-tag'))
+                    .map(t => t.textContent.toLowerCase());
+
+                post.style.display = query === "" || postTags.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        tagInput.addEventListener('input', () => {
+            filterPostsByTag(tagInput.value);
+        });
+
+        document.querySelectorAll('.post-tags .post-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                tagInput.value = tag.textContent.trim();
+                filterPostsByTag(tagInput.value);
+            });
+        });
+    </script>
     <script async type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
 </body>
 
