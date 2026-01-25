@@ -533,8 +533,6 @@
 
             document.querySelectorAll(".content").forEach(el => observer.observe(el));
 
-            document.querySelectorAll(".post-preview").forEach(post => observer.observe(post));
-
             if ('scrollRestoration' in history) {
                 history.scrollRestoration = 'manual';
             }
@@ -558,7 +556,7 @@
             localStorage.setItem("theme", root.dataset.theme);
         });
     </script>
-    <script type="text/javascript" defer>
+    <!-- <script type="text/javascript" defer>
         (async () => {
             const container = document.getElementById("posts");
             if (!container) return;
@@ -609,7 +607,7 @@
                 container.innerHTML = "<p>Failed to load posts.</p>";
             }
         })();
-    </script>
+    </script> -->
     <script async type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
 </body>
 
