@@ -38,7 +38,7 @@ for (const file of fs.readdirSync(postsDir)) {
       data-ad-layout="in-article">
     </ins>
   </div>
-  `
+  `;
 
   const mobileinArticleAd = `
   <div class="ad ad-in-article ad-mobile">
@@ -50,7 +50,7 @@ for (const file of fs.readdirSync(postsDir)) {
       data-ad-layout="in-article">
     </ins>
   </div>
-  `
+  `;
 
   const mdContent = fs.readFileSync(path.join(postsDir, file), "utf-8");
 
@@ -63,11 +63,11 @@ for (const file of fs.readdirSync(postsDir)) {
   if (paragraphs.length > 3) paragraphs.splice(3, 0, inArticleAd);
   if (paragraphs.length > 4) paragraphs.splice(4, 0, mobileinArticleAd);
 
-  htmlBody = paragraphs
-    .slice(0, 2).join("</p>") +
+  htmlBody =
+    paragraphs.slice(0, 2).join("</p>") +
     inArticleAd +
     mobileinArticleAd +
-    paragraphs.slice(2).join("</p>");  
+    paragraphs.slice(2).join("</p>");
 
   const slug = path.basename(file, ".md");
 
@@ -524,35 +524,51 @@ let blogTemplate = fs.readFileSync(blogTemplatePath, "utf-8");
 
 postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-const blogItemsHTML = postsIndex.map(post => {
-  const tagsHTML = post.tags?.length
-    ? `<ul class="post-tags">
-        ${post.tags.map(tag => `<li class="post-tag">${tag}</li>`).join("")}
-       </ul>`
-    : "";
+const blogItemsHTML = postsIndex
+  .map((post) => {
+    const tagsHTML = post.tags?.length
+      ? `<ul class="post-tags">
+            ${post.tags.map((tag) => `<li class="post-tag">${tag}</li>`).join("")}
+           </ul>`
+      : "";
 
-  return `
-  <article class="post-preview content">
-    <div class="post-text">
-      <a href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
-        <time datetime="${post.date}">
-          ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
-        </time>
-        <br><br>
-        ${post.cover ? `<img class="cover" width="457" height="257" src="${post.cover}">` : ""}
-        <br>
-        <h2>${post.title}</h2>
-        ${tagsHTML}
-        <p class="summary">${post.summary}</p>
-        <span class="read-more">Read</span>
-      </a>
-    </div>
-  </article>`;
-}).join("\n");
+    return `
+        <article class="post-preview content">
+            <div class="post-text">
+            <a href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
+                <time datetime="${post.date}">
+                ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
+                </time>
+                <br><br>
+                ${post.cover ? `<img class="cover" width="457" height="257" src="${post.cover}">` : ""}
+                <br>
+                <h2>${post.title}</h2>
+                ${tagsHTML}
+                <p class="summary">${post.summary}</p>
+                <span class="read-more">Read</span>
+            </a>
+            </div>
+        </article>`;
+  })
+  .join("\n");
+
+const allTags = Array.from(
+  new Set(postsIndex.flatMap((post) => post.tags)),
+).sort();
+
+const allTagsHTML = `
+    <ul class="post-tags">
+        ${allTags.map((tag) => `<li class="post-tag">${tag}</li>`).join("")}
+    </ul>`;
 
 blogTemplate = blogTemplate.replace(
   /<!-- BLOG_POSTS_START -->([\s\S]*?)<!-- BLOG_POSTS_END -->/,
-  `<!-- BLOG_POSTS_START -->\n${blogItemsHTML}\n<!-- BLOG_POSTS_END -->`
+  `<!-- BLOG_POSTS_START -->\n${blogItemsHTML}\n<!-- BLOG_POSTS_END -->`,
+);
+
+blogTemplate = blogTemplate.replace(
+  /<!-- TAGS_START -->([\s\S]*?)<!-- TAGS_END -->/,
+  `<!-- TAGS_START -->\n<div class="tag-cloud">${allTagsHTML}</div>\n<!-- TAGS_END -->`
 );
 
 fs.writeFileSync(blogTemplatePath, blogTemplate);
