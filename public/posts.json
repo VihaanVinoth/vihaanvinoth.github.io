@@ -2,7 +2,7 @@
   {
     "title": "Why Your HTML “Works” but is Secretly Broken",
     "summary": "You load your website in the browser. It looks fine. The layout is correct, the buttons click, and nothing seems obviously wrong. So your HTML must be good… right?",
-    "cover": "/assets/uploads/html-works-thumbnail.png",
+    "cover": "https://cdn.vihaanvinoth.com/assets/uploads/html-works-thumbnail.webp",
     "slug": "why-your-html-works-but-is-secretly-broken",
     "url": "/posts/why-your-html-works-but-is-secretly-broken",
     "date": "2026-01-20T11:22:00.000Z",
