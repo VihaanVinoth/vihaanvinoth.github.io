@@ -275,8 +275,8 @@ for (const file of fs.readdirSync(postsDir)) {
                 }
             }
         </style>
-        <link rel="preload" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=3.9" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=3.9"></noscript>
+        <link rel="preload" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.vihaanvinoth.com/stylesheets/style.css?v=4"></noscript>
         <meta name="description" content="${summary}">
         <meta property="og:title" content="${title} - Vihaan Vinoth">
         <meta property="og:description" content="${summary}">
@@ -382,7 +382,7 @@ for (const file of fs.readdirSync(postsDir)) {
             <button class="content" id="theme-toggle" aria-label="Toggle theme">
                 <img id="theme-toggle-icon" src="https://cdn.vihaanvinoth.com/icons/light-mode-icon.svg" width="18" height="18" loading="eager" alt="Theme toggle icon" fetchpriority="high">
             </button>
-            <section class="article content">
+            <section class="article">
                 ${cover ? `<img class="cover" width="457" height="257" src="${cover}">` : ""}
                 <div class="cover-blur"></div>
                 <div class="article-text">

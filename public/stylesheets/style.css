@@ -222,6 +222,11 @@ nav ol li a:hover {
   }
 }
 
+.blog-page .content {
+  opacity: 1;
+  transform: none;
+}
+
 .content {
   opacity: 0;
   transform: translateY(16px);
