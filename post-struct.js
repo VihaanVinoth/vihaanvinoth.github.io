@@ -298,6 +298,7 @@ for (const file of fs.readdirSync(postsDir)) {
                 href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100..700&display=swap">
         </noscript>
         <meta name="theme-color" content="#ffffff">
+        <meta name="google-adsense-account" content="ca-pub-8253398098387796">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8253398098387796" crossorigin="anonymous"></script>
         <style>
         *,
@@ -517,6 +518,42 @@ for (const file of fs.readdirSync(postsDir)) {
     tags,
   });
 }
+
+const blogTemplatePath = "public/blog.html";
+let blogTemplate = fs.readFileSync(blogTemplatePath, "utf-8");
+
+const blogItemsHTML = postsIndex.map(post => {
+  const tagsHTML = post.tags?.length
+    ? `<ul class="post-tags">
+        ${post.tags.map(tag => `<li class="post-tag">${tag}</li>`).join("")}
+       </ul>`
+    : "";
+
+  return `
+  <article class="post-preview content">
+    <div class="post-text">
+      <a href="${post.url}" aria-label="Takes you to the blog post named: ${post.title}">
+        <time datetime="${post.date}">
+          ${post.displayDate} · Vihaan Vinoth · ${post.readingTime} min read
+        </time>
+        <br><br>
+        ${post.cover ? `<img class="cover" width="457" height="257" src="${post.cover}">` : ""}
+        <br>
+        <h2>${post.title}</h2>
+        ${tagsHTML}
+        <p class="summary">${post.summary}</p>
+        <span class="read-more">Read</span>
+      </a>
+    </div>
+  </article>`;
+}).join("\n");
+
+blogTemplate = blogTemplate.replace(
+  /<!-- BLOG_POSTS_START -->([\s\S]*?)<!-- BLOG_POSTS_END -->/,
+  `<!-- BLOG_POSTS_START -->\n${blogItemsHTML}\n<!-- BLOG_POSTS_END -->`
+);
+
+fs.writeFileSync(blogTemplatePath, blogTemplate);
 
 postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
 
