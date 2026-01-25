@@ -522,6 +522,8 @@ for (const file of fs.readdirSync(postsDir)) {
 const blogTemplatePath = "public/blog.html";
 let blogTemplate = fs.readFileSync(blogTemplatePath, "utf-8");
 
+postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
+
 const blogItemsHTML = postsIndex.map(post => {
   const tagsHTML = post.tags?.length
     ? `<ul class="post-tags">
@@ -554,8 +556,6 @@ blogTemplate = blogTemplate.replace(
 );
 
 fs.writeFileSync(blogTemplatePath, blogTemplate);
-
-postsIndex.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 fs.writeFileSync(indexFile, JSON.stringify(postsIndex, null, 2));
 
