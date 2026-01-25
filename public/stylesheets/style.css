@@ -811,6 +811,7 @@ article > h2:hover {
   list-style-type: none;
   margin: 3% 0;
   flex-wrap: wrap;
+  cursor: help;
 }
 
 .post-tag {

@@ -435,6 +435,31 @@ for (const file of fs.readdirSync(postsDir)) {
                 <p id="footer-reserved">&copy; <span id="year"></span> Made with 🌶️ by Vihaan Vinoth. <a href="https://vihaanvinoth.com/privacy">Privacy Policy</a></p>
             </section>
         </main>
+        <script>
+            const tagInput = document.getElementById('tagInput');
+            const tags = document.querySelectorAll('.post-tag');
+
+            tags.forEach(tag => {
+                tag.addEventListener('click', () => {
+                const value = tag.textContent.trim();
+                tagInput.value = value;
+
+                filterPostsByTag(value);
+                });
+            });
+
+            function filterPostsByTag(tag) {
+                const posts = document.querySelectorAll('.post-preview');
+                posts.forEach(post => {
+                const postTags = Array.from(post.querySelectorAll('.post-tag')).map(t => t.textContent.trim().toLowerCase());
+                if (postTags.includes(tag.toLowerCase())) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+                });
+            }
+        </script>
         <script type="application/ld+json">
             {
             "@context": "https://schema.org",
@@ -498,7 +523,6 @@ for (const file of fs.readdirSync(postsDir)) {
             localStorage.setItem("theme", root.dataset.theme);
         });
         </script>
-
         <script async type="text/javascript" src="https://s.skimresources.com/js/297470X1784957.skimlinks.js"></script>
     </body>
     </html>
@@ -568,7 +592,7 @@ blogTemplate = blogTemplate.replace(
 
 blogTemplate = blogTemplate.replace(
   /<!-- TAGS_START -->([\s\S]*?)<!-- TAGS_END -->/,
-  `<!-- TAGS_START -->\n<div class="tag-cloud">${allTagsHTML}</div>\n<!-- TAGS_END -->`
+  `<!-- TAGS_START -->\n<div class="tag-cloud">${allTagsHTML}</div>\n<!-- TAGS_END -->`,
 );
 
 fs.writeFileSync(blogTemplatePath, blogTemplate);
