@@ -811,7 +811,6 @@ article > h2:hover {
   list-style-type: none;
   margin: 3% 0;
   flex-wrap: wrap;
-  cursor: pointer;
 }
 
 .post-tag {
@@ -820,6 +819,14 @@ article > h2:hover {
   background: transparent;
   font-size: 13px;
   padding: 5px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.tag-cloud > .post-tag:hover {
+  background: var(--text-opp);
+  color: var(--text);
+  cursor: pointer;
 }
 
 section pre {
