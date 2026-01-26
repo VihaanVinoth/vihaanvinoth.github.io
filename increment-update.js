@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const version = "4.2";
+const version = "4.3";
 const htmlFiles = fs.readdirSync("public").filter(f => f.endsWith(".html"));
 
 for (const file of htmlFiles) {
