@@ -15,7 +15,7 @@ If you’ve seen my blog over the past few months, you might have noticed a dist
 
 The short answer is life happens. Between shifting work priorities, deep-diving into complex projects offline, and standard-issue developer burnout, stepping away from writing code content became a necessary pause. While writing about programming is something I genuinely love, balancing it alongside day-to-day software development requires a continuous reserve of mental bandwidth that simply wasn't available for a while. In addition, I am in the home stretch of my school years, and it's getting rough with the threshold of work, which is why I haven't been posting for a while.
 
-\## What I’ve Been Up To - Behind The Scenes
+## What I’ve Been Up To - Behind The Scenes
 
 Taking a break from public writing didn’t mean that I entirely dropped programming. If anything, stepping away offered me a chance to learn and practice my programming without the pressure of immediately turning every discovery into a polished tutorial or write-up. During this quiet period, I’ve been:  
 
@@ -24,7 +24,7 @@ Taking a break from public writing didn’t mean that I entirely dropped program
 * Re-evaluating workflow efficiency: Streamlining local environments and building small internal tools purely for personal utility.  
 * Preparing a new series of posts: I have been trying to organise some new posts that might roll up in the coming time.
 
-\## What to Expect Moving Forward
+## What to Expect Moving Forward
 
 I’m excited to get back into a week-based posting rhythm. Moving forward, the goal isn't just to post more frequently, but to bring higher quality, practical insights straight from the trenches of software development. However, there is guaranteed to be some small delays due to academics and other sorts, however I won't try to disrupt posting.
 
@@ -42,5 +42,5 @@ Stay tuned - the next technical deep-dive lands very soon!
 
 
 
-Keep coding,\
+Keep coding,
 Vihaan
