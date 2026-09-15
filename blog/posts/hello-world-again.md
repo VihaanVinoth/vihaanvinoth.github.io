@@ -9,7 +9,7 @@ tags:
   - coding
   - vihaan
   - daily-life
-cover: /assets/uploads/hiatus-post.png
+cover: https://cdn.hackclub.com/01a0a514-4056-79ba-b4a7-c14a845364f2/Hiatus%20Post.png
 ---
 If you’ve seen my blog over the past few months, you might have noticed a distinct lack of frequent posts. My last tech-focused post went live back in January - and then, it pretty much dimmed down. No project breakdowns, no hot takes on framework updates, no debugging tales. So, where have I been, and more importantly, what comes next?  
 
